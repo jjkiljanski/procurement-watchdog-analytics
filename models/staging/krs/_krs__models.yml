@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: stg_krs__entities
+    description: Placeholder staging model for future KRS entity data.

@@ -1,0 +1,8 @@
+procurement_watchdog_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: procurement_watchdog_analytics.duckdb
+      threads: 4
+      schema: analytics

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: warehouse_krs
+    description: Placeholder source group for future KRS-derived warehouse data.
+    schema: "{{ var('silver_schema') }}"
+    tables:
+      - name: silver_entities
+        identifier: krs_entities
+        description: Future KRS entity exposure.

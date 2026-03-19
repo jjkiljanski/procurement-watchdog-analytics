@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_buyer_daily_signals
+    description: Starter daily buyer signal fact table.
+    columns:
+      - name: buyer_key
+        tests:
+          - not_null
+      - name: signal_date
+        tests:
+          - not_null

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: int_procurement__cases
+    description: Reusable procurement case grain assembled from staged BZP data.
+    columns:
+      - name: case_key
+        tests:
+          - not_null
+          - unique
+      - name: case_id
+      - name: buyer_id
+
+  - name: int_procurement__buyers
+    description: Reusable buyer grain assembled from staged BZP data.
+    columns:
+      - name: buyer_key
+        tests:
+          - not_null
+          - unique
+      - name: buyer_id

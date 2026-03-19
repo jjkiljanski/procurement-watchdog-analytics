@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_cases
+    description: Starter case mart for analytics consumers.
+    columns:
+      - name: case_key
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_buyers
+    description: Starter buyer mart for analytics consumers.
+    columns:
+      - name: buyer_key
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_market_daily
+    description: Starter daily market aggregate built from staged notice data.
+    columns:
+      - name: publication_date
+        tests:
+          - not_null
