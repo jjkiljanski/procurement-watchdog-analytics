@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw_silver
+    description: >
+      Raw copied Silver relations with original upstream column names. In
+      DuckDB they are accessed through local parquet-backed models. In BigQuery
+      they should point to copied raw Silver tables with the same column names
+      as the parquet source.
+    schema: "{{ var('silver_schema') }}"
+    tables:
+      - name: common_envelope
+        description: Raw common_envelope relation copied from upstream Silver.
+
+      - name: contract_notice_core
+        description: Raw ContractNotice core relation copied from upstream Silver.
+
+      - name: contract_notice_client
+        description: Raw ContractNotice client relation copied from upstream Silver.
+
+      - name: contract_notice_part
+        description: Raw ContractNotice part relation copied from upstream Silver.

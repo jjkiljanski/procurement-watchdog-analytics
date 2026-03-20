@@ -6,3 +6,10 @@ procurement_watchdog_analytics:
       path: procurement_watchdog_analytics.duckdb
       threads: 4
       schema: analytics
+    prod:
+      type: bigquery
+      method: oauth
+      project: your-gcp-project
+      dataset: analytics
+      threads: 4
+      location: EU

@@ -22,6 +22,12 @@ models:
       relation: true
       columns: true
 
+    platform:
+      local_raw:
+        +enabled: "{{ target.type == 'duckdb' }}"
+        +materialized: view
+        +schema: silver
+
     staging:
       +materialized: view
 
@@ -34,3 +40,4 @@ models:
 vars:
   silver_schema: silver
   gold_schema: analytics
+  local_silver_root: "E:/git_projects/procurement-watchdog-api-exploration/data/silver"

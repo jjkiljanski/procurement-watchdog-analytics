@@ -10,36 +10,40 @@ The current split is:
 - `procurement-watchdog-lakehouse`: ingestion and physical medallion pipeline
   (`bronze_raw` -> `bronze` -> `silver`)
 - `procurement-watchdog-analytics`: dbt models that define reusable Gold logic
-  over warehouse tables/views exposed from the lakehouse outputs
+  over a canonical `silver` contract
 
 ## Design Goals
 
 - keep Gold business logic in SQL and version it independently
 - treat the lakehouse `silver` layer as the main dbt input contract
-- support `bzp` first without hard-coding the repo around one source forever
+- support `bzp` first without locking the business layer to parquet paths
 - leave room for future sources such as `krs`
 - stay small for the first commit
 
 ## Expected Upstream Inputs
 
-The lakehouse currently produces these main Silver assets:
+The current canonical input contract for this repo is:
 
 - `common_envelope`
-- `notice_type_tables`
-- `case_derived_facts`
+- `contract_notice_core`
+- `contract_notice_client`
+- `contract_notice_part`
 
-This dbt project assumes those assets are made available in the target
-warehouse as tables or views. The exact physical names can differ by adapter
-and environment; the source definitions in `models/staging/*/*sources*.yml`
-are the place to map them.
+Locally, DuckDB builds these canonical relations from parquet files under:
+
+- `E:\git_projects\procurement-watchdog-api-exploration\data\silver`
+
+In production, BigQuery is expected to expose the same `silver.*` relations
+with the same schema and semantics. The business-layer dbt models are written
+to swap between those runtimes without changing downstream SQL.
 
 ## Project Layout
 
 ```text
 models/
+  platform/
+    local_raw/
   staging/
-    bzp/
-    krs/
   intermediate/
     procurement/
   marts/
@@ -54,7 +58,10 @@ profiles/
 
 ## Modeling Approach
 
-- `staging`: thin source cleanup and naming normalization per upstream system
+- `platform/local_raw`: DuckDB-only parquet access models with no business
+  renaming
+- `staging`: platform-independent Silver contract models that define the
+  canonical column names, casts, and the first downstream-facing contract
 - `intermediate`: reusable joins and business-ready building blocks
 - `marts`: end-user tables for cases, buyers, market views, and signals
 
@@ -62,9 +69,14 @@ The initial scaffold includes only a few starter models. They are placeholders
 for the real Gold logic and are meant to be easy to replace as the warehouse
 contract stabilizes.
 
+For now, the notice-type side is intentionally limited to `ContractNotice`
+tables only. This matches the current workflow: start Gold modeling on one
+notice family while keeping the repo structure ready to add more notice types
+later.
+
 ## Getting Started
 
-1. Install dbt and the adapter for your warehouse, for example:
+1. Install dbt and the local adapter:
 
    ```bash
    pip install dbt-core dbt-duckdb
@@ -76,7 +88,8 @@ contract stabilizes.
    copy profiles\profiles.yml.example %USERPROFILE%\.dbt\profiles.yml
    ```
 
-3. Adjust the profile and the source table mappings to your environment.
+3. Adjust the profile if needed. The default local profile points at a DuckDB
+   file and uses the local parquet-backed raw access models.
 
 4. Run:
 
@@ -103,9 +116,25 @@ This repo should own:
 - source-combining logic across `bzp`, `krs`, and future datasets
 - dbt documentation and tests around Gold semantics
 
+## Local vs Production Runtime
+
+The contract is documented in `docs/contracts/silver_contract.md`.
+
+Runtime behavior:
+
+- `duckdb` target:
+  - dbt reads local parquet from
+    `E:\git_projects\procurement-watchdog-api-exploration\data\silver`
+  - raw access happens in `models/platform/local_raw`
+- `bigquery` target:
+  - dbt reads copied raw Silver tables in BigQuery with original upstream
+    column names
+
+The canonical renaming and casting logic lives in `models/staging`, so the
+business layer does not change when you switch environments.
+
 ## Near-Term Next Steps
 
-- wire the `source()` definitions to real warehouse tables/views
 - replace starter marts with production business logic
 - add source freshness/tests where the adapter supports it
-- add `krs` staging models once the upstream contract exists
+- add `krs` once its upstream contract exists

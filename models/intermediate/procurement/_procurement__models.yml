@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: int_procurement__cases
-    description: Reusable procurement case grain assembled from staged BZP data.
+    description: Reusable procurement case grain assembled from canonical Silver inputs.
     columns:
       - name: case_key
         tests:
@@ -12,7 +12,7 @@ models:
       - name: buyer_id
 
   - name: int_procurement__buyers
-    description: Reusable buyer grain assembled from staged BZP data.
+    description: Reusable buyer grain assembled from canonical Silver inputs.
     columns:
       - name: buyer_key
         tests:

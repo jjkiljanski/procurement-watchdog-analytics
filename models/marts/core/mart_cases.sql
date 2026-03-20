@@ -6,7 +6,6 @@ select
     first_publication_date,
     last_publication_date,
     notice_count,
-    winning_supplier_name,
-    winning_price_amount,
-    winning_price_currency
+    contract_notice_core_count,
+    notice_type_count
 from {{ ref('int_procurement__cases') }}

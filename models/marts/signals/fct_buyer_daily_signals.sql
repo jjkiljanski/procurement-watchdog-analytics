@@ -1,5 +1,5 @@
 with envelope as (
-    select * from {{ ref('stg_bzp__common_envelope') }}
+    select * from {{ ref('stg_silver__common_envelope') }}
 ),
 buyers as (
     select * from {{ ref('mart_buyers') }}

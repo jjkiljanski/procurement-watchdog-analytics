@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: local_raw__common_envelope
+    description: DuckDB-only raw relation over local common_envelope parquet.
+
+  - name: local_raw__contract_notice_core
+    description: DuckDB-only raw relation over local ContractNotice core parquet.
+
+  - name: local_raw__contract_notice_client
+    description: DuckDB-only raw relation over local ContractNotice client parquet.
+
+  - name: local_raw__contract_notice_part
+    description: DuckDB-only raw relation over local ContractNotice part parquet.

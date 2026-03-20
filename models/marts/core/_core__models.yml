@@ -18,7 +18,7 @@ models:
           - unique
 
   - name: mart_market_daily
-    description: Starter daily market aggregate built from staged notice data.
+    description: Starter daily market aggregate built from canonical Silver inputs.
     columns:
       - name: publication_date
         tests:
