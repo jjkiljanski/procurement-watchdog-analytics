@@ -74,37 +74,86 @@ tables only. This matches the current workflow: start Gold modeling on one
 notice family while keeping the repo structure ready to add more notice types
 later.
 
-## Getting Started
+## Local Setup
 
-1. Install dbt and the local adapter:
+The local workflow has been checked on Windows with:
+
+- `dbt-core`
+- `dbt-duckdb`
+- DuckDB profile at `%USERPROFILE%\.dbt\profiles.yml`
+- local Silver parquet under
+  `E:\git_projects\procurement-watchdog-api-exploration\data\silver`
+
+Recommended setup:
+
+1. Activate the Python/conda environment that should own `dbt`.
+
+2. Install dbt and the DuckDB adapter:
 
    ```bash
-   pip install dbt-core dbt-duckdb
+   python -m pip install dbt-core dbt-duckdb
    ```
 
-2. Copy the example profile:
+3. Copy the example profile:
 
    ```bash
    copy profiles\profiles.yml.example %USERPROFILE%\.dbt\profiles.yml
    ```
 
-3. Adjust the profile if needed. The default local profile points at a DuckDB
-   file and uses the local parquet-backed raw access models.
-
-4. Run:
+4. Validate the setup:
 
    ```bash
    dbt debug
    dbt parse
-   dbt run
-   dbt test
    ```
 
-For faster local development, you can optionally restrict the staging contract
-to a date window:
+The local profile creates a DuckDB database file in the repo root:
+
+- `procurement_watchdog_analytics.duckdb`
+
+This file stores dbt-created views and tables. The source parquet files remain
+external and are read through DuckDB.
+
+## First Local Run
+
+For a narrow first run, build only the raw-access dependencies plus the
+ContractNotice/CommonEnvelope staging contract for the first ten days of
+October 2025:
 
 ```bash
-dbt run --vars "{dev_date_from: '2025-10-01', dev_date_to: '2025-10-10'}"
+dbt run --select +stg_silver__common_envelope +stg_silver__contract_notice_core +stg_silver__contract_notice_client +stg_silver__contract_notice_part --vars "{dev_date_from: '2025-10-01', dev_date_to: '2025-10-10'}"
+```
+
+Notes:
+
+- The leading `+` is important. It includes upstream raw models from
+  `models/platform/local_raw`.
+- `dev_date_from` and `dev_date_to` are optional development vars that restrict
+  the staging contract to a smaller date window for faster local iteration.
+
+## Inspecting Local Outputs
+
+Open the local DuckDB database:
+
+```bash
+duckdb procurement_watchdog_analytics.duckdb
+```
+
+Then inspect what dbt created:
+
+```sql
+select table_schema, table_name
+from information_schema.tables
+where table_schema in ('silver', 'analytics')
+order by 1, 2;
+```
+
+Example checks:
+
+```sql
+select count(*) from analytics.stg_silver__common_envelope;
+select min(publication_date_day), max(publication_date_day)
+from analytics.stg_silver__contract_notice_core;
 ```
 
 ## Relationship To The Lakehouse Repo
