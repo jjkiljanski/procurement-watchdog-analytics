@@ -3,6 +3,8 @@ dbt_packages/
 logs/
 dbt.log
 .dbt/
+.duckdb
+*.duckdb
 .venv/
 venv/
 __pycache__/
