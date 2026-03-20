@@ -100,6 +100,13 @@ later.
    dbt test
    ```
 
+For faster local development, you can optionally restrict the staging contract
+to a date window:
+
+```bash
+dbt run --vars "{dev_date_from: '2025-10-01', dev_date_to: '2025-10-10'}"
+```
+
 ## Relationship To The Lakehouse Repo
 
 The lakehouse repo still owns:

@@ -4,3 +4,4 @@ select
     cast(publicationDateDay as date) as publication_date_day,
     * exclude (objectId, noticeType, publicationDateDay, data_model)
 from {{ raw_silver_relation('contract_notice_part') }}
+{{ dev_date_window('publicationDateDay') }}

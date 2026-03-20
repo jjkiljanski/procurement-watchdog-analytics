@@ -41,3 +41,5 @@ vars:
   silver_schema: silver
   gold_schema: analytics
   local_silver_root: "E:/git_projects/procurement-watchdog-api-exploration/data/silver"
+  dev_date_from:
+  dev_date_to:

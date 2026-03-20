@@ -25,3 +25,4 @@ select
         noticeStage
     )
 from {{ raw_silver_relation('common_envelope') }}
+{{ dev_date_window('publicationDateDay') }}
