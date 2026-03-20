@@ -107,6 +107,12 @@ Recommended setup:
    dbt parse
    ```
 
+5. Run the static contract check before builds:
+
+   ```bash
+   python scripts/validate_notice_contracts.py
+   ```
+
 The local profile creates a DuckDB database file in the repo root:
 
 - `procurement_watchdog_analytics.duckdb`
@@ -130,6 +136,9 @@ Notes:
   `models/platform/local_raw`.
 - `dev_date_from` and `dev_date_to` are optional development vars that restrict
   the staging contract to a smaller date window for faster local iteration.
+- Recommended local sequence:
+  - `python scripts/validate_notice_contracts.py`
+  - `dbt run --select ...`
 
 ## Inspecting Local Outputs
 
@@ -194,3 +203,15 @@ business layer does not change when you switch environments.
 - replace starter marts with production business logic
 - add source freshness/tests where the adapter supports it
 - add `krs` once its upstream contract exists
+
+## Notice Schema Utilities
+
+This repo also includes helper scripts for notice-schema maintenance:
+
+```bash
+python scripts/generate_all_notice_profile_markdown.py
+python scripts/validate_notice_contracts.py
+```
+
+See [scripts/README.md](e:/git_projects/procurement-watchdog-analytics/scripts/README.md)
+for details.

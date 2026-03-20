@@ -1,0 +1,241 @@
+Specific column-level value constraints are defined separately at the
+column level and described in the column-level documentation.
+
+## 1.1
+- `col_name`: `section_1_1`
+- `section_header`: `Nazwa zamawiającego`
+- `data_model`: `core`
+- `example_values`:
+  - `METRO WARSZAWSKIE SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ`
+  - `ŁÓDZKI URZĄD WOJEWÓDZKI W ŁODZI`
+  - `Gmina Karlino`
+
+## 1.2
+- `col_name`: `section_1_2`
+- `section_header`: `Oddział zamawiającego`
+- `data_model`: `core`
+- `example_values`:
+  - `Gmina Karlino`
+  - `Starostwo Powiatowe w Zawierciu`
+  - `SZI`
+
+## 1.3
+- `col_name`: `section_1_3`
+- `section_header`: `Krajowy Numer Identyfikacyjny`
+- `data_model`: `core`
+- `example_values`:
+  - `REGON 015314592`
+  - `REGON 004308002`
+  - `REGON 330920475`
+- `derived_cols`:
+  - `section_1_3`:
+    - `fn`: `parse_national_id_value`
+  - `section_1_3_type`:
+    - `fn`: `parse_national_id_type`
+
+## 1.4.1
+- `col_name`: `section_1_4_1`
+- `section_header`: `Ulica`
+- `data_model`: `core`
+- `example_values`:
+  - `ul. Wilczy Dół 5`
+  - `Piotrkowska 104`
+  - `Plac Jana Pawła II 6`
+
+## 1.4.2
+- `col_name`: `section_1_4_2`
+- `section_header`: `Miejscowość`
+- `data_model`: `core`
+- `example_values`:
+  - `Warszawa`
+  - `Łódź`
+  - `Karlino`
+
+## 1.4.3
+- `col_name`: `section_1_4_3`
+- `section_header`: `Kod pocztowy`
+- `data_model`: `core`
+- `example_values`:
+  - `02-798`
+  - `90-926`
+  - `78-230`
+
+## 1.4.4
+- `col_name`: `section_1_4_4`
+- `section_header`: `Województwo`
+- `data_model`: `core`
+- `example_values`:
+  - `mazowieckie`
+  - `łódzkie`
+  - `zachodniopomorskie`
+
+## 1.4.5
+- `col_name`: `section_1_4_5`
+- `section_header`: `Kraj`
+- `data_model`: `core`
+- `example_values`:
+  - `Polska`
+  - `Kenia`
+
+## 1.4.6
+- `col_name`: `section_1_4_6`
+- `section_header`: `Lokalizacja NUTS 3`
+- `data_model`: `core`
+- `example_values`:
+  - `PL911 - Miasto Warszawa`
+  - `PL711 - Miasto Łódź`
+  - `PL426 - Koszaliński`
+- `derived_cols`:
+  - `section_1_4_6_code`:
+    - `fn`: `parse_nuts3_code`
+  - `section_1_4_6_name`:
+    - `fn`: `parse_nuts3_name`
+
+## 1.4.7
+- `col_name`: `section_1_4_7`
+- `section_header`: `Numer telefonu`
+- `data_model`: `core`
+- `example_values`:
+  - `42-664-12-10`
+  - `032 3813786`
+  - `95 785 12 00`
+
+## 1.4.8
+- `col_name`: `section_1_4_8`
+- `section_header`: `Numer faksu`
+- `data_model`: `core`
+- `example_values`:
+  - `95 785 12 04`
+  - `233067109`
+  - `957652410`
+
+## 1.4.9
+- `col_name`: `section_1_4_9`
+- `section_header`: `Adres poczty elektronicznej`
+- `data_model`: `core`
+- `example_values`:
+  - `zam-eh@metro.waw.pl`
+  - `zamowienia@lodz.uw.gov.pl`
+  - `zamowienia@tarnogorski.pl`
+
+## 1.4.10
+- `col_name`: `section_1_4_10`
+- `section_header`: `Adres strony internetowej zamawiającego`
+- `data_model`: `core`
+- `example_values`:
+  - `https://postepowania.metro.waw.pl/servlet/HomeServlet`
+  - `https://www.gov.pl/web/uw-lodzki`
+  - `bip.karlino.pl`
+
+## 1.5
+- `col_name`: `section_1_5`
+- `section_header`: `Rodzaj zamawiającego`
+- `data_model`: `core`
+- `example_values`:
+  - `Zamawiający sektorowy - art. 5 ust. 1 pkt 1 - usługi transportowe`
+  - `Zamawiający publiczny - jednostka sektora finansów publicznych - organ władzy publicznej - organ administracji rządowej (centralnej lub terenowej)`
+  - `Zamawiający publiczny - jednostka sektora finansów publicznych - jednostka samorządu terytorialnego`
+
+## 1.6
+- `col_name`: `section_1_6`
+- `section_header`: `Przedmiot działalności zamawiającego`
+- `data_model`: `core`
+- `example_values`:
+  - `Ogólne usługi publiczne`
+  - `Inna działalność`
+  - `Budownictwo i obiekty komunalne`
+
+## 2.2
+- `col_name`: `section_2_2`
+- `section_header`: `Numer ogłoszenia`
+- `data_model`: `core`
+- `example_values`:
+  - `2025/BZP 00000179`
+  - `2025/BZP 00000506`
+  - `2025/BZP 00000741`
+
+## 2.3
+- `col_name`: `section_2_3`
+- `section_header`: `Wersja ogłoszenia`
+- `data_model`: `core`
+- `example_values`:
+  - `01`
+
+## 2.4
+- `col_name`: `section_2_4`
+- `section_header`: `Data ogłoszenia`
+- `data_model`: `core`
+- `example_values`:
+  - `2025-01-02`
+  - `2025-01-03`
+  - `2025-01-07`
+- `parser`:
+  - `fn`: `parse_date_from_text`
+
+## 3.1
+- `col_name`: `section_3_1`
+- `section_header`: `Nazwa zamówienia`
+- `data_model`: `core`
+- `example_values`:
+  - `Wykonanie naprawy rewizyjnej silników trakcyjnych stosowanych w pojazdach typu Metropolis 98B`
+  - `Zakup sprzętu komputerowego`
+  - `ŚWIADCZENIE KOMPLEKSOWEJ USŁUGI OŚWIETLENIA NA TERENIE GMINY KARLINO`
+
+## 3.2
+- `col_name`: `section_3_2`
+- `section_header`: `Rodzaj zamówienia`
+- `data_model`: `core`
+- `example_values`:
+  - `Usługi`
+  - `Dostawy`
+  - `Roboty budowlane`
+
+## 3.3
+- `col_name`: `section_3_3`
+- `section_header`: `Krótki opis przedmiotu zamówienia`
+- `data_model`: `core`
+- `example_values`:
+  - `1.	Przedmiotem Zamówienia jest naprawa rewizyjna silników trakcyjnych stosowanych w pojazdach typu Metropolis 98B w latach 2025 i 2026.2.	Szczegółowy opis Przedmiotu został określony w Specyfikacji Technicznej wraz z załącznikami, stanowiącymi załącznik nr 1 do SIWP.`
+  - `Zakup sprzętu komputerowego`
+  - `1.	Wykonawca w ramach wykonywania niniejszej Umowy zobowiązany będzie do podjęcia i wykonywania wszelkich czynności niezbędnych do zapewnienia oświetlenia na terenie Gminy Karlino, w tym do:1)	wykonywania usługi przy wykorzystaniu posiadanej infrastruktury oświetleniowej,2)	utrzymania urządzeń oświetleniowych w należytym stanie technicznym, eksploatację, konserwację i remonty infrastruktury oświetleniowej w zakresie zgodnym z obowiązującymi przepisami prawa oraz wedle najlepszej profesjonalnej wiedzy Wykonawcy, w tym m.in.:a)	oględziny i przeglądy techniczne urządzeń aparatury zasilającej, pomiarowej                                  i sterowniczej,b)	oględziny i przeglądy tras linii napowietrznych i kablowych,c)	przeglądy techniczne opraw,d)	wymianę zużytych i uszkodzonych źródeł światła,e)	malowanie i konserwację metalowych konstrukcji latarń, szafek i tablic rozdzielczych,f)	pomiary skuteczności ochrony od porażeń z częstotliwością przewidzianą przepisami,g)	wymianę uszkodzonych słupów, wysięgników, opraw, tablic, szafek,h)	wymianę uszkodzonych elementów zasilania i sterowania oświetlenia,i)	naprawę lub wymianę uszkodzonych kabli i linii napowietrznych,j)	podwieszanie zerwanych przewodów,k)	wymianę opraw, oprawek, stateczników, kondensatorów,l)	likwidację powstałych awarii w urządzeniach oświetleniowych,m)	utrzymanie czystości opraw oświetleniowych;3)	całodobowej dyspozycyjności, monitorowania i dozoru technicznego nad urządzeniami oświetleniowymi,4)	prowadzenia rejestru zdarzeń,5)	zapewnienia oświetlenia (w tym niezbędnej do tego energii elektrycznej) w porze od zmierzchu do świtu, 6)	rozbudowy i przebudowy niezbędnej infrastruktury celem podniesienia standardu oświetlenia na terenie Gminy Karlino.`
+
+## 3.4
+- `col_name`: `section_3_4`
+- `section_header`: `Wartość`
+- `data_model`: `core`
+- `example_values`:
+  - `35295,00`
+  - `311093,88`
+  - `70,00`
+- `parser`:
+  - `fn`: `parse_pln_value`
+
+## 3.5
+- `col_name`: `section_3_5`
+- `section_header`: `Kod waluty`
+- `data_model`: `core`
+- `example_values`:
+  - `PLN`
+  - `EUR`
+- `parser`:
+  - `fn`: `parse_currency_code`
+
+## 3.6
+- `col_name`: `section_3_6`
+- `section_header`: `Termin składania wniosków lub ofert`
+- `data_model`: `core`
+- `example_values`:
+  - `2025-01-10 09:00`
+  - `2025-01-17 13:30`
+  - `2025-01-10 13:30`
+- `parser`:
+  - `fn`: `parse_datetime_from_text`
+
+## 3.7
+- `col_name`: `section_3_7`
+- `section_header`: `Informacje dla wykonawców dotyczące warunków zamówienia`
+- `data_model`: `core`
+- `example_values`:
+  - `1.	O udzielenie zamówienia mogą ubiegać się Wykonawcy, którzy: 1)	nie podlegają wykluczeniu, z powodu zaistnienia okoliczności wskazanych w: a)	art. 108 ust. 1 oraz art. 109 ust. 1 pkt 4 ustawy Pzp, z wyłączeniem art. 108 ust. 1 pkt 1 lit. h oraz przypadku, o którym mowa w art. 108 ust. 1 pkt 2 ustawy Pzp, jeśli osoba, o której mowa w tym przepisie została skazana za przestępstwo wymienione w art. 108 ust. 1 pkt 1 lit. h (podstawa prawna art. 393 ust. 4 ustawy Pzp); b)	w art. 7 ust. 1 Ustawy z dnia 13 kwietnia 2022r. o szczególnych rozwiązaniach w zakresie przeciwdziałania wspieraniu agresji na Ukrainę oraz służących ochronie bezpieczeństwa narodowego  (t.j. Dz.U. z 2024 r. poz. 507 z późn. zm.). 2)	spełniają warunki udziału w postępowaniu dotyczące posiadania zdolności technicznej i zawodowej, potwierdzające zdolność Wykonawcy do należytego wykonania Przedmiotu Zamówienia. 2.	Wykonawca WRAZ Z OFERTĄ składa następujące dokumenty: 1)	wypełnione oświadczenie o braku podstaw do wykluczenia z postępowania (załącznik nr 3a do SIWP); 2)	wypełnione oświadczenie o spełnieniu warunków udziału w postępowaniu (załącznik nr 3b do SIWP); 3)	dokument potwierdzający brak podstaw wykluczenia na podstawie przesłanki, o której mowa w art. 109 ust. 1 pkt 4 ustawy Pzp: odpis lub informacja z właściwego rejestru lub centralnej ewidencji i informacji o działalności gospodarczej, sporządzone nie wcześniej niż 3 miesiące przed ich złożeniem, jeżeli odrębne przepisy wymagają wpisu do rejestru lub ewidencji. 4)	dokumenty potwierdzające spełnienie warunków udziału w postępowaniu zgodnie z pkt 5.2 ppkt 4 SIWP; W sytuacjach określonych w SIWP, Wykonawca wraz z ofertą składa oświadczenia i dokumenty, o których mowa w pkt 5.3, 5.9, 5.11 SIWP.`
+  - `Szczegóły pod adresem: https://ihar.eb2b.com.pl/open-auctions.html`
+  - `https://zgm-tbs.szczecinek.pl/zapytania-ofertowe/zapytania-ofertowe-aktualne/zaproszenie-do-skladania-ofert-ul.-powstancow-wielkopolskich-4abc5.html`
