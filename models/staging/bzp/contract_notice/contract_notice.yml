@@ -15,7 +15,7 @@ models:
           jointly by multiple buyers, or by an entrusted entity.
         tests:
           - accepted_values:
-              values: ['samodzielnie', 'wspĂłlnie', 'powierzono']
+              values: ['samodzielnie', 'wspólnie', 'powierzono']
       - name: cn_buyer_type
         description: >
           The type of the main buyer issuing the notice (e.g. public buyer in the public finances sector, sector buyer, etc.). Extracted from the relevant section of the notice if available.
@@ -50,7 +50,7 @@ models:
       - name: cn_notice_subject
         tests:
           - accepted_values:
-              values: ['ZamĂłwienia publicznego', 'Umowy ramowej']
+              values: ['Zamówienia publicznego', 'Umowy ramowej']
       - name: cn_is_social_service_notice
       - name: cn_contract_title
       - name: cn_procedure_ocid
