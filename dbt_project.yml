@@ -34,9 +34,6 @@ models:
     intermediate:
       +materialized: ephemeral
 
-    marts:
-      +materialized: table
-
 vars:
   silver_schema: silver
   gold_schema: analytics
