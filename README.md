@@ -215,3 +215,8 @@ python scripts/validate_notice_contracts.py
 
 See [scripts/README.md](e:/git_projects/procurement-watchdog-analytics/scripts/README.md)
 for details.
+
+## Developer Guide
+
+For copy-paste local development commands with dbt and DuckDB, see
+[DEV_WORKFLOW.md](e:/git_projects/procurement-watchdog-analytics/docs/DEV_WORKFLOW.md).
