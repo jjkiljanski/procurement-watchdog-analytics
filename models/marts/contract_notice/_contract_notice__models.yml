@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: mart_contract_notice_structure
+    description: Notice-grain gold mart with the main structural and procedural features of ContractNotice records for comparative analysis.
+    columns:
+      - name: notice_id
+        tests:
+          - not_null
+          - unique
+      - name: tender_id
+      - name: buyer_name
+      - name: buyer_province_name
+      - name: buyer_nuts3_code
+      - name: buyer_nuts3_name
+      - name: publication_date
+      - name: cn_allows_partial_offers
+      - name: cn_number_of_lots
+      - name: cn_limits_lots_per_bidder
+      - name: cn_part_has_options
+      - name: cn_part_has_renewals
+      - name: cn_part_duration_days_min
+      - name: cn_part_duration_days_max
+      - name: cn_has_optional_exclusion_grounds
+      - name: cn_optional_exclusion_grounds
+      - name: cn_participation_conditions_description
+      - name: cn_submission_languages
+      - name: cn_request_to_participate_deadline
+      - name: cn_allows_variant_offers
+      - name: cn_has_restricted_procurement_documents
+      - name: cn_may_cancel_if_funding_missing
+      - name: cn_allows_contract_changes
+      - name: cn_contract_change_terms
+      - name: cn_has_advance_payments
+      - name: cn_has_electronic_auction
+      - name: cn_part_price_criterion_weight_min
+      - name: cn_part_price_criterion_weight_max
+      - name: cn_part_criteria_count_min
+      - name: cn_part_criteria_count_max
+      - name: cn_has_social_environmental_label_requirements
+      - name: cn_social_environmental_label_requirements_description
