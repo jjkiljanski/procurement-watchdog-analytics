@@ -2,7 +2,9 @@ select
     objectId as cn_part_notice_id,
     noticeType as cn_part_notice_type,
     cast(publicationDateDay as date) as cn_part_publication_date_day,
-    section_4_2_2 as cn_part_description,
+    part_ordinal as cn_part_ordinal,
+    section_4_2_2 as cn_part_short_description,
+    section_4_2_3 as cn_part_buyer_needs_description,
     section_4_2_4 as cn_part_is_replenishment,
     section_4_2_5 as cn_part_value_amount,
     section_4_2_5_currency as cn_part_value_currency,
@@ -19,10 +21,6 @@ select
     section_4_3_1 as cn_part_offer_evaluation_method,
     section_4_3_2 as cn_part_award_criteria_weighting_method,
     section_4_3_3 as cn_part_award_criteria_summary,
-    section_4_3_4 as cn_part_award_criterion_type,
-    section_4_3_5 as cn_part_award_criterion_name,
-    section_4_3_6 as cn_part_award_criterion_weight,
-    section_4_3_7 as cn_part_award_criterion_order,
     section_4_3_10 as cn_part_award_criteria_include_policy_aspects,
     section_4_3_11 as cn_part_award_criteria_policy_aspects_description
 from {{ raw_silver_relation('contract_notice_part') }}

@@ -12,3 +12,6 @@ models:
 
   - name: local_raw__contract_notice_part
     description: DuckDB-only raw relation over local ContractNotice part parquet.
+
+  - name: local_raw__contract_notice_part_criterion
+    description: DuckDB-only raw relation over local ContractNotice part_criterion parquet.

@@ -19,3 +19,14 @@ models:
           - not_null
           - unique
       - name: buyer_id
+
+  - name: int_procurement__contract_notice_part_criteria_counts
+    description: Part-grain reusable intermediate model with the number of award criteria per part and per notice for ContractNotice.
+    columns:
+      - name: cn_part_notice_id
+      - name: cn_part_notice_type
+      - name: cn_part_publication_date_day
+      - name: cn_part_ordinal
+      - name: cn_part_short_description
+      - name: part_criterion_count
+      - name: notice_criterion_count

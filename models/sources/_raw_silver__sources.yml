@@ -20,3 +20,6 @@ sources:
 
       - name: contract_notice_part
         description: Raw ContractNotice part relation copied from upstream Silver.
+
+      - name: contract_notice_part_criterion
+        description: Raw ContractNotice part_criterion relation copied from upstream Silver.

@@ -176,14 +176,16 @@ models:
       - name: cn_client_website
 
   - name: stg_silver__contract_notice_part
-    description: Canonical staging contract for the Silver ContractNotice part relation. Contains the parsed data from all the ContractNotice HTML sections that can appear multiple times within one notice AND describe one or more of the procurement parts described in the notice (e.g. part's CPV code).
+    description: Canonical staging contract for the Silver ContractNotice part relation. Contains the parsed part-level data from all the ContractNotice HTML sections that can appear multiple times within one notice AND describe one procurement part (e.g. part scope, value, CPV codes, or award-criteria framework).
     columns:
       - name: cn_part_notice_id
         tests:
           - not_null
       - name: cn_part_notice_type
       - name: cn_part_publication_date_day
-      - name: cn_part_description
+      - name: cn_part_ordinal
+      - name: cn_part_short_description
+      - name: cn_part_buyer_needs_description
       - name: cn_part_is_replenishment
       - name: cn_part_value_amount
       - name: cn_part_value_currency
@@ -200,9 +202,20 @@ models:
       - name: cn_part_offer_evaluation_method
       - name: cn_part_award_criteria_weighting_method
       - name: cn_part_award_criteria_summary
-      - name: cn_part_award_criterion_type
-      - name: cn_part_award_criterion_name
-      - name: cn_part_award_criterion_weight
-      - name: cn_part_award_criterion_order
       - name: cn_part_award_criteria_include_policy_aspects
       - name: cn_part_award_criteria_policy_aspects_description
+
+  - name: stg_silver__contract_notice_part_criterion
+    description: Canonical staging contract for the Silver ContractNotice part criterion relation. Contains the repeated award-criterion rows nested under one procurement part in the ContractNotice.
+    columns:
+      - name: cn_part_criterion_notice_id
+        tests:
+          - not_null
+      - name: cn_part_criterion_notice_type
+      - name: cn_part_criterion_publication_date_day
+      - name: cn_part_criterion_part_ordinal
+      - name: cn_part_criterion_ordinal
+      - name: cn_part_criterion_type
+      - name: cn_part_criterion_name
+      - name: cn_part_criterion_weight
+      - name: cn_part_criterion_order

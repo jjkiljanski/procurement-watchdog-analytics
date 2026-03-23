@@ -127,7 +127,7 @@ ContractNotice/CommonEnvelope staging contract for the first ten days of
 October 2025:
 
 ```bash
-dbt run --select +stg_silver__common_envelope +stg_silver__contract_notice_core +stg_silver__contract_notice_client +stg_silver__contract_notice_part --vars "{dev_date_from: '2025-10-01', dev_date_to: '2025-10-10'}"
+dbt run --select +stg_silver__common_envelope +stg_silver__contract_notice_core +stg_silver__contract_notice_client +stg_silver__contract_notice_part +stg_silver__contract_notice_part_criterion --vars "{dev_date_from: '2025-10-01', dev_date_to: '2025-10-10'}"
 ```
 
 Notes:
