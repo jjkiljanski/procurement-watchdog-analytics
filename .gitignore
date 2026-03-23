@@ -5,6 +5,7 @@ dbt.log
 .dbt/
 .duckdb
 *.duckdb
+*.duckdb.wal
 .venv/
 venv/
 __pycache__/
