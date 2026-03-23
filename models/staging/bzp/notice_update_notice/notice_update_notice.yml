@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_silver__notice_update_notice_core
+    description: Canonical staging contract for the Silver NoticeUpdateNotice core relation.
+    columns:
+      - name: nun_core_notice_id
+        tests:
+          - not_null
+      - name: nun_core_notice_type
+      - name: nun_core_publication_date_day
+      - name: nun_buyer_name
+      - name: nun_buyer_department
+      - name: nun_buyer_national_id
+      - name: nun_buyer_national_id_type
+      - name: nun_buyer_street
+      - name: nun_buyer_city
+      - name: nun_buyer_postal_code
+      - name: nun_buyer_province
+      - name: nun_buyer_country
+      - name: nun_buyer_nuts3_code
+      - name: nun_buyer_nuts3_name
+      - name: nun_buyer_phone
+      - name: nun_buyer_fax
+      - name: nun_buyer_email
+      - name: nun_buyer_website
+      - name: nun_buyer_type
+      - name: nun_buyer_main_activity
+      - name: nun_notice_number
+      - name: nun_notice_date
+      - name: nun_updated_notice_name
+      - name: nun_updated_notice_number
+      - name: nun_updated_notice_version
+
+  - name: stg_silver__notice_update_notice_part
+    description: Canonical staging contract for the Silver NoticeUpdateNotice part relation.
+    columns:
+      - name: nun_part_notice_id
+        tests:
+          - not_null
+      - name: nun_part_notice_type
+      - name: nun_part_publication_date_day
+      - name: nun_part_ordinal
+      - name: nun_updated_notice_section_identifier
+
+  - name: stg_silver__notice_update_notice_part_part
+    description: Canonical staging contract for the Silver NoticeUpdateNotice part_part relation.
+    columns:
+      - name: nun_part_part_notice_id
+        tests:
+          - not_null
+      - name: nun_part_part_notice_type
+      - name: nun_part_part_publication_date_day
+      - name: nun_part_part_ordinal
+      - name: nun_part_part_subitem_ordinal
+      - name: nun_updated_notice_change_description

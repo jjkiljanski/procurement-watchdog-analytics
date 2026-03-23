@@ -1,0 +1,28 @@
+select
+    objectId as nun_core_notice_id,
+    noticeType as nun_core_notice_type,
+    cast(publicationDateDay as date) as nun_core_publication_date_day,
+    section_1_1 as nun_buyer_name,
+    section_1_2 as nun_buyer_department,
+    section_1_3 as nun_buyer_national_id,
+    section_1_3_type as nun_buyer_national_id_type,
+    section_1_4_1 as nun_buyer_street,
+    section_1_4_2 as nun_buyer_city,
+    section_1_4_3 as nun_buyer_postal_code,
+    section_1_4_4 as nun_buyer_province,
+    section_1_4_5 as nun_buyer_country,
+    section_1_4_6_code as nun_buyer_nuts3_code,
+    section_1_4_6_name as nun_buyer_nuts3_name,
+    section_1_4_7 as nun_buyer_phone,
+    section_1_4_8 as nun_buyer_fax,
+    section_1_4_9 as nun_buyer_email,
+    section_1_4_10 as nun_buyer_website,
+    section_1_5 as nun_buyer_type,
+    section_1_6 as nun_buyer_main_activity,
+    section_2_1 as nun_notice_number,
+    section_2_2 as nun_notice_date,
+    section_3_1 as nun_updated_notice_name,
+    section_3_2 as nun_updated_notice_number,
+    section_3_3 as nun_updated_notice_version
+from {{ raw_silver_relation('notice_update_notice_core') }}
+{{ dev_date_window('publicationDateDay') }}

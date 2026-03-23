@@ -9,6 +9,8 @@ column level and described in the column-level documentation.
   - `BIAŁOGARDZKIE TOWARZYSTWO BUDOWNICTWA SPOŁECZNEGO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ`
   - `GMINA MILEJCZYCE`
   - `Samodzielny Publiczny Wojewódzki Szpital Specjalistyczny w Chełmie`
+- `staging_columns`:
+  - `nun_buyer_name`
 
 ## 1.2
 - `col_name`: `section_1_2`
@@ -18,6 +20,8 @@ column level and described in the column-level documentation.
   - `ZZDW Koszalin`
   - `Starostwo Powiatowe w Świdnicy`
   - `MZK Witnica`
+- `staging_columns`:
+  - `nun_buyer_department`
 
 ## 1.3
 - `col_name`: `section_1_3`
@@ -32,6 +36,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_1_3_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `nun_buyer_national_id`
+  - `nun_buyer_national_id_type`
 
 ## 1.4.1
 - `col_name`: `section_1_4_1`
@@ -41,6 +48,8 @@ column level and described in the column-level documentation.
   - `STEFANA KARDYNAŁA WYSZYŃSKIEGO 18`
   - `ul. Szkolna 5`
   - `Ceramiczna 1`
+- `staging_columns`:
+  - `nun_buyer_street`
 
 ## 1.4.2
 - `col_name`: `section_1_4_2`
@@ -50,6 +59,8 @@ column level and described in the column-level documentation.
   - `Białogard`
   - `Milejczyce`
   - `Chełm`
+- `staging_columns`:
+  - `nun_buyer_city`
 
 ## 1.4.3
 - `col_name`: `section_1_4_3`
@@ -59,6 +70,8 @@ column level and described in the column-level documentation.
   - `78-200`
   - `17-332`
   - `22-100`
+- `staging_columns`:
+  - `nun_buyer_postal_code`
 
 ## 1.4.4
 - `col_name`: `section_1_4_4`
@@ -68,6 +81,8 @@ column level and described in the column-level documentation.
   - `zachodniopomorskie`
   - `podlaskie`
   - `lubelskie`
+- `staging_columns`:
+  - `nun_buyer_province`
 
 ## 1.4.5
 - `col_name`: `section_1_4_5`
@@ -77,6 +92,8 @@ column level and described in the column-level documentation.
   - `Polska`
   - `Zjedn.Emiraty Arabskie`
   - `Republika Czeska`
+- `staging_columns`:
+  - `nun_buyer_country`
 
 ## 1.4.6
 - `col_name`: `section_1_4_6`
@@ -91,6 +108,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_nuts3_code`
   - `section_1_4_6_name`:
     - `fn`: `parse_nuts3_name`
+- `staging_columns`:
+  - `nun_buyer_nuts3_code`
+  - `nun_buyer_nuts3_name`
 
 ## 1.4.7
 - `col_name`: `section_1_4_7`
@@ -100,6 +120,8 @@ column level and described in the column-level documentation.
   - `+48 94 357 99 50`
   - `562 32 54`
   - `17 86 66 060`
+- `staging_columns`:
+  - `nun_buyer_phone`
 
 ## 1.4.8
 - `col_name`: `section_1_4_8`
@@ -109,6 +131,8 @@ column level and described in the column-level documentation.
   - `562 32 47`
   - `BRAK`
   - `+48 95 7515021`
+- `staging_columns`:
+  - `nun_buyer_fax`
 
 ## 1.4.9
 - `col_name`: `section_1_4_9`
@@ -118,6 +142,8 @@ column level and described in the column-level documentation.
   - `biuro@tbs-bialogard.pl`
   - `gmina@milejczyce.pl`
   - `przetarg@szpitalchelm.pl`
+- `staging_columns`:
+  - `nun_buyer_email`
 
 ## 1.4.10
 - `col_name`: `section_1_4_10`
@@ -127,6 +153,8 @@ column level and described in the column-level documentation.
   - `https://www.tbs-bialogard.pl/`
   - `http://bip.ug.milejczyce.wrotapodlasia.pl/`
   - `www.szpitalchelm.pl`
+- `staging_columns`:
+  - `nun_buyer_website`
 
 ## 1.5
 - `col_name`: `section_1_5`
@@ -136,6 +164,8 @@ column level and described in the column-level documentation.
   - `Zamawiający publiczny - inny zamawiający`
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - jednostka samorządu terytorialnego`
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - samodzielny publiczny zakład opieki zdrowotnej`
+- `staging_columns`:
+  - `nun_buyer_type`
 
 ## 1.6
 - `col_name`: `section_1_6`
@@ -145,6 +175,8 @@ column level and described in the column-level documentation.
   - `Inna działalność`
   - `Ogólne usługi publiczne`
   - `Zdrowie`
+- `staging_columns`:
+  - `nun_buyer_main_activity`
 
 ## 2.1
 - `col_name`: `section_2_1`
@@ -154,6 +186,8 @@ column level and described in the column-level documentation.
   - `2025/BZP 00000019`
   - `2025/BZP 00000044`
   - `2025/BZP 00000064`
+- `staging_columns`:
+  - `nun_notice_number`
 
 ## 2.2
 - `col_name`: `section_2_2`
@@ -165,6 +199,8 @@ column level and described in the column-level documentation.
   - `2025-01-03`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `nun_notice_date`
 
 ## 3.1
 - `col_name`: `section_3_1`
@@ -174,6 +210,8 @@ column level and described in the column-level documentation.
   - `Ogłoszenie o zamówieniu`
   - `Ogłoszenie o zmianie umowy`
   - `Ogłoszenie o wykonaniu umowy`
+- `staging_columns`:
+  - `nun_updated_notice_name`
 
 ## 3.2
 - `col_name`: `section_3_2`
@@ -183,6 +221,8 @@ column level and described in the column-level documentation.
   - `2024/BZP 00665454`
   - `2024/BZP 00449953`
   - `2024/BZP 00663208`
+- `staging_columns`:
+  - `nun_updated_notice_number`
 
 ## 3.3
 - `col_name`: `section_3_3`
@@ -190,6 +230,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `01`
+- `staging_columns`:
+  - `nun_updated_notice_version`
 
 ## 3.4
 - `col_name`: `section_3_4`
@@ -199,6 +241,8 @@ column level and described in the column-level documentation.
   - `SEKCJA V - KWALIFIKACJA WYKONAWCÓW`
   - `SEKCJA VIII - PROCEDURA`
   - `SEKCJA III - PODSTAWOWE INFORMACJE O POSTĘPOWANIU W WYNIKU KTÓREGO ZOSTAŁA ZAWARTA UMOWA`
+- `staging_columns`:
+  - `nun_updated_notice_section_identifier`
 
 ## 3.4.1
 - `col_name`: `section_3_4_1`
@@ -208,3 +252,5 @@ column level and described in the column-level documentation.
   - `5.4.  Nazwa i opis warunków udziału w postępowaniu`
   - `8.1.  Termin składania ofert`
   - `8.3.  Termin otwarcia ofert`
+- `staging_columns`:
+  - `nun_updated_notice_change_description`

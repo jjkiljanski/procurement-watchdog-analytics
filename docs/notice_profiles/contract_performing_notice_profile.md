@@ -9,6 +9,8 @@ column level and described in the column-level documentation.
   - `Samodzielny Publiczny Zakład Opieki Zdrowotnej Gruźlicy i Chorób Płuc w Adampolu`
   - `POWIAT NOWOSĄDECKI - POWIATOWY ZARZĄD DRÓG W NOWYM SĄCZU`
   - `GMINA SŁUPNO`
+- `staging_columns`:
+  - `cpn_buyer_name`
 
 ## 1.2
 - `col_name`: `section_1_2`
@@ -18,6 +20,8 @@ column level and described in the column-level documentation.
   - `Wójt Gminy Słupno`
   - `PBW Nowy Sącz`
   - `Sekcja Zamówień Publicznych`
+- `staging_columns`:
+  - `cpn_buyer_department`
 
 ## 1.3
 - `col_name`: `section_1_3`
@@ -32,6 +36,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_1_3_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `cpn_buyer_national_id`
+  - `cpn_buyer_national_id_type`
 
 ## 1.4.1
 - `col_name`: `section_1_4_1`
@@ -41,6 +48,8 @@ column level and described in the column-level documentation.
   - `Adampol 37`
   - `ul. Jeremiego Wiśniowieckiego 136`
   - `ul. Miszewska 8A`
+- `staging_columns`:
+  - `cpn_buyer_street`
 
 ## 1.4.2
 - `col_name`: `section_1_4_2`
@@ -50,6 +59,8 @@ column level and described in the column-level documentation.
   - `Włodawa`
   - `Nowy Sącz`
   - `Słupno`
+- `staging_columns`:
+  - `cpn_buyer_city`
 
 ## 1.4.3
 - `col_name`: `section_1_4_3`
@@ -59,6 +70,8 @@ column level and described in the column-level documentation.
   - `22-200`
   - `33-300`
   - `09-472`
+- `staging_columns`:
+  - `cpn_buyer_postal_code`
 
 ## 1.4.4
 - `col_name`: `section_1_4_4`
@@ -68,6 +81,8 @@ column level and described in the column-level documentation.
   - `lubelskie`
   - `małopolskie`
   - `mazowieckie`
+- `staging_columns`:
+  - `cpn_buyer_province`
 
 ## 1.4.5
 - `col_name`: `section_1_4_5`
@@ -77,6 +92,8 @@ column level and described in the column-level documentation.
   - `Polska`
   - `Wielka Brytania`
   - `Republika Czeska`
+- `staging_columns`:
+  - `cpn_buyer_country`
 
 ## 1.4.6
 - `col_name`: `section_1_4_6`
@@ -91,6 +108,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_nuts3_code`
   - `section_1_4_6_name`:
     - `fn`: `parse_nuts3_name`
+- `staging_columns`:
+  - `cpn_buyer_nuts3_code`
+  - `cpn_buyer_nuts3_name`
 
 ## 1.4.7
 - `col_name`: `section_1_4_7`
@@ -100,6 +120,8 @@ column level and described in the column-level documentation.
   - `82 59 13 286`
   - `+48 18 442 74 14`
   - `(+48) 18 443 70 67`
+- `staging_columns`:
+  - `cpn_buyer_phone`
 
 ## 1.4.8
 - `col_name`: `section_1_4_8`
@@ -109,6 +131,8 @@ column level and described in the column-level documentation.
   - `+48 18 442 63 45`
   - `(+48) 58 682 34 51`
   - `542830640`
+- `staging_columns`:
+  - `cpn_buyer_fax`
 
 ## 1.4.9
 - `col_name`: `section_1_4_9`
@@ -118,6 +142,8 @@ column level and described in the column-level documentation.
   - `info@spzozadampol.pl`
   - `przetargi@pzd.nowy-sacz.pl`
   - `ug@slupno.eu`
+- `staging_columns`:
+  - `cpn_buyer_email`
 
 ## 1.4.10
 - `col_name`: `section_1_4_10`
@@ -127,6 +153,8 @@ column level and described in the column-level documentation.
   - `www.spzozadampol.pl`
   - `http://www.pzd.nowy-sacz.pl`
   - `www.ugslupno.bip.org.pl`
+- `staging_columns`:
+  - `cpn_buyer_website`
 
 ## 1.5
 - `col_name`: `section_1_5`
@@ -136,6 +164,8 @@ column level and described in the column-level documentation.
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - samodzielny publiczny zakład opieki zdrowotnej`
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - jednostka samorządu terytorialnego`
   - `Zamawiający publiczny - inny zamawiający`
+- `staging_columns`:
+  - `cpn_buyer_type`
 
 ## 2.1
 - `col_name`: `section_2_1`
@@ -145,6 +175,8 @@ column level and described in the column-level documentation.
   - `ocds-148610-b7a40792-2fcd-4d7a-9d3b-6f3779073917`
   - `ocds-148610-b32ead90-999d-11ee-9ee7-e2087ac16d09`
   - `ocds-148610-e24fc37a-337d-4638-a98a-d1084f32c23e`
+- `staging_columns`:
+  - `cpn_procedure_ocid`
 
 ## 2.2
 - `col_name`: `section_2_2`
@@ -154,6 +186,8 @@ column level and described in the column-level documentation.
   - `2025/BZP 00000003`
   - `2025/BZP 00000014`
   - `2025/BZP 00000015`
+- `staging_columns`:
+  - `cpn_notice_number`
 
 ## 2.3
 - `col_name`: `section_2_3`
@@ -161,6 +195,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `01`
+- `staging_columns`:
+  - `cpn_notice_version`
 
 ## 2.4
 - `col_name`: `section_2_4`
@@ -172,6 +208,8 @@ column level and described in the column-level documentation.
   - `2025-01-03`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `cpn_notice_date`
 
 ## 3.1
 - `col_name`: `section_3_1`
@@ -181,6 +219,8 @@ column level and described in the column-level documentation.
   - `Zamówienie klasyczne - od 130 000 zł, ale o wartości mniejszej niż progi unijne`
   - `Zamówienie klasyczne - wartości równej lub przekraczającej progi unijne`
   - `Zamówienie sektorowe`
+- `staging_columns`:
+  - `cpn_procurement_character`
 
 ## 3.2
 - `col_name`: `section_3_2`
@@ -191,6 +231,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cpn_was_preceded_by_prior_notice`
 
 ## 3.2.1
 - `col_name`: `section_3_2_1`
@@ -200,6 +242,8 @@ column level and described in the column-level documentation.
   - `2024/BZP 00558846`
   - `2023/BZP 00551868`
   - `2024/BZP 00603547`
+- `staging_columns`:
+  - `cpn_prior_notice_number`
 
 ## 3.3
 - `col_name`: `section_3_3`
@@ -210,6 +254,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cpn_is_eu_funded`
 
 ## 3.4
 - `col_name`: `section_3_4`
@@ -219,6 +265,8 @@ column level and described in the column-level documentation.
   - `Współfinansowany ze środków UEw ramach POPT  2014-2020, Programu Operacyjnego PT POWER 2014-2020, Programu Interreg V-A Polska-Słowacja 2014-2020, Programu Współpracy Terytorialnej Polska – Białoruś – Ukraina 2014-2020, Programu Współpracy Transgranicznej Polska-Rosja 2014-2020, Programu Współpracy Interreg V-A Południowy Bałtyk 2014-2020, Programu Współpracy INTERREG Polska – Saksonia 2014-2020.`
   - `Projekt „Wielkopolskie telecentrum opieki” dofinansowany przez Unię Europejską w ramach Programu Regionalnego Fundusze Europejskie dla Wielkopolski 2021 - 2027, Program Fundusze Europejskie dla Wielkopolski 2021-2027 na realizację Projektu „Wspomaganie preadopcji i postadopcji kluczem do udanej adopcji”, Projekt "Wsparcie wielkopolskich migrantów"`
   - `Projekt „Wielkopolskie telecentrum opieki” dofinansowany przez Unię Europejską w ramach Programu Regionalnego "Fundusze Europejskie dla Wielkopolski 2021 - 2027", Program Fundusze Europejskie dla Wielkopolski 2021-2027 na realizację Projektu „Wspomaganie preadopcji i postadopcji kluczem do udanej adopcji”, Projekt "Wsparcie wielkopolskich migrantów"`
+- `staging_columns`:
+  - `cpn_eu_funding_program_name`
 
 ## 3.5
 - `col_name`: `section_3_5`
@@ -228,6 +276,8 @@ column level and described in the column-level documentation.
   - `Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy`
   - `Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy`
   - `Zamówienie udzielane jest w trybie przetargu nieograniczonego na podstawie: art. 132 ustawy`
+- `staging_columns`:
+  - `cpn_award_procedure_legal_basis`
 
 ## 3.6
 - `col_name`: `section_3_6`
@@ -237,6 +287,8 @@ column level and described in the column-level documentation.
   - `Dostawy`
   - `Roboty budowlane`
   - `Usługi`
+- `staging_columns`:
+  - `cpn_contract_type`
 
 ## 3.7
 - `col_name`: `section_3_7`
@@ -246,6 +298,8 @@ column level and described in the column-level documentation.
   - `Zakup aparatu ultrasonograficznego`
   - `Dostawa paliw na potrzeby Powiatowego Zarządu Dróg w Nowym Sączu`
   - `Dostawa i montaż lamp solarnych na terenie gminy Słupno`
+- `staging_columns`:
+  - `cpn_contract_title`
 
 ## 3.8
 - `col_name`: `section_3_8`
@@ -255,6 +309,8 @@ column level and described in the column-level documentation.
   - `zakup aparatu usg z dwiema głowicami`
   - `Dostawa benzyny silnikowej  (Kod CN 2710 12 45) – zamówienie gwarantowane – 4.000 litrów. Szczegółowy zakres zamówienia został określony w załączniku nr 5 do SWZ – Opis przedmiotu zamówienia.`
   - `Dostawa gazu propan-butan w butlach 11 kg zamówienie gwarantowane 154 kg. Szczegółowy zakres zamówienia został określony w załączniku nr 5 do SWZ – Opis przedmiotu zamówienia.`
+- `staging_columns`:
+  - `cpn_part_short_description`
 
 ## 3.9
 - `col_name`: `section_3_9`
@@ -266,6 +322,8 @@ column level and described in the column-level documentation.
   - `09120000-6 - Paliwa gazowe`
 - `parser`:
   - `fn`: `parse_cpv_codes`
+- `staging_columns`:
+  - `cpn_part_main_cpv_codes`
 
 ## 3.10
 - `col_name`: `section_3_10`
@@ -277,6 +335,8 @@ column level and described in the column-level documentation.
   - `45400000-1 - Roboty wykończeniowe w zakresie obiektów budowlanych 45111300-1 - Roboty rozbiórkowe 45300000-0 - Roboty instalacyjne w budynkach`
 - `parser`:
   - `fn`: `parse_cpv_codes`
+- `staging_columns`:
+  - `cpn_part_additional_cpv_codes`
 
 ## 4.1
 - `col_name`: `section_4_1`
@@ -288,6 +348,8 @@ column level and described in the column-level documentation.
   - `2024-12-11`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `cpn_contract_signature_date`
 
 ## 4.2
 - `col_name`: `section_4_2`
@@ -299,6 +361,8 @@ column level and described in the column-level documentation.
   - `do 2024-12-20`
 - `parser`:
   - `fn`: `parse_duration_end_date`
+- `staging_columns`:
+  - `cpn_contract_term_end_date`
 
 ## 4.3
 - `col_name`: `section_4_3`
@@ -306,6 +370,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `Wykonawca 0`
+- `staging_columns`:
+  - `cpn_supplier_section_label`
 
 ## 4.3.1
 - `col_name`: `section_4_3_1`
@@ -315,6 +381,8 @@ column level and described in the column-level documentation.
   - `TMS Sp. z o.o.`
   - `Petrodom Paliwa Spółka z Ograniczoną Odpowiedzialnością Spółka Komandytowa`
   - `SOLUMEN Sp. z o.o.`
+- `staging_columns`:
+  - `cpn_supplier_name`
 
 ## 4.3.2
 - `col_name`: `section_4_3_2`
@@ -329,6 +397,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_4_3_2_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `cpn_supplier_national_id`
+  - `cpn_supplier_national_id_type`
 
 ## 4.3.3
 - `col_name`: `section_4_3_3`
@@ -338,6 +409,8 @@ column level and described in the column-level documentation.
   - `Wiertnicza`
   - `Sidorska 61`
   - `Zajączkowo 35A`
+- `staging_columns`:
+  - `cpn_supplier_street`
 
 ## 4.3.4
 - `col_name`: `section_4_3_4`
@@ -347,6 +420,8 @@ column level and described in the column-level documentation.
   - `Warszawa`
   - `Biała Podlaska`
   - `Miłobądz`
+- `staging_columns`:
+  - `cpn_supplier_city`
 
 ## 4.3.5
 - `col_name`: `section_4_3_5`
@@ -356,6 +431,8 @@ column level and described in the column-level documentation.
   - `02-952`
   - `21-500`
   - `33-330`
+- `staging_columns`:
+  - `cpn_supplier_postal_code`
 
 ## 4.3.6
 - `col_name`: `section_4_3_6`
@@ -365,6 +442,8 @@ column level and described in the column-level documentation.
   - `mazowieckie`
   - `lubelskie`
   - `pomorskie`
+- `staging_columns`:
+  - `cpn_supplier_province`
 
 ## 4.3.7
 - `col_name`: `section_4_3_7`
@@ -374,6 +453,8 @@ column level and described in the column-level documentation.
   - `Polska`
   - `Szwajcaria`
   - `Francja`
+- `staging_columns`:
+  - `cpn_supplier_country`
 
 ## 4.4
 - `col_name`: `section_4_4`
@@ -388,6 +469,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_4_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cpn_contract_value_amount`
+  - `cpn_contract_value_currency`
 
 ## 4.5
 - `col_name`: `section_4_5`
@@ -397,6 +481,8 @@ column level and described in the column-level documentation.
   - `2024/BZP 00633646/01`
   - `2024/BZP 00041828/01`
   - `2024/BZP 00495396/01`
+- `staging_columns`:
+  - `cpn_result_notice_number`
 
 ## 5.1
 - `col_name`: `section_5_1`
@@ -407,6 +493,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cpn_contract_completed`
 
 ## 5.2
 - `col_name`: `section_5_2`
@@ -418,6 +506,8 @@ column level and described in the column-level documentation.
   - `2024-12-20`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `cpn_contract_completion_date`
 
 ## 5.3
 - `col_name`: `section_5_3`
@@ -428,6 +518,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cpn_completed_on_original_deadline`
 
 ## 5.4.1
 - `col_name`: `section_5_4_1`
@@ -439,6 +531,8 @@ column level and described in the column-level documentation.
   - `1`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `cpn_contract_change_count`
 
 ## 5.4.2
 - `col_name`: `section_5_4_2`
@@ -448,6 +542,8 @@ column level and described in the column-level documentation.
   - `1`
   - `2`
   - `3`
+- `staging_columns`:
+  - `cpn_change_number`
 
 ## 5.4.3
 - `col_name`: `section_5_4_3`
@@ -459,6 +555,8 @@ column level and described in the column-level documentation.
   - `art. 455 ust. 1 pkt 4 ustawy`
 - `parser`:
   - `fn`: `parse_list_from_newlines`
+- `staging_columns`:
+  - `cpn_change_legal_basis`
 
 ## 5.4.4
 - `col_name`: `section_5_4_4`
@@ -468,6 +566,8 @@ column level and described in the column-level documentation.
   - `Konieczność wykonania robót dodatkowych, których Zamawiający nie mógł przewidzieć na etapie przygotowania postępowania i zawierania umowy (roboty dotyczą lub wynikają z elementów zakrytych).`
   - `Konieczność przedłużenia terminu realizacji zamówienia z uwagi na roboty dodatkowe. Zmiana terminu dotyczyła tylko robót dodatkowych i bezpośrednio z nimi powiązanymi.`
   - `zmiana wynagrodzenia Wykonawcy ze względu na zmianę ilości pracujących sobót`
+- `staging_columns`:
+  - `cpn_change_reason`
 
 ## 5.4.5
 - `col_name`: `section_5_4_5`
@@ -477,6 +577,8 @@ column level and described in the column-level documentation.
   - `1. Nazwa zamówienia: Modernizacja i dostosowanie pomieszczeń Pedagogicznej Biblioteki Wojewódzkiej w Nowym Sączu Filia w Nowym Targu. 2. Przedmiot zamówienia obejmuje wykonanie następujących robót budowlanych: 2.1. wykonanie posadzek z wymianą warstw wyrównujących i wygładzających, 2.2. wykonanie wykończenia ścian, 2.3. wykonanie wykończenia sufitów, 2.4. montaż lamp oświetleniowych, 2.5. montaż drzwi i wydzieleni szklanych, 2.6. wywóz gruzu i roboty zabezpieczające 2.7.wymiana elementów instalacji alarmowej. 3. Szczegółowy zakres zamówienia został określony w załączniku nr 4 do SWZ - dokumentacja techniczna składająca się z następujących opracowań: 3.1. Dokumentacja projektowa, 3.2. Specyfikacje techniczne wykonania i odbioru robót, 3.3. Przedmiar robót.`
   - `1. Nazwa zamówienia: Modernizacja i dostosowanie pomieszczeń Pedagogicznej Biblioteki Wojewódzkiej w Nowym Sączu Filia w Nowym Targu. 2. Przedmiot zamówienia obejmuje wykonanie następujących robót budowlanych: 2.1. wykonanie posadzek z wymianą warstw wyrównujących i wygładzających, 2.2. wykonanie wykończenia ścian, 2.3. wykonanie wykończenia sufitów, 2.4. montaż lamp oświetleniowych, 2.5. montaż drzwi i wydzieleni szklanych, 2.6. wywóz gruzu i roboty zabezpieczające 2.7.wymiana elementów instalacji alarmowej. 3. Szczegółowy zakres zamówienia został określony w załączniku nr 4 do SWZ - dokumentacja techniczna składająca się z następujących opracowań: 3.1. Dokumentacja projektowa, 3.2. Specyfikacje techniczne wykonania i odbioru robót, 3.3. Przedmiar robót. 4. Okres realizacji zamówienia: do 2024-12-20`
   - `ze względu na  zmniejszenie ilości pracujących sobót zmniejszeniu uległo wynagrodzenie Wykonawcy.`
+- `staging_columns`:
+  - `cpn_change_contract_description_after_change`
 
 ## 5.4.6
 - `col_name`: `section_5_4_6`
@@ -488,6 +590,8 @@ column level and described in the column-level documentation.
   - `269295,61`
 - `parser`:
   - `fn`: `parse_pln_value`
+- `staging_columns`:
+  - `cpn_change_value_amount`
 
 ## 5.4.7
 - `col_name`: `section_5_4_7`
@@ -497,6 +601,8 @@ column level and described in the column-level documentation.
   - `PLN`
 - `parser`:
   - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cpn_change_value_currency`
 
 ## 5.4.8
 - `col_name`: `section_5_4_8`
@@ -507,6 +613,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cpn_change_increased_contract_price`
 
 ## 5.5
 - `col_name`: `section_5_5`
@@ -521,6 +629,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_5_5_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cpn_total_paid_amount`
+  - `cpn_total_paid_currency`
 
 ## 5.6
 - `col_name`: `section_5_6`
@@ -531,6 +642,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cpn_contract_completed_properly`
 
 ## 5.7
 - `col_name`: `section_5_7`
@@ -540,3 +653,5 @@ column level and described in the column-level documentation.
   - `nie dotyczy`
   - `w zakresie zatrudnienia na podstawie stosunku pracy, w okolicznościach, o których mowa w art. 95 ustawy`
   - `obejmujące, zgodnie z art. 96 ustawy: - aspekty społeczne`
+- `staging_columns`:
+  - `cpn_monitored_contract_execution_requirements`

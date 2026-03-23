@@ -41,3 +41,12 @@ sources:
 
       - name: contract_performing_notice_change_matter
         description: Raw ContractPerformingNotice change_matter relation copied from upstream Silver.
+
+      - name: notice_update_notice_core
+        description: Raw NoticeUpdateNotice core relation copied from upstream Silver.
+
+      - name: notice_update_notice_part
+        description: Raw NoticeUpdateNotice part relation copied from upstream Silver.
+
+      - name: notice_update_notice_part_part
+        description: Raw NoticeUpdateNotice part_part relation copied from upstream Silver.

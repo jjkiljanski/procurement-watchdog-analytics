@@ -33,3 +33,12 @@ models:
 
   - name: local_raw__contract_performing_notice_change_matter
     description: DuckDB-only raw relation over local ContractPerformingNotice change_matter parquet.
+
+  - name: local_raw__notice_update_notice_core
+    description: DuckDB-only raw relation over local NoticeUpdateNotice core parquet.
+
+  - name: local_raw__notice_update_notice_part
+    description: DuckDB-only raw relation over local NoticeUpdateNotice part parquet.
+
+  - name: local_raw__notice_update_notice_part_part
+    description: DuckDB-only raw relation over local NoticeUpdateNotice part_part parquet.
