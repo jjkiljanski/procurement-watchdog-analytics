@@ -9,6 +9,8 @@ column level and described in the column-level documentation.
   - `Postępowanie prowadzone jest samodzielnie przez zamawiającego`
   - `Postępowanie prowadzi podmiot, któremu powierzono przeprowadzenie postępowania`
   - `Postępowanie prowadzą zamawiający działający wspólnie`
+- `staging_columns`:
+  - `cn_procedure_conduct_mode`
 
 ## 1.2
 - `col_name`: `section_1_2`
@@ -18,6 +20,8 @@ column level and described in the column-level documentation.
   - `ZESPÓŁ SZKÓŁ TECHNICZNYCH I OGÓLNOKSZTAŁCĄCYCH IM. PROF. ZBIGNIEWA STRZELECKIEGO W SANDOMEIRZU`
   - `ZESPÓŁ OPIEKI ZDROWOTNEJ W ŚWIĘTOCHŁOWICACH SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ`
   - `ZESPÓŁ OPIEKI ZDROWOTNEJ W ŚWIĘTOCHŁOWICACH SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ W RESTRUKTURYZACJI`
+- `staging_columns`:
+  - `cn_client_name`
 
 ## 1.3
 - `col_name`: `section_1_3`
@@ -27,6 +31,8 @@ column level and described in the column-level documentation.
   - `Dział ZP Anna Wiącek`
   - `Sąd Okręgowy we Wrocławiu`
   - `Broker ubezpieczeniowy`
+- `staging_columns`:
+  - `cn_client_department`
 
 ## 1.4
 - `col_name`: `section_1_4`
@@ -41,6 +47,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_1_4_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `cn_client_national_id`
+  - `cn_client_national_id_type`
 
 ## 1.5.1
 - `col_name`: `section_1_5_1`
@@ -50,6 +59,8 @@ column level and described in the column-level documentation.
   - `ul. Słowackiego 37`
   - `ul. Chorzowska 38`
   - `Sądowa, 1`
+- `staging_columns`:
+  - `cn_client_street`
 
 ## 1.5.2
 - `col_name`: `section_1_5_2`
@@ -59,6 +70,8 @@ column level and described in the column-level documentation.
   - `Sandomierz`
   - `Świętochłowice`
   - `Wrocław`
+- `staging_columns`:
+  - `cn_client_city`
 
 ## 1.5.3
 - `col_name`: `section_1_5_3`
@@ -68,6 +81,8 @@ column level and described in the column-level documentation.
   - `27-600`
   - `41-605`
   - `50-046`
+- `staging_columns`:
+  - `cn_client_postal_code`
 
 ## 1.5.4
 - `col_name`: `section_1_5_4`
@@ -77,6 +92,8 @@ column level and described in the column-level documentation.
   - `świętokrzyskie`
   - `śląskie`
   - `dolnośląskie`
+- `staging_columns`:
+  - `cn_client_province`
 
 ## 1.5.5
 - `col_name`: `section_1_5_5`
@@ -84,6 +101,8 @@ column level and described in the column-level documentation.
 - `data_model`: `client`
 - `example_values`:
   - `Polska`
+- `staging_columns`:
+  - `cn_client_country`
 
 ## 1.5.6
 - `col_name`: `section_1_5_6`
@@ -98,6 +117,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_nuts3_code`
   - `section_1_5_6_name`:
     - `fn`: `parse_nuts3_name`
+- `staging_columns`:
+  - `cn_client_nuts3_code`
+  - `cn_client_nuts3_name`
 
 ## 1.5.7
 - `col_name`: `section_1_5_7`
@@ -107,6 +129,8 @@ column level and described in the column-level documentation.
   - `+48797637683`
   - `32 2455041`
   - `71-74-82-130`
+- `staging_columns`:
+  - `cn_client_phone`
 
 ## 1.5.8
 - `col_name`: `section_1_5_8`
@@ -116,6 +140,8 @@ column level and described in the column-level documentation.
   - `32 2453440`
   - `757411541`
   - `+48 67 263 53 05`
+- `staging_columns`:
+  - `cn_client_fax`
 
 ## 1.5.9
 - `col_name`: `section_1_5_9`
@@ -125,6 +151,8 @@ column level and described in the column-level documentation.
   - `kierownik@zstio.pl`
   - `zamowieniapubliczne@zoz.net.pl`
   - `zamowienia.publiczne@wroclaw.so.gov.pl`
+- `staging_columns`:
+  - `cn_client_email`
 
 ## 1.5.10
 - `col_name`: `section_1_5_10`
@@ -134,6 +162,8 @@ column level and described in the column-level documentation.
   - `www.zstio.pl`
   - `www.zoz.net.pl`
   - `www.wroclaw.so.gov.pl`
+- `staging_columns`:
+  - `cn_client_website`
 
 ## 1.6
 - `col_name`: `section_1_6`
@@ -143,6 +173,8 @@ column level and described in the column-level documentation.
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - jednostka samorządu terytorialnego`
   - `Zamawiający publiczny - osoba prawna, o której mowa w art. 4 pkt 3 ustawy (podmiot prawa publicznego)`
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - organ władzy publicznej - organ kontroli państwowej i ochrony prawa oraz sąd i trybunał`
+- `staging_columns`:
+  - `cn_buyer_type`
 
 ## 1.7
 - `col_name`: `section_1_7`
@@ -152,6 +184,8 @@ column level and described in the column-level documentation.
   - `Edukacja`
   - `Zdrowie`
   - `Inna działalność`
+- `staging_columns`:
+  - `cn_buyer_main_activity`
 
 ## 1.9
 - `col_name`: `section_1_9`
@@ -161,6 +195,15 @@ column level and described in the column-level documentation.
   - `Zakład Karny w Opolu Lubelskim przygotowuje i przeprowadza w imieniu i na rzecz wszystkich Zamawiających, postępowanie o udzielenie zamówienia publicznego, którego przedmiotem są „Zakup i sukcesywne dostawy margaryny dosmarowania pieczywa” do zakładów karnych i aresztów śledczych podległych pod Okręgowy Inspektorat Służby Więziennej w Lublinie`
   - `Gmina Myślenice: prowadzi postępowania w celu wyboru najkorzystniejszej oferty, wybór oferty Przedszkole Samorządowe w Trzemeśni -  opisu przedmiotu zamówienia, określenie wartości szacunkowej oraz udzieli zamówienia`
   - `Gmina Myślenice: prowadzi postępowania w celu wyboru najkorzystniejszej oferty, wybór oferty ZPO w Drogini -  opisu przedmiotu zamówienia, określenie wartości szacunkowej oraz udzieli zamówienia`
+- `staging_columns`:
+  - `cn_joint_procurement_responsibility_split`
+
+## 1.10
+- `col_name`: `section_1_10`
+- `section_header`: `Właściwe przepisy w przypadku wspólnego udzielania zamówień z zamawiającymi z innych państw członkowskich UE`
+- `data_model`: `core`
+- `example_values`:
+  - `nie dotyczy`
 
 ## 1.11.1
 - `col_name`: `section_1_11_1`
@@ -170,6 +213,8 @@ column level and described in the column-level documentation.
   - `Inter-Broker sp. z o.o.`
   - `Supra Brokers S.A.`
   - `Postępowanie prowadzi Gmina Miasto Rzeszów - Urząd Miasta Rzeszowa na rzecz Zamawiającego Domu Pomocy Społecznej dla Osób Przewlekle Psychicznie Chorych w Rzeszowie, ul. Załęska 7a`
+- `staging_columns`:
+  - `cn_procedure_operator_name`
 
 ## 1.11.2
 - `col_name`: `section_1_11_2`
@@ -184,6 +229,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_1_11_2_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `cn_procedure_operator_national_id`
+  - `cn_procedure_operator_national_id_type`
 
 ## 1.11.3
 - `col_name`: `section_1_11_3`
@@ -193,6 +241,8 @@ column level and described in the column-level documentation.
   - `Żółkiewskiego 5`
   - `Al. Śląska 1`
   - `ul. Rynek 1`
+- `staging_columns`:
+  - `cn_procedure_operator_street`
 
 ## 1.11.4
 - `col_name`: `section_1_11_4`
@@ -202,6 +252,8 @@ column level and described in the column-level documentation.
   - `Toruń`
   - `Wrocław`
   - `Rzeszów`
+- `staging_columns`:
+  - `cn_procedure_operator_city`
 
 ## 1.11.5
 - `col_name`: `section_1_11_5`
@@ -211,6 +263,8 @@ column level and described in the column-level documentation.
   - `87-100`
   - `54-118`
   - `35-064`
+- `staging_columns`:
+  - `cn_procedure_operator_postal_code`
 
 ## 1.11.6
 - `col_name`: `section_1_11_6`
@@ -220,6 +274,8 @@ column level and described in the column-level documentation.
   - `kujawsko-pomorskie`
   - `dolnośląskie`
   - `podkarpackie`
+- `staging_columns`:
+  - `cn_procedure_operator_province`
 
 ## 1.11.7
 - `col_name`: `section_1_11_7`
@@ -227,6 +283,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `Polska`
+- `staging_columns`:
+  - `cn_procedure_operator_country`
 
 ## 1.11.8
 - `col_name`: `section_1_11_8`
@@ -241,6 +299,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_nuts3_code`
   - `section_1_11_8_name`:
     - `fn`: `parse_nuts3_name`
+- `staging_columns`:
+  - `cn_procedure_operator_nuts3_code`
+  - `cn_procedure_operator_nuts3_name`
 
 ## 1.11.9
 - `col_name`: `section_1_11_9`
@@ -250,6 +311,8 @@ column level and described in the column-level documentation.
   - `56 6548260`
   - `44 683 54 03`
   - `/94/ 714 02 71`
+- `staging_columns`:
+  - `cn_procedure_operator_phone`
 
 ## 1.11.10
 - `col_name`: `section_1_11_10`
@@ -259,6 +322,8 @@ column level and described in the column-level documentation.
   - `566584260`
   - `632416580`
   - `943161769`
+- `staging_columns`:
+  - `cn_procedure_operator_fax`
 
 ## 1.11.11
 - `col_name`: `section_1_11_11`
@@ -268,6 +333,8 @@ column level and described in the column-level documentation.
   - `interbroker@interbroker.pl`
   - `s.ruskiewicz@suprabrokers.pl`
   - `przetargi@erzeszow.pl`
+- `staging_columns`:
+  - `cn_procedure_operator_email`
 
 ## 1.11.12
 - `col_name`: `section_1_11_12`
@@ -277,6 +344,8 @@ column level and described in the column-level documentation.
   - `www.interbroker.pl`
   - `www.suprabrokers.pl`
   - `https://bip.erzeszow.pl`
+- `staging_columns`:
+  - `cn_procedure_operator_website`
 
 ## 2.1
 - `col_name`: `section_2_1`
@@ -285,6 +354,8 @@ column level and described in the column-level documentation.
 - `example_values`:
   - `Zamówienia publicznego`
   - `Umowy ramowej`
+- `staging_columns`:
+  - `cn_notice_subject`
 
 ## 2.2
 - `col_name`: `section_2_2`
@@ -295,6 +366,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_is_social_service_notice`
 
 ## 2.3
 - `col_name`: `section_2_3`
@@ -304,6 +377,8 @@ column level and described in the column-level documentation.
   - `„Zorganizowanie kompleksowej usługi przygotowania i realizacji kursów/szkoleń specjalistycznych/seminariów/wyjazdów dla nauczycieli i uczniów  ZSTiO w Sandomierzu”`
   - `Świadczenie usług odbioru, transportu i unieszkodliwiania odpadów medycznych z obiektów Zespołu Opieki Zdrowotnej w Świętochłowicach sp. z o.o. w restrukturyzacji`
   - `Świadczenie usług gastronomicznych w zakresie przygotowania i dystrybucji posiłków na potrzeby Zespołu Opieki Zdrowotnej w Świętochłowicach sp. z o.o. w restrukturyzacji`
+- `staging_columns`:
+  - `cn_contract_title`
 
 ## 2.4
 - `col_name`: `section_2_4`
@@ -313,6 +388,8 @@ column level and described in the column-level documentation.
   - `ocds-148610-83fd4966-0241-4a57-8823-3b202a86afbf`
   - `ocds-148610-adc3e525-a98f-4bf0-9f77-18bad9062000`
   - `ocds-148610-93b308dc-be64-4bae-96a1-57a2e397956d`
+- `staging_columns`:
+  - `cn_procedure_ocid`
 
 ## 2.5
 - `col_name`: `section_2_5`
@@ -322,6 +399,8 @@ column level and described in the column-level documentation.
   - `2025/BZP 00000033`
   - `2025/BZP 00000036`
   - `2025/BZP 00000037`
+- `staging_columns`:
+  - `cn_notice_number`
 
 ## 2.6
 - `col_name`: `section_2_6`
@@ -329,6 +408,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `01`
+- `staging_columns`:
+  - `cn_notice_version`
 
 ## 2.7
 - `col_name`: `section_2_7`
@@ -340,6 +421,8 @@ column level and described in the column-level documentation.
   - `2025-01-04`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `cn_notice_date`
 
 ## 2.8
 - `col_name`: `section_2_8`
@@ -350,6 +433,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_is_in_procurement_plan`
 
 ## 2.9
 - `col_name`: `section_2_9`
@@ -359,6 +444,8 @@ column level and described in the column-level documentation.
   - `2024/BZP 00027746/07/P`
   - `2024/BZP 00070095/01/P`
   - `2025/BZP 00000077/01/P`
+- `staging_columns`:
+  - `cn_procurement_plan_number`
 
 ## 2.10
 - `col_name`: `section_2_10`
@@ -368,6 +455,8 @@ column level and described in the column-level documentation.
   - `1.3.4 Świadczenie usług ochrony mienia Zarządu Zieleni Miejskiej w Elblągu`
   - `1.3.4 Obsługa prawna`
   - `1.2.1 „Zakup i dostawę pomocy dydaktycznych i wyposażenia do przedszkola i oddziałów przedszkolnych w Gminie Łobżenica” w ramach projektu pn.: „Gmina Łobżenica stawia na przedszkolaków”`
+- `staging_columns`:
+  - `cn_procurement_plan_item_identifier`
 
 ## 2.11
 - `col_name`: `section_2_11`
@@ -378,6 +467,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_is_reserved_contract`
 
 ## 2.12
 - `col_name`: `section_2_12`
@@ -389,6 +480,8 @@ column level and described in the column-level documentation.
   - `art. 94 ust. 1 pkt 1) ustawy art. 94 ust. 1 pkt 2) ustawy art. 94 ust. 1 pkt 3) ustawy art. 94 ust. 1 pkt 4) ustawy art. 94 ust. 1 pkt 7) ustawy art. 94 ust. 1 pkt 8) ustawy art. 94 ust. 1 pkt 9) ustawy art. 94 ust. 1 pkt 10) ustawy`
 - `parser`:
   - `fn`: `parse_list_from_newlines`
+- `staging_columns`:
+  - `cn_reserved_contract_eligible_contractor_types`
 
 ## 2.13
 - `col_name`: `section_2_13`
@@ -399,6 +492,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_is_reserved_social_service_contract`
 
 ## 2.14
 - `col_name`: `section_2_14`
@@ -409,6 +504,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_is_eu_funded`
 
 ## 2.15
 - `col_name`: `section_2_15`
@@ -418,6 +515,8 @@ column level and described in the column-level documentation.
   - `„Profesjonalni fachowcy w sandomierskiej „Budowlance”” nr FESW.08.04-IZ.00-003/24, z Programu Regionalnego Fundusze Europejskie dla Świętokrzyskiego 2021-2027. Priorytet 8. Edukacja na wszystkich etapach życia, Działanie 08.04 Rozwój szkolnictwa branżowego współfinansowanego ze środków Unii Europejskiej w ramach Europejskiego Funduszu Społecznego Plus (EFS+).`
   - `Program Fundusze Europejskie dla Wielkopolski 2021-2027 (FEW) współfinansowanego ze środków Europejskiego Funduszu Społecznego Plus (EFS+)`
   - `Krajowy Plan Odbudowy, Dziedzina: Energetyka odnawialna (słoneczna), Tytuł: Utworzenie i wsparcie funkcjonowania Branżowego Centrum Umiejętności dla branży elektroenergetycznej w dziedzinie energetyka odnawialna (słoneczna)`
+- `staging_columns`:
+  - `cn_eu_funding_program_name`
 
 ## 2.16
 - `col_name`: `section_2_16`
@@ -427,6 +526,8 @@ column level and described in the column-level documentation.
   - `Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy`
   - `Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy`
   - `Zamówienie udzielane jest w trybie partnerstwa innowacyjnego na podstawie: art. 297 ustawy`
+- `staging_columns`:
+  - `cn_award_procedure_legal_basis`
 
 ## 2.17
 - `col_name`: `section_2_17`
@@ -435,6 +536,8 @@ column level and described in the column-level documentation.
 - `example_values`:
   - `Umowa ramowa udzielana jest w trybie podstawowym na podstawie: art. 311 ust. 1 pkt 2 ustawy  w zw. z art. 275 pkt 1 ustawy`
   - `Umowa ramowa udzielana jest w trybie podstawowym na podstawie: art. 311 ust. 1 pkt 2 ustawy  w zw. z art. 275 pkt 2 ustawy`
+- `staging_columns`:
+  - `cn_framework_agreement_legal_basis`
 
 ## 3.1
 - `col_name`: `section_3_1`
@@ -444,6 +547,8 @@ column level and described in the column-level documentation.
   - `https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-83fd4966-0241-4a57-8823-3b202a86afbf`
   - `https://zoz.logintrade.net/rejestracja/ustawowe.html`
   - `https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-b26097a3-a718-48ce-9ae5-4f2ff1a6499c`
+- `staging_columns`:
+  - `cn_procedure_website_url`
 
 ## 3.2
 - `col_name`: `section_3_2`
@@ -454,6 +559,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_restricted_procurement_documents`
 
 ## 3.3
 - `col_name`: `section_3_3`
@@ -463,6 +570,8 @@ column level and described in the column-level documentation.
   - `Z powodu ochrony poufnego charakteru informacji Specyfikacja Warunków Zamówienia zwana dalej SWZ, na podstawie art. 280 ust. 3 ustawy została podzielona na część zawierającą informacje jawne i część zawierającą informacje poufne. Treść SWZ nie objęta poufnością jest dostępna na stronie internetowej, natomiast część SWZ objęta poufnością zostanie udostępniona Wykonawcy po złożeniu wniosku o udostępnienie. W treści wniosku Wykonawca zobowiązany jest wskazać swoje dane identyfikacyjne oraz nr postępowania/SWZ, którego wniosek dotyczy.  Wykonawca zobowiązany jest do zachowania w tajemnicy treści udostępnionych informacji`
   - `4.	Zamawiającego informuje o charakterze poufnym części dokumentacji SWZ. Wykonawca może uzyskać dostęp do dokumentacji poufnej poprzez złożenie wniosku (załącznik nr 7 do SWZ) o ich przesłanie w formie elektronicznej, przekazując wniosek za pośrednictwem poczty elektronicznej: kaniewska@jarjarocin.pl.`
   - `Zamawiający udostępnia dokumentację techniczną na wniosek zainteresowanego`
+- `staging_columns`:
+  - `cn_restricted_documents_access_info`
 
 ## 3.4
 - `col_name`: `section_3_4`
@@ -473,6 +582,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_requires_electronic_submission`
 
 ## 3.5
 - `col_name`: `section_3_5`
@@ -482,6 +593,8 @@ column level and described in the column-level documentation.
   - `www.zstio.pl`
   - `https://zoz.logintrade.net/rejestracja/ustawowe.html, email:zamowieniapubliczne@zoz.net.pl`
   - `https://zoz.logintrade.net/rejestracja/ustawowe.html, e-mail:zamowieniapubliczne@zoz.net.pl`
+- `staging_columns`:
+  - `cn_electronic_communication_url`
 
 ## 3.6
 - `col_name`: `section_3_6`
@@ -491,6 +604,8 @@ column level and described in the column-level documentation.
   - `1.	Postępowanie prowadzone jest w języku polskim w formie elektronicznej za pośrednictwem Platformy e-Zamówienia.2.Komunikacja o udzielenie zamówienia oraz informacji między zamawiającym a wykonawcami przekazywane winny być za pośrednictwem Platformy e-Zamówienia przy użyciu środków komunikacji elektronicznej. 3.W postępowaniu o udzielenie zamówienia publicznego komunikacja między Zamawiającym a wykonawcami odbywa się przy użyciu Platformy e-Zamówienia, która jest dostępna pod adresem https://ezamowienia.gov.pl.4.	Za datę przekazania (wpływu) oświadczeń, wniosków, zawiadomień oraz informacji przyjmuje się datę ich przesłania za pośrednictwem Platformy e-Zamówienia.5.	W przypadku problemów technicznych i awarii związanych z funkcjonowaniem Platformy e-Zamówienia użytkownicy mogą skorzystać ze wsparcia technicznego dostępnego pod numerem telefonu (32) 77 88 999 lub drogą elektroniczną poprzez formularz udostępniony na stronie internetowej  6.	W szczególnie uzasadnionych przypadkach uniemożliwiających komunikację Wykonawcy i Zamawiającego za pośrednictwem Platformy e-Zamówienia, Zamawiający dopuszcza komunikację za pośrednictwem poczty elektronicznej: kierownik@zstio.pl .7.Możliwość korzystania w postępowaniu z „Formularzy do komunikacji” w pełnym zakresie wymaga posiadania konta „Wykonawcy” na Platformie e- Zamówienia.8.Do korzystania z „Formularzy do komunikacji” służących do zadawania pytań dotyczących treści dokumentów zamówienia wystarczające jest posiadanie tzw. konta uproszczonego na Platformie e-Zamówienia.9.Minimalne wymagania techniczne dotyczące sprzętu używanego w celu korzystania z usług Platformy e-Zamówienia oraz informacje dotyczące specyfikacji połączenia określa Regulamin Platformy e-Zamówienia.10.Wykonawca, przystępując do niniejszego postępowania o udzielenie zamówienia publicznego:1)	akceptuje warunki korzystania z Platformy e- Zamówienia określone w Regulaminie Platformy e-Zmówienia oraz uznaje go za wiążący,2)	zapoznał i stosuje się do Instrukcji składania ofert/wniosków dostępnej pod adresem: https://ezamowienia.gov.pl.  11.Zamawiający nie ponosi odpowiedzialności za złożenie oferty w sposób niezgodny z Instrukcją korzystania z Platformy e-Zamówienia.12.Zgodnie z art. 284 ustawy Pzp, Wykonawca może zwrócić się do Zamawiającego z wnioskiem o wyjaśnienie odpowiednio treści SWZ.13.Zamawiający jest obowiązany udzielić wyjaśnień niezwłocznie, jednak nie później niż na 2 dni przed upływem terminu składania ofert, pod warunkiem że wniosek o wyjaśnienie treści SWZ wpłynął do Zamawiającego nie później niż na 4 dni przed upływem terminu składania ofert.14.	Jeżeli Zamawiający nie udzieli wyjaśnień w terminie, o którym mowa w ust. 18, przedłuża termin składania odpowiednio ofert o czas niezbędny do zapoznania się wszystkich zainteresowanych Wykonawców z wyjaśnieniami niezbędnymi do należytego przygotowania i złożenia ofert.20.W przypadku gdy wniosek o wyjaśnienie treści SWZ nie wpłynął w terminie, o którym mowa w ust. 18, Zamawiający nie ma obowiązku udzielania wyjaśnień SWZ oraz obowiązku przedłużenia terminu składania ofert.21.Przedłużenie terminu składania ofert, o których mowa w ust. 18, nie wpływa na bieg terminu składania wniosku o wyjaśnienie treści SWZ.15.Treść zapytań wraz z wyjaśnieniami Zamawiający udostępnia, bez ujawniania źródła zapytania, na Platformie e- Zamówienia, w zakładce prowadzonego postępowania. 16.W zakresie kwestii nieuregulowanych niniejszą SWZ obowiązują przepisy ustawy Pzp oraz Rozporządzenia Prezesa Rady Ministrów z dnia z dnia 30 grudnia 2020 r. w sprawie sposobu sporządzania i przekazywania informacji oraz wymagań technicznych dla dokumentów elektronicznych oraz środków komunikacji elektronicznej w postępowaniu o udzielenie zamówienia publicznego lub konkursie`
   - `1. Ofertę składa się pod rygorem nieważności, zgodnie z wyborem Wykonawcy: a) w formie elektronicznej (oznacza to postać elektroniczną opatrzoną kwalifikowanym podpisem elektronicznym), lub b) w postaci elektronicznej opatrzonej podpisem zaufanym lub podpisem osobistym -wyłącznie poprzez Platformę przetargową. 2. Wykonawca zamierzający złożyć ofertę (wyłącznie poprzez Platformę przetargową) – zobowiązany jest zapoznać się z instrukcjami użytkowników Platformy przetargowej - dostępnymi pod adresem: https://zoz.logintrade.net/rejestracja/instrukcje.html oraz zaakceptować regulamin korzystania z Platformy przetargowej dostępny pod adresem: https://zoz.logintrade.net/rejestracja/regulamin.html 3. Złożenie oferty poprzez Platformę przetargową oznacza akceptację regulaminu, o którym mowa w pkt 1 niniejszego rozdziału SWZ. 4. Wymagania techniczne związane z korzystaniem z Platformy przetargowej – wskazane są na stronie internetowej Platformy przetargowej - pod adresem:  https://zoz.logintrade.net/rejestracja/instrukcje.html 5. Wsparcia technicznego w zakresie działania Platformy przetargowej udziela jej dostawca, tj. Logintrade S.A., ul. Legnicka 57d, lokal B/J, 54-203Wrocław, nr tel. +48 71 787 35 34, e-mail: helpdesk@logintrade.net od poniedziałku do piątku (dni robocze) w godz. 8:00 - 16:00. 6. Sposoby złożenia oferty za pośrednictwem Platformy przetargowej oraz potwierdzenia złożenia oferty (w zależności od wyboru opcji z logowaniem lub bez logowania), zostały opisane w Instrukcjach użytkowników Platformy przetargowej. 7. Oferty, oświadczenie, o którym mowa w art. 117 ust. 4 ustawy, oraz zobowiązanie podmiotu udostępniającego zasoby, o którym mowa w art. 118 ust. 3 ustawy, zwane dalej „zobowiązaniem podmiotu udostępniającego zasoby”, przedmiotowe środki dowodowe, pełnomocnictwo, sporządza się w postaci elektronicznej, w formatach danych określonych w przepisach wydanych na podstawie art.18 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne, z zastrzeżeniem formatów, o których mowa w art. 66 ust. 1 ustawy, z uwzględnieniem rodzaju przekazywanych danych.`
   - `1. Ofertę składa się pod rygorem nieważności, zgodnie z wyborem Wykonawcy: a) w formie elektronicznej (oznacza to postać elektroniczną opatrzoną kwalifikowanym podpisem elektronicznym), lub b) w postaci elektronicznej opatrzonej podpisem zaufanym lub podpisem osobistym -wyłącznie poprzez Platformę przetargową.2. Wykonawca zamierzający złożyć ofertę (wyłącznie poprzez Platformę przetargową) – zobowiązany jest zapoznać się z instrukcjami użytkowników Platformy przetargowej - dostępnymi pod adresem https://zoz.logintrade.net/rejestracja/instrukcje.html oraz zaakceptować regulamin korzystania z Platformy przetargowej dostępny pod adresem:https://zoz.logintrade.net/rejestracja/regulamin.html3. Złożenie oferty poprzez Platformę przetargową oznacza akceptację regulaminu, o którym mowa w pkt 1 niniejszego rozdziału SWZ. 4. Wymagania techniczne związane z korzystaniem z Platformy przetargowej – wskazane są na stronie internetowej Platformy przetargowej - pod adresem: https://zoz.logintrade.net/rejestracja/instrukcje.html 5. Wsparcia technicznego w zakresie działania Platformy przetargowej udziela jej dostawca, tj. Logintrade S.A., ul. Legnicka 57d, lokal B/J, 54-203 Wrocław, nr tel. +48 71 787 35 34, e-mail: helpdesk@logintrade.netod poniedziałku do piątku (dni robocze) w godz. 8:00 - 16:00. 6. Sposoby złożenia oferty za pośrednictwem Platformy przetargowejoraz potwierdzenia złożenia oferty (w zależności od wyboru opcji z logowaniem lub bez logowania), zostały opisane w Instrukcjach użytkowników Platformy przetargowej. 7. Oferty, oświadczenie, o którym mowa w art. 117 ust. 4 ustawy, oraz zobowiązanie podmiotu udostępniającego zasoby, o którym mowa w art. 118 ust. 3 ustawy, zwane dalej „zobowiązaniem podmiotu udostępniającegozasoby”, przedmiotowe środki dowodowe, pełnomocnictwo, sporządza się w postaci elektronicznej, w formatach danych określonych w przepisach wydanych na podstawie art. 18 ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne, z zastrzeżeniem formatów, o których mowa w art. 66 ust. 1 ustawy, z uwzględnieniem rodzaju przekazywanych danych.`
+- `staging_columns`:
+  - `cn_electronic_communication_requirements`
 
 ## 3.7
 - `col_name`: `section_3_7`
@@ -500,6 +615,8 @@ column level and described in the column-level documentation.
   - `https://ezamowienia.gov.pl`
   - `https://oneplace.marketplanet.pl/przygotuj-stanowisko-pc-wykonujac-ponizsze-kroki`
   - `https://zsm-chorzow.ezamawiajacy.pl/pn/zsm-chorzow/demand/188487/notice/public/details`
+- `staging_columns`:
+  - `cn_non_general_tools_access_url`
 
 ## 3.8
 - `col_name`: `section_3_8`
@@ -510,6 +627,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_requires_non_general_electronic_tools`
 
 ## 3.9
 - `col_name`: `section_3_9`
@@ -517,6 +636,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `https://platformazakupowa.pl/pn/wolow;`
+- `staging_columns`:
+  - `cn_non_general_tools_access_method`
 
 ## 3.10
 - `col_name`: `section_3_10`
@@ -526,6 +647,8 @@ column level and described in the column-level documentation.
   - `zamawiający wymaga przedstawienia modelu fizycznego, modelu w skali lub próbki, których nie można przekazać przy użyciu środków komunikacji elektronicznej (art. 65 ust. 1 pkt 4 ustawy)`
   - `wyspecjalizowany charakter zamówienia, użycie środków komunikacji elektronicznej wymaga narzędzi, urządzeń lub formatów plików, które nie są ogólnie dostępne lub nie są obsługiwane za pomocą ogólnie dostępnych aplikacji (art. 65 ust. 1 pkt 1 ustawy)`
   - `użycie środków komunikacji elektronicznej wymaga pozyskania przez zamawiającego specjalistycznego sprzętu biurowego (art. 65 ust. 1 pkt 3 ustawy)`
+- `staging_columns`:
+  - `cn_non_electronic_communication_reason`
 
 ## 3.11
 - `col_name`: `section_3_11`
@@ -535,6 +658,8 @@ column level and described in the column-level documentation.
   - `Zamawiający działając na podstawie art. 65 ust. 1 pkt 4) Ustawy Pzp odstępuje od użycia środków komunikacji elektronicznej w zakresie przedstawienia próbki. Próbki należy przesłać najpóźniej do dnia i godziny terminu składania ofert z podaniem nazwy i adresu Wykonawcy na adres wskazany w SWZ.Próbki powinny być zapakowane i opisane w sposób pozwalający na jednoznaczne ustalenie, której pozycji dotyczą. Próbki zostaną sprawdzone w toku badania i oceny ofert pod kątem zgodności parametrów oferowanego produktu z wymogami określonymi w opisie przedmiotu zamówienia w SWZ.`
   - `Zamawiający działając na podstawie art. 65 ust. 1 pkt 4) Ustawy Pzp odstępuje od użycia środków komunikacji elektronicznej w zakresie przedstawienia próbki. Próbki należy przesłać najpóźniej do dnia i godziny terminu składania ofert z podaniem nazwy i adresu Wykonawcy na adres wskazany w SWZ. Próbki powinny być zapakowane i opisane w sposób pozwalający na jednoznaczne ustalenie, której pozycji dotyczą. Próbki zostaną sprawdzone w toku badania i oceny ofert pod kątem zgodności parametrów oferowanego produktu z wymogami określonymi w opisie przedmiotu zamówienia w SWZ.`
   - `Wykonawca zobowiązany jest złożyć wraz z ofertą próbki zaoferowanych produktów  (wg informacji z załącznika nr 5  do SWZ) w celu dokonania oceny zgodności zaoferowanego przedmiotu zamówienia z wymaganiami określonymi przez Zamawiającego w SWZ oraz dokonania oceny jakościowej. Egzemplarze produktów zostaną wykorzystane do oceny jakościowej i nie podlegają zwrotowi. Egzemplarze produktów, jako elementy oferty nie podlegają uzupełnieniu po upływie terminu składania ofert.  Próbki należy dosłać przed terminem składania ofert określonym w Dziale XXVIII ust. 1 do siedziby zamawiającego na adres:  Powiatowy Zakład Opieki Zdrowotnej, Kancelaria - pokój nr 245,  ul. Batalionów Chłopskich 6, 27-200 Starachowice.`
+- `staging_columns`:
+  - `cn_non_electronic_submission_method`
 
 ## 3.12
 - `col_name`: `section_3_12`
@@ -544,6 +669,8 @@ column level and described in the column-level documentation.
   - `Nie dotyczy`
   - `Zamawiający wymaga złożenia oferty w postaci katalogu elektronicznego`
   - `Zamawiający dopuszcza dołączenie katalogu elektronicznego do oferty`
+- `staging_columns`:
+  - `cn_electronic_catalog_requirement`
 
 ## 3.14
 - `col_name`: `section_3_14`
@@ -552,6 +679,8 @@ column level and described in the column-level documentation.
 - `example_values`:
   - `polski`
   - `polski angielski`
+- `staging_columns`:
+  - `cn_submission_languages`
 
 ## 3.15
 - `col_name`: `section_3_15`
@@ -561,6 +690,8 @@ column level and described in the column-level documentation.
   - `Od dnia 25 maja 2018 roku obowiązuje Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych)(Dz. Urz. UE L z 04.05.2016 r., Nr 119, s. 1), zwane w skrócie „RODO”, które stanowi podstawą prawą przetwarzania Państwa danych, w związku z powyższym  zgodnie z art. 12, art.13 ust. 1 i ust. 2, art. 14 informujemy o zasadach przetwarzania danych osobowych oraz o przysługujących prawach z tym związanych.1.	Administratorem Państwa danych osobowych jest Zespół Szkół Technicznych i Ogólnokształcących im. prof. Zbigniewa Strzeleckiego w Sandomierzu reprezentowany przez dyrektora szkoły, z siedzibą ul. Słowackiego 37, 27-600 Sandomierz, tel. 797 637 683, e-mail: sekretariat@zstio.pl. 2.	Z Inspektorem Ochrony Danych można skontaktować się poprzez adres e-mail: gradzinski@powiat.sandomierz.pl,tel. (+ 48 15) 832 33 78) lub pisemnie na adres siedziby administratora. 3.	Dane osobowe przetwarzane będą zgodnie z obowiązującymi przepisami prawa w celu realizacji ustawowych zadań szkoły oraz przepisów prawa i nie będą udostępniane innym podmiotom niż upoważnione na podstawie przepisów prawa:1)	na etapie postępowania o udzielenie zamówienia: na podstawie art. 6 ust. 1 lit. c RODO w związku z art. 2 ust. 1 pkt 1 ustawy z dnia 11 września 2019 r. Prawo zamówień publicznych (t.j. DZ. U z 2024 r., poz. 1320) w celu związanym z postępowaniem o udzielenie zamówienia publicznego poniżej 130 000 złotych, prowadzonym w trybie zapytania ofertowego, w celu realizacji umów zawartych z kontrahentami, której Pani/Pan jest stroną, obsługi gwarancyjnej i pogwarancyjnej, obsługi reklamacji i promocji, obsługi programów partnerskich lub do podjęcia niezbędnych działań, na Pani/Pana żądanie, przed zawarciem umowy;2)	na etapie zawierania umowy: na podstawie art. 6 ust. 1 lit. b RODO w celu zawarcia  i prawidłowego wykonania umowy, której przedmiotem jest: „Zorganizowanie kompleksowej usługi przygotowania i realizacji kursów/szkoleń specjalistycznych/seminariów/wyjazdów dla nauczycieli i uczniów  Zespołu Szkół Technicznych i Ogólnokształcących im. prof. Zbigniewa Strzeleckiego w Sandomierzu” w ramach realizacji projektu pn.: „Profesjonalni fachowcy w sandomierskiej „Budowlance”” nr FESW.08.04-IZ.00-003/24, z Programu Regionalnego Fundusze Europejskie dla Świętokrzyskiego 2021-2027. Priorytet 8. Edukacja na wszystkich etapach życia, Działanie 08.04 Rozwój szkolnictwa branżowego współfinansowanego ze środków Unii Europejskiej w ramach Europejskiego Funduszu Społecznego Plus (EFS+).3)	w pozostałych przypadkach Pani/Pana dane osobowe przetwarzane będą wyłącznie na podstawie wcześniej udzielonej zgody w zakresie i celu określonym w treści zgody na podstawie  art. 6 ust. 1 lit. a oraz art. 9 ust. 2 lit. a  Rozporządzenia – dotyczy to realizacji zadań statutowych i wypełnienia innych niż w ust. 3  pkt 1-3 obowiązków prawnych ciążących na Zespole Szkół Technicznych i Ogólnokształcących     im. prof. Zbigniewa Strzeleckiego w Sandomierzu.4.	Administrator będzie przetwarzał Pani/Pana dane zgodnie z prawem w zakresie związanym z realizacją powyższych celów.`
   - `Zgodnie z art. 13 ust. 1 i 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) (Dz. Urz. UE L 119 z 04.05.2016, str. 1), dalej „RODO”, informuję, że:administratorem Pani/Pana danych osobowych jest: Zarząd Zespołu Opieki Zdrowotnej w Świętochłowicach sp. z o.o. w restrukturyzacji z siedzibą w Świętochłowicach (kod pocztowy: 41-605) przy ul. Chorzowskiej 38;Administrator wyznaczył Inspektora Ochrony Danych, z którym może się Pani/Pan skontaktować w sprawach związanych z ochroną danych osobowych w następujący sposób:• pod adresem poczty elektronicznej: iodo@zoz.net.pl;• pisemnie na adres siedziby Administratora;Pani/Pana dane osobowe przetwarzane będą na podstawie art. 6 ust. 1 lit. c RODO w związku z przepisami ustawy z dnia 11 września 2019 r. – Prawo zamówień publicznych (Dz.U. z 2024 r. poz. 1320 z późn. zm) dalej „ustawa Pzp” w celu przeprowadzenia przedmiotowego postępowania o udzielenie zamówienia publicznego oraz jego rozstrzygnięcia, jak również zawarcia umowy w sprawie zamówienia publicznego i jego archiwizacji;odbiorcami Pani/Pana danych osobowych będą:• osoby lub podmioty, którym udostępniona zostanie dokumentacja postępowania w oparciu o art. 18 oraz art. 74 ust. 1 ustawy Pzp;• firma PZP24.pl sp. z o.o. oraz Logintrade S.A. z siedzibą we Wrocławiu przy ul. Legnickiej 57D lok. B/J, z którą administrator zawarł umowę na obsługę Platformy Przetargowej, na której prowadzone są postępowania o udzielenie zamówienia publicznego;• podmiot uprawniony do obsługi doręczeń (Poczta Polska S.A.);• podmioty, z którymi administrator zawarł umowę na świadczenie usług serwisowych dla użytkowanych w Zespole Opieki Zdrowotnej w Świętochłowicach sp. z o.o. w restrukturyzacji systemów informatycznych;Pani/Pana dane osobowe będą przechowywane jedynie w okresie niezbędnym do spełnienia celu, dla którego zostały zebrane, a następnie w celach archiwalnych przechowywane będą przez 5 lat, chyba że przepisy szczególne będą stanowić inaczej.obowiązek podania przez Panią/Pana danych osobowych bezpośrednio Pani/Pana dotyczących jest wymogiem ustawowym określonym w przepisach ustawy Pzp, związanym z udziałem w postępowaniu o udzielenie zamówienia publicznego; konsekwencje niepodania określonych danych wynikają z ustawy Pzp;w odniesieniu do Pani/Pana danych osobowych decyzje nie będą podejmowane w sposób zautomatyzowany, stosowanie do art. 22 RODO;posiada Pani/Pan:• na podstawie art. 15 RODO prawo dostępu do danych osobowych Pani/Pana dotyczących;• na podstawie art. 16 RODO prawo do sprostowania Pani/Pana danych osobowych z zastrzeżeniem, iż skorzystanie przez osobę, której dane osobowe dotyczą, z uprawnienia do sprostowania lub uzupełnienia, o którym mowa w art. 16 RODO, nie może skutkować zmianą wyniku postępowania o udzielenie zamówienia ani zmianą postanowień umowy w sprawie zamówienia publicznego w zakresie niezgodnym z ustawą;• na podstawie art. 18 RODO prawo żądania od administratora ograniczenia przetwarzania danych osobowych z zastrzeżeniem, iż w postępowaniu o udzielenie zamówienia zgłoszenie żądania ograniczenia przetwarzania, o którym mowa w art. 18 ust. 1 RODO, nie ogranicza przetwarzania danych osobowych do czasu zakończenia tego postępowania;• prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, gdy uzna Pani/Pan, że przetwarzanie danych osobowych Pani/Pana dotyczących narusza przepisy RODO;nie przysługuje Pani/Panu:• w związku z art. 17 ust. 3 lit. b, d lub e RODO prawo do usunięcia danych osobowych;• prawo do przenoszenia danych osobowych, o którym mowa w art. 20 RODO;• na podstawie art. 21 RODO prawo sprzeciwu, wobec przetwarzania danych osobowych, gdyż podstawą prawną przetwarzania Pani/Pana danych osobowych jest art. 6 ust. 1 lit. c RODO.`
   - `Zgodnie z art. 13 ust. 1 i 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych) (Dz. Urz. UE L 119 z 04.05.2016, str. 1), dalej „RODO”, informuję, że: administratorem Pani/Pana danych osobowych jest: Zarząd Zespołu Opieki Zdrowotnej w Świętochłowicach sp. z oo. w restrukturyzacji z siedzibą w Świętochłowicach (kod pocztowy: 41-605) przy ul. Chorzowskiej 38; Administrator wyznaczył Inspektora Ochrony Danych, z którym może się Pani/Pan skontaktować w sprawach związanych z ochroną danych osobowych w następujący sposób:• pod adresem poczty elektronicznej: iodo@zoz.net.pl;• pisemnie na adres siedziby Administratora; Pani/Pana dane osobowe przetwarzane będą na podstawie art. 6 ust. 1 lit. c RODO w związku z przepisami ustawy z dnia 11 września 2019 r. – Prawo zamówień publicznych (Dz.U. z 2024 r. poz. 1320 z późn. zm) dalej „ustawa Pzp” w celu przeprowadzenia przedmiotowego postępowania o udzielenie zamówienia publicznego oraz jego rozstrzygnięcia, jak również zawarcia umowy w sprawie zamówienia publicznego i jego archiwizacji; odbiorcami Pani/Pana danych osobowych będą:• osoby lub podmioty, którym udostępniona zostanie dokumentacja postępowania w oparciu o art. 18 oraz art. 74 ust. 1 ustawy Pzp;• firma PZP24.pl sp. z o.o. oraz Logintrade S.A. z siedzibą we Wrocławiu przy ul. Legnickiej 57D lok. B/J, z którą administrator zawarł umowę na obsługę Platformy Przetargowej, na której prowadzone są postępowania o udzielenie zamówienia publicznego; • podmiot uprawniony do obsługi doręczeń (Poczta Polska S.A.);• podmioty, z którymi administrator zawarł umowę na świadczenie usług serwisowych dla użytkowanych w Zespole Opieki Zdrowotnej w Świętochłowicach sp. z o.o. w restrukturyzacji systemów informatycznych;Pani/Pana dane osobowe będą przechowywane jedynie w okresie niezbędnym do spełnienia celu, dla którego zostały zebrane, a następnie w celach archiwalnych przechowywane będą przez 5 lat, chyba że przepisy szczególne będą stanowić inaczej. obowiązek podania przez Panią/Pana danych osobowych bezpośrednio Pani/Pana dotyczących jest wymogiem ustawowym określonym w przepisach ustawy Pzp, związanym z udziałem w postępowaniu o udzielenie zamówienia publicznego; konsekwencje niepodania określonych danych wynikają z ustawy Pzp; w odniesieniu do Pani/Pana danych osobowych decyzje nie będą podejmowane w sposób zautomatyzowany, stosowanie do art. 22RODO; posiada Pani/Pan:• na podstawie art. 15 RODO prawo dostępu do danych osobowych Pani/Pana dotyczących;• na podstawie art. 16 RODO prawo do sprostowania Pani/Pana danych osobowych z zastrzeżeniem, iż skorzystanie przez osobę, której dane osobowe dotyczą, z uprawnienia do sprostowania lub uzupełnienia, o którym mowa w art. 16 RODO, nie może skutkować zmianą wyniku postępowania o udzielenie zamówienia ani zmianą postanowień umowy w sprawie zamówienia publicznego w zakresie niezgodnym z ustawą;• na podstawie art. 18 RODO prawo żądania od administratora ograniczenia przetwarzania danych osobowych z zastrzeżeniem, iż w postępowaniu o udzielenie zamówienia zgłoszenie żądania ograniczenia przetwarzania, o którym mowa w art. 18 ust. 1 RODO, nie ogranicza przetwarzania danych osobowych do czasu zakończenia tego postępowania;• prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, gdy uzna Pani/Pan, że przetwarzanie danych osobowych Pani/Pana dotyczących narusza przepisy RODO; nie przysługuje Pani/Panu:• w związku z art. 17 ust. 3 lit. b, d lub e RODO prawo do usunięcia danych osobowych;• prawo do przenoszenia danych osobowych, o którym mowa w art. 20 RODO;• na podstawie art. 21 RODO prawo sprzeciwu, wobec przetwarzania danych osobowych, gdyż podstawą prawną przetwarzania Pani/Pana danych osobowych jest art. 6 ust. 1 lit. c RODO.`
+- `staging_columns`:
+  - `cn_gdpr_information_clause`
 
 ## 3.16
 - `col_name`: `section_3_16`
@@ -570,6 +701,8 @@ column level and described in the column-level documentation.
   - `7.	Przysługuje Pani/Panu prawo do:1)	żądania dostępu do treści swoich danych osobowych, w tym prawo do uzyskania kopii tych danych na podstawie art. 15 RODO;2)	sprostowania (poprawienia) danych na podstawie art. 16 RODO – w przypadku gdy dane są nieprawidłowe lub niekompletne;3)	usunięcia danych osobowych (tzw. „prawo do bycia zapomnianym") na podstawie art. 17 RODO;4)	ograniczenia przetwarzania danych na podstawie art. 18 RODO;5)	przenoszenia danych na podstawie art. 20 RODO;6)	wniesienia sprzeciwu wobec przetwarzania danych na podstawie art.21 RODO;7)	wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych z siedzibą ul. Stawki 2, 00-193 Warszawa w przypadku powzięcia informacji o niezgodnym z prawem przetwarzaniu Pani/Pana danych osobowych co narusza przepisy ogólnego rozporządzenia o ochronie danych osobowych z dnia 27 kwietnia 2016 r.8.	Tam, gdzie do przetwarzania danych osobowych konieczne jest wyrażenie zgody, zawsze ma Pani/Pan prawo nie wyrazić zgody, a w przypadku jej wcześniejszego wyrażenia, do cofnięcia zgody w dowolnym momencie. Skorzystanie z prawa cofnięcia zgody nie ma wpływu na przetwarzanie, które miało miejsce do momentu wycofania zgody – dane przed wycofaniem zgody nadal będą przetwarzane zgodnie z prawem.9.	Dane osobowe nie podlegają zautomatyzowanemu podejmowaniu decyzji a Administrator nie przewiduje profilowania na podstawie Państwa danych osobowych, chyba że takie działanie jest dozwolone przepisami prawa.10.	Dane osobowe nie będą przekazywane do państwa trzeciego/organizacji międzynarodowej poza Europejskim Obszarem Gospodarczym (czyli poza teren Unii Europejskiej, Islandii, Liechtensteinu, Norwegii). 11.	Podanie przez Panią/Pana prawidłowych danych osobowych jest obowiązkowe, w sytuacji gdy przesłankę przetwarzania danych osobowych stanowi przepis prawa lub zawarta między stronami umowa (wymóg ustawowy, umowny lub warunek zawarcia umowy). W przypadku niepodania danych nie będzie możliwy udział w postępowaniu o udzielenie zamówienia powyżej 130 000,00 złotych.12.	W przypadku, gdy będzie istniał obowiązek ustawowy, a nie poda Pani/Pan swoich danych, nie będziemy mogli zrealizować zadania ustawowego, co może skutkować konsekwencjami przewidzianymi przepisami prawa.13.	W przypadku, gdy będzie istniał wymóg umowny, a nie poda Pani/Pan swoich danych, nie będziemy mogli wykonać takiej umowy.14.	W przypadku, kiedy podanie danych będzie warunkiem zawarcia umowy, a nie poda Pani/Pan swoich danych, nie będziemy mogli zawrzeć takiej umowy.15.	W przypadku gdy przetwarzanie danych osobowych odbywa się na podstawie zgody osoby, podanie przez Państwa danych osobowych Administratorowi jest dobrowolne. Nie wyrażenie zgody lub jej cofnięcie jest równoznaczne, że dane nie będą przetwarzane w tym celu.`
   - `Informacja zawarta w pkt 7 Rozdziału I SWZ`
   - `- w związku z art. 17 ust. 3 lit. b), d) lub e) RODO prawo do usunięcia danychosobowych;- prawo do przenoszenia danych osobowych, o którym mowa w art. 20 RODO;- na podstawie art. 21 RODO prawo sprzeciwu, wobec przetwarzania danych osobowych, gdyż podstawą prawną przetwarzaniadanych osobowych jest art. 6 ust. 1 lit. c) RODO`
+- `staging_columns`:
+  - `cn_gdpr_limitation_clause`
 
 ## 4.1.1
 - `col_name`: `section_4_1_1`
@@ -580,6 +713,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_had_market_consultations`
 
 ## 4.1.2
 - `col_name`: `section_4_1_2`
@@ -589,6 +724,8 @@ column level and described in the column-level documentation.
   - `KA.262.15.2024`
   - `1/TP/2025`
   - `2/TP/2025`
+- `staging_columns`:
+  - `cn_reference_number`
 
 ## 4.1.3
 - `col_name`: `section_4_1_3`
@@ -598,6 +735,8 @@ column level and described in the column-level documentation.
   - `Usługi`
   - `Dostawy`
   - `Roboty budowlane`
+- `staging_columns`:
+  - `cn_contract_type`
 
 ## 4.1.4
 - `col_name`: `section_4_1_4`
@@ -608,6 +747,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_is_split_into_separate_lots`
 
 ## 4.1.5
 - `col_name`: `section_4_1_5`
@@ -622,6 +763,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_1_5_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cn_total_lots_value_amount`
+  - `cn_total_lots_value_currency`
 
 ## 4.1.6
 - `col_name`: `section_4_1_6`
@@ -636,6 +780,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_1_6_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cn_procedure_value_amount`
+  - `cn_procedure_value_currency`
 
 ## 4.1.7
 - `col_name`: `section_4_1_7`
@@ -648,6 +795,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_1_7_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cn_framework_agreement_value_amount`
+  - `cn_framework_agreement_value_currency`
 
 ## 4.1.8
 - `col_name`: `section_4_1_8`
@@ -658,6 +808,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_allows_partial_offers`
 
 ## 4.1.9
 - `col_name`: `section_4_1_9`
@@ -669,6 +821,8 @@ column level and described in the column-level documentation.
   - `4`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `cn_number_of_lots`
 
 ## 4.1.11
 - `col_name`: `section_4_1_11`
@@ -679,6 +833,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_limits_lots_per_bidder`
 
 ## 4.1.12
 - `col_name`: `section_4_1_12`
@@ -690,6 +846,8 @@ column level and described in the column-level documentation.
   - `1`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `cn_max_lots_per_bidder`
 
 ## 4.1.13
 - `col_name`: `section_4_1_13`
@@ -700,6 +858,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_social_environmental_label_requirements`
 
 ## 4.1.14
 - `col_name`: `section_4_1_14`
@@ -709,30 +869,46 @@ column level and described in the column-level documentation.
   - `Zamawiający uwzględnił wymagania w zakresie dostępności dla osób niepełnosprawnych oraz projektowania z przeznaczeniem dla wszystkich użytkowników, zgodnie z art. 100 ust. 1 ustawy`
   - `Zamawiający żąda określonej etykiety lub wskazuje mające zastosowanie wymagania określonej etykiety, zgodnie z art. 104 ustaw - etykiety  środowiskowej (tzw. Ekoetykieta)`
   - `Zamawiający żąda określonej etykiety lub wskazuje mające zastosowanie wymagania określonej etykiety, zgodnie z art. 104 ustaw - etykiety społecznej`
+- `staging_columns`:
+  - `cn_social_environmental_label_requirements_description`
 
 ## 4.2.2
 - `col_name`: `section_4_2_2`
 - `section_header`: `Krótki opis przedmiotu zamówienia`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Szkolenie z suchej zabudowy Bezpieczeństwo i higiena pracy i p.poż.; Dokumentacja budowlana oraz rysunek budowlany; Materiałoznawstwo; Montaż ścian działowych, przedścianek i ścian szybów instalacyjnych, sufitów podwieszanych; Montaż zabudowy poddasza z obróbką okna; Akustyka w systemach suchej zabudowy: Naprawa usterek wykonawczych;`
   - `Szkolenie z budownictwa pasywnego Budynki energooszczędne; System wentylacji; Mostki termiczne i sposoby ich likwidacji; Zalety budynków energooszczędnych; System ogrzewania w budownictwie energooszczędnym; Wykorzystanie energii ze źródeł odnawialnych w budownictwie energooszczędnym;`
   - `Szkolenie z systemów glazurniczych Przygotowanie podłoża; Kleje i fugi do montażu okładzin ceramicznych; Hydroizolacja oraz tarasy; Rodzaje maszyn, nowoczesne technologie, zasady bezpieczeństwa; Wykonanie hydroizolacji mineralnej oraz jednoskładnikowej wraz z montażem taśm; Wykonanie wylewki; Klejenie płytek na klejach; Techniki cięcia i fazowania;`
+- `staging_columns`:
+  - `cn_part_short_description`
+
+## 4.2.3
+- `col_name`: `section_4_2_3`
+- `section_header`: `Opis potrzeb Zamawiającego`
+- `data_model`: `part.core`
+- `example_values`:
+  - `Część 1 – Testy molekularne do badań – bakterie pokarmowe`
+  - `Część II - Testy molekularne do badań - wirusy oddechowe.`
+- `staging_columns`:
+  - `cn_part_buyer_needs_description`
 
 ## 4.2.4
 - `col_name`: `section_4_2_4`
 - `section_header`: `Zapotrzebowa`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `nie`
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_part_is_replenishment`
 
 ## 4.2.5
 - `col_name`: `section_4_2_5`
 - `section_header`: `Wartość części`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `25854,00                        PLN`
   - `149268,00                        PLN`
@@ -742,52 +918,63 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_2_5_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `cn_part_value_amount`
+  - `cn_part_value_currency`
 
 ## 4.2.6
 - `col_name`: `section_4_2_6`
 - `section_header`: `Główny kod CPV`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `80000000-4 - Usługi edukacyjne i szkoleniowe`
   - `90524000-6 - Usługi w zakresie odpadów medycznych`
   - `55322000-3 - Usługi gotowania posiłków`
 - `parser`:
   - `fn`: `parse_cpv_codes`
+- `staging_columns`:
+  - `cn_part_main_cpv_codes`
 
 ## 4.2.7
 - `col_name`: `section_4_2_7`
 - `section_header`: `Dodatkowy kod CPV`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `80500000-9 - Usługi szkoleniowe`
   - `80530000-8 - Usługi szkolenia zawodowego`
   - `80510000-2 - Usługi szkolenia specjalistycznego`
 - `parser`:
   - `fn`: `parse_cpv_codes`
+- `staging_columns`:
+  - `cn_part_additional_cpv_codes`
 
 ## 4.2.8
 - `col_name`: `section_4_2_8`
 - `section_header`: `Zamówienie obejmuje opcje`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Nie`
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_part_has_options`
 
 ## 4.2.9
 - `col_name`: `section_4_2_9`
 - `section_header`: `Rodzaj i maksymalna wartość opcji oraz okoliczności skorzystania z opcji`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Zamawiający, korzystając z prawa opcji, zastrzega sobie prawo do ograniczenia o 15 % maksymalnej wielkości przedmiotu zamówienia – tj. maksymalnej ilości zamawianego paliwa gazowego wskazanej w § 4 ust. 8 Wzoru Umowy (załącznik nr 3 do SWZ), a wskutek tego wszystkich z tym związanych parametrów dostaw paliwa gazowego wskazanych w Załączniku nr 2 do Umowy – Szczegółowy opis przedmiotu zamówienia,  w taki sposób, który może powodować zmniejszenie maksymalnej wartości umowy o nie więcej niż 15 %. Niewykonanie przez Zamawiającego umowy w zakresie pozostałych 15 % maksymalnej wartości przedmiotu zamówienia nie wymaga podania przyczyn i nie stanowi podstawy jego odpowiedzialności z tytułu niewykonania lub nienależytego wykonania umowy, a Wykonawcy nie przysługują żadne roszczenia z tego tytułu.`
   - `dodatkowe 1000 ton`
   - `5.	Zamawiający przewiduje zmianę umowy poprzez zastrzeżenie możliwości zastosowania prawa opcji do zmniejszenia ilości asortymentu stanowiącego przedmiot zamówienia ujętego w SAC stanowiącej załącznik nr 2 do umowy.`
+- `staging_columns`:
+  - `cn_part_option_scope`
 
 ## 4.2.10
 - `col_name`: `section_4_2_10`
 - `section_header`: `Okres realizacji zamówienia albo umowy ramowej`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `do 2025-12-31`
   - `do 2026-04-30`
@@ -797,130 +984,158 @@ column level and described in the column-level documentation.
     - `fn`: `parse_duration_end_date`
   - `section_4_2_10_days`:
     - `fn`: `parse_duration_days_from_range`
+- `staging_columns`:
+  - `cn_part_duration_days`
 
 ## 4.2.11
 - `col_name`: `section_4_2_11`
 - `section_header`: `Zamawiający przewiduje wznowienia`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Nie`
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_part_has_renewals`
 
 ## 4.2.12
 - `col_name`: `section_4_2_12`
 - `section_header`: `Opis wznowienia`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Kolejna edycja od 01.09.2025 r. do 31.05.2026 r.`
   - `4)	Zamawiający zastrzega sobie możliwość skorzystania ze wznowienia zamówienia, polegającego na przedłużeniu świadczenia usług ochrony mienia maksymalnie o 1200 godziny, tj. 2 miesiące. Wymagania dotyczące realizacji zamówienia objętego wznowieniem będą takie same jak te, które zostały wskazane dla zamówienia podstawowego. Szczegóły wznowienia zamówienia zawarte są we wzorze umowy stanowiącej załącznik nr 3 do SWZ dla części I.`
   - `Zamawiający przewiduje postepowanie na podobne zamówienie na kolejny rok w IV kwartale 2025r.`
+- `staging_columns`:
+  - `cn_part_renewal_description`
 
 ## 4.2.13
 - `col_name`: `section_4_2_13`
 - `section_header`: `Zamawiający przewiduje udzielenie dotychczasowemu wykonawcy zamówień na podobne usługi lub roboty budowlane`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Nie`
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_part_has_similar_services_option`
 
 ## 4.2.14
 - `col_name`: `section_4_2_14`
 - `section_header`: `Przedmiot, wielkość lub zakres oraz warunki zamówień na podobne usługi lub roboty budowlane`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `zwiększenie dostaw do 20% wartości zamówienia podstawowego`
   - `Zamawiającyprzewiduje możliwość zawarcia w okresie trwania umowy zamówieniapolegającego na powtórzeniu usług podobnych do zamówienia podstawowego stanowiących20% zamówienia podstawowego. Zamówienie udzielane będzie na usługi zgodne zprzedmiotem zamówienia podstawowego w trybie zamówień z wolnej ręki, po spełnieniuprzesłanek z art. 214 ust.1 pkt. 7 ustawy.`
   - `Zamawiający przewiduje możliwość udzielania zamówień podobnych, o których mowa w art. 214 ust. 1 pkt 7 ustawy, polegających na powtórzeniu podobnych usług, zgodnych z przedmiotem zamówienia podstawowego do 20 % wartości zamówienia podstawowego. Podstawą ustalenia warunków realizacji zamówienia podobnego jest umowa podstawowa oraz przeprowadzone z wykonawcą negocjacje.`
+- `staging_columns`:
+  - `cn_part_similar_services_scope`
 
 ## 4.3.1
 - `col_name`: `section_4_3_1`
 - `section_header`: `Sposób oceny ofert`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `1)	Cena: waga 60 punktów (PK1);2)	Doświadczenie zawodowe osób skierowanych przez wykonawcę do realizacji zamówienia: waga 40 punktów (PK2).`
   - `Z uwagi na ograniczoną ilość znaków informacje zostały zawarte w Rozdziale X SWZ`
   - `Sposób oceny ofert:Liczba punktów przyznawana przez jednego oceniającego dla oferty, w przyjętych kryteriach oceny ofert:   X(1) x 60% + X(2) x 40%gdzie:X(1) – liczba punktów przyznawana w kryterium cena (brutto)X(2) – liczba punktów przyznawana w kryterium doświadczenie pracowników ochrony`
+- `staging_columns`:
+  - `cn_part_offer_evaluation_method`
 
 ## 4.3.2
 - `col_name`: `section_4_3_2`
 - `section_header`: `Sposób określania wagi kryteriów oceny ofert`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Punktowo`
   - `Procentowo`
   - `Wg kolejności`
+- `staging_columns`:
+  - `cn_part_award_criteria_weighting_method`
 
 ## 4.3.3
 - `col_name`: `section_4_3_3`
 - `section_header`: `Stosowane kryteria oceny ofert`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Kryterium ceny oraz kryteria jakościowe`
   - `Wyłącznie kryterium ceny`
   - `Kryterium kosztu oraz kryteria jakościowe`
+- `staging_columns`:
+  - `cn_part_award_criteria_summary`
 
 ## 4.3.4
 - `col_name`: `section_4_3_4`
 - `section_header`: `Rodzaj kryterium`
-- `data_model`: `part`
+- `data_model`: `part.criterion`
 - `example_values`:
   - `inne.`
   - `serwis posprzedażny, pomoc techniczna, warunki dostawy takich jak termin, sposób lub czas dostawy, oraz okresu realizacji.`
   - `jakość, w tym do parametry techniczne, właściwości estetyczne i funkcjonalne takie jak dostępność dla osób niepełnosprawnych lub uwzględnianie potrzeb użytkowników`
+- `staging_columns`:
+  - `cn_part_criterion_type`
 
 ## 4.3.5
 - `col_name`: `section_4_3_5`
 - `section_header`: `Nazwa kryterium`
-- `data_model`: `part`
+- `data_model`: `part.criterion`
 - `example_values`:
   - `Cena`
   - `Doświadczenie zawodowe`
   - `Gotowość odbioru w trybie pilnym`
+- `staging_columns`:
+  - `cn_part_criterion_name`
 
 ## 4.3.6
 - `col_name`: `section_4_3_6`
 - `section_header`: `Waga`
-- `data_model`: `part`
+- `data_model`: `part.criterion`
 - `example_values`:
   - `60`
   - `40`
   - `100`
 - `parser`:
   - `fn`: `parse_criterion_weight`
+- `staging_columns`:
+  - `cn_part_criterion_weight`
 
 ## 4.3.7
 - `col_name`: `section_4_3_7`
 - `section_header`: `Kolejność kryterium`
-- `data_model`: `part`
+- `data_model`: `part.criterion`
 - `example_values`:
   - `1`
   - `100`
   - `60`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `cn_part_criterion_order`
 
 ## 4.3.10
 - `col_name`: `section_4_3_10`
 - `section_header`: `Zamawiający określa  aspekty społeczne, środowiskowe lub innowacyjne, żąda etykiet lub stosuje rachunek kosztów cyklu życia w odniesieniu do kryterium oceny ofert`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `Nie`
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_part_award_criteria_include_policy_aspects`
 
 ## 4.3.11
 - `col_name`: `section_4_3_11`
 - `section_header`: `Określenie aspektów społecznych, środowiskowych lub innowacyjnych, etykiet lub rachunku  kosztów cyklu życia w odniesieniu do kryteriów oceny ofert`
-- `data_model`: `part`
+- `data_model`: `part.core`
 - `example_values`:
   - `zgodnie z art. 242 ust. 2 ustawy - aspekty społeczne`
   - `zgodnie z art. 242 ust. 2 ustawy - aspekty środowiskowe`
   - `wymagania dotyczące określonej etykiety, zgodnie z art. 104 ustawy - etykiety środowiskowej (tzw. Ekoetykieta)`
+- `staging_columns`:
+  - `cn_part_award_criteria_policy_aspects_description`
 
 ## 5.1
 - `col_name`: `section_5_1`
@@ -931,6 +1146,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_optional_exclusion_grounds`
 
 ## 5.2
 - `col_name`: `section_5_2`
@@ -942,6 +1159,8 @@ column level and described in the column-level documentation.
   - `Art. 109 ust. 1 pkt 1 Art. 109 ust. 1 pkt 4`
 - `parser`:
   - `fn`: `parse_list_from_newlines`
+- `staging_columns`:
+  - `cn_optional_exclusion_grounds`
 
 ## 5.3
 - `col_name`: `section_5_3`
@@ -952,6 +1171,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_participation_conditions`
 
 ## 5.4
 - `col_name`: `section_5_4`
@@ -961,6 +1182,8 @@ column level and described in the column-level documentation.
   - `Wykonawca musi posiadać aktualne niezbędne decyzje/zezwolenia (właściwego terytorialnie organu) do wykonywania działalności w zakresie usług związanych z odbiorem, transportem i unieszkodliwianiem odpadów medycznych zgodnie z ustawą z dnia 14 grudnia 2012 r. o odpadach.`
   - `1.Wykonawca musi wykazać, iż w okresie ostatnich 3 lat przed upływem terminu składania ofert, a jeżeli okres prowadzenia działalności jest krótszy – w tym okresie, wykonał/wykonuje należycie co najmniej 1 usługę polegającą na świadczeniu usługi cateringu zbiorowego żywienia co najmniej przez 6 miesięcy na kwotę min. 500 000,00 PLN brutto. W przypadku`
   - `O udzielenie zamówienia mogą ubiegać się Wykonawcy, którzy nie podlegają wykluczeniu na zasadach określonych w Rozdziale V SWZ i spełniają warunki udziału w postępowaniu dotyczące:`
+- `staging_columns`:
+  - `cn_participation_conditions_description`
 
 ## 5.5
 - `col_name`: `section_5_5`
@@ -971,6 +1194,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_requires_art_125_declaration`
 
 ## 5.6
 - `col_name`: `section_5_6`
@@ -980,6 +1205,8 @@ column level and described in the column-level documentation.
   - `9)	Załącznik nr 9 - wzór oświadczenia wykonawcy`
   - `Wykonawca, którego oferta zostanie najwyżej oceniona, w celu wykazania braku podstaw (przesłanek) wykluczenia z postępowania, na podstawie art. 274 ust. 1 ustawy zostanie wezwany do złożenia następujących podmiotowych środków dowodowych (aktualnych na dzień ich złożenia):- oświadczenia Wykonawcy, w zakresie art. 108 ust. 1 pkt 5 ustawy, o braku przynależności do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego 2007 r. o ochronie konkurencji i konsumentów, z innym Wykonawcą, który złożył odrębną ofertę, ofertę częściową lub wniosek o dopuszczenie do udziału w postępowaniu, albo oświadczenia o przynależności do tej samej grupy kapitałowej wraz z dokumentami lub informacjami potwierdzającymi przygotowanie oferty, oferty częściowej lub wniosku o dopuszczenie do udziału w postępowaniu niezależnie od innego Wykonawcy należącego do tej samej grupy kapitałowej.W przypadku wspólnego ubiegania się o zamówienie przez Wykonawców, oświadczenie w zakresie pkt 4.1. składa każdy z Wykonawców wspólnie ubiegających się o zamówienie.`
   - `Oświadczenie Wykonawcy,w zakresie art. 108 ust. 1 pkt 5 ustawy, o braku przynależności do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego2007 r. o ochronie konkurencji i konsumentów, z innym Wykonawcą, który złożył odrębną ofertę, ofertę częściową lub wniosek odopuszczenie do udziału w postępowaniu, albo oświadczenia o przynależności do tej samej grupy kapitałowej wraz z dokumentamilub informacjami potwierdzającymi przygotowanie oferty, oferty częściowej lub wniosku o dopuszczenie do udziału w postępowaniuniezależnie od innego Wykonawcy należącego do tej samej grupy kapitałowej.W przypadku wspólnego ubiegania się o zamówienie przez Wykonawców, oświadczenie, o którym wyżej mowa składa każdy zWykonawców wspólnie ubiegających się o zamówienie.`
+- `staging_columns`:
+  - `cn_exclusion_evidence_requirements`
 
 ## 5.7
 - `col_name`: `section_5_7`
@@ -989,6 +1216,8 @@ column level and described in the column-level documentation.
   - `8)	Załącznik nr 8 - formularz ofertowy`
   - `Wykonawca, którego oferta zostanie najwyżej oceniona, w celu wykazania spełniania warunków udziału w postępowaniu, na podstawie art. 274 ust. 1 ustawy zostanie wezwany do złożenia następujących podmiotowych środków dowodowych (aktualnych na dzień ich złożenia):- aktualne niezbędne decyzje/zezwolenia (właściwego terytorialnie organu) do wykonywania działalności w zakresie usług związanych z odbiorem, transportem i unieszkodliwianiem odpadów medycznych zgodnie z ustawą z dnia 14 grudnia 2012 r o odpadach.`
   - `Wykonawca, którego oferta zostanie najwyżej oceniona, w celu wykazania spełniania warunków udziału w postępowaniu (określonych przez Zamawiającego), na podstawie art. 274 ust. 1 ustawy zostanie wezwany do złożenia następujących podmiotowych środków dowodowych (aktualnych na dzień ich złożenia):- wykazu usług wykonanych, a w przypadku świadczeń powtarzających się lub ciągłych również wykonywanych, w okresie ostatnich 3 lat, a jeżeli okres prowadzenia działalności jest krótszy – w tym okresie, wraz z podaniem ich wartości, przedmiotu, dat wykonania i podmiotów, na rzecz których usługi zostały wykonane lub są wykonywane oraz załączeniem dowodów określających, czy te usługi zostały wykonane lub są wykonywane należycie.Uwaga: Dowodami, o których mowa, są referencje bądź inne dokumenty sporządzone przez podmiot, na rzecz którego usługi zostały wykonane, a w przypadku świadczeń powtarzających się lub ciągłych są wykonywane, a jeżeli Wykonawca z przyczyn niezależnych od niego nie jest w stanie uzyskać tych dokumentów – oświadczenie Wykonawcy, w przypadku świadczeńpowtarzających się lub ciągłych są wykonywane, a jeżeli Wykonawca z przyczyn niezależnych od niego nie jest wstanie uzyskać tych dokumentów - oświadczenie wykonawcy; w przypadku świadczeń powtarzających się lub ciągłych nadal wykonywanych referencje bądź inne dokumenty potwierdzające ich należyte wykonywanie powinny być wystawione w okresie ostatnich 3 miesięcy. Okres, o którym wyżej mowa liczy się wstecz od dnia, w którym upływa termin składania ofert.- wykazu osób, skierowanych przez Wykonawcę do realizacji zamówienia publicznego, w szczególności odpowiedzialnych za świadczenie usług, kontrolę jakości, wraz z informacjami na temat ich kwalifikacji zawodowych i uprawnień niezbędnych do wykonania zamówienia publicznego, a także zakresu wykonywanych przez nie czynności oraz informacją o podstawie dodysponowania tymi osobami.- wykazu środków transportu, którymi Wykonawca dysponuje lub będzie dysponował na czas realizacji zamówienia wraz z informacją o podstawie dysponowania tymi zasobami.`
+- `staging_columns`:
+  - `cn_participation_conditions_evidence_requirements`
 
 ## 5.8
 - `col_name`: `section_5_8`
@@ -998,6 +1227,8 @@ column level and described in the column-level documentation.
   - `Zamawiający nie wymaga składania przedmiotowych środków dowodowych`
   - `Dokumenty charakteryzujące oferowane produkty (np. firmowe materiały informacyjne producenta, katalogi, ulotki, foldery, opisy techniczne lub inne posiadane dokumenty), zawierające szczegółowe dane, które umożliwią potwierdzenie spełniania wymagań ustalonych przez Zamawiającego oraz będą podstawą dokonania oceny zgodności złożonej oferty przez Wykonawcę z wymaganiami określonymi przez Zamawiającego. Zaleca się w sposób widoczny (np. kolorowy zakreślacz lub obrys kolorem) na w/w dokumentach wpisać nr pakietu i pozycji w Formularzu`
   - `Do oferty należy dołączyć następujące dokumenty:`
+- `staging_columns`:
+  - `cn_subject_matter_evidence_requirements`
 
 ## 5.9
 - `col_name`: `section_5_9`
@@ -1008,6 +1239,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_allows_subject_matter_evidence_completion`
 
 ## 5.10
 - `col_name`: `section_5_10`
@@ -1017,6 +1250,8 @@ column level and described in the column-level documentation.
   - `Zamawiający przewiduje uzupełnienie przedmiotowych środków dowodowych – dotyczy tylko dokumentów charakteryzujących oferowane produkty (art. 107- ustawy Pzp)`
   - `10.	Jeżeli Wykonawca nie złoży przedmiotowych środków dowodowych lub złożone przedmiotowe środki dowodowe będą niekompletne, Zamawiający wezwie do ich złożenia lub uzupełnienia w wyznaczonym terminie`
   - `1) Oświadczenie o niepodleganiu wykluczeniu oraz spełnianiu warunków uczestnictwa w postępowaniu zgodnie z art. 125`
+- `staging_columns`:
+  - `cn_subject_matter_evidence_completion_scope`
 
 ## 5.11
 - `col_name`: `section_5_11`
@@ -1026,6 +1261,8 @@ column level and described in the column-level documentation.
   - `Integralną częścią SWZ są załączniki:`
   - `1. Oświadczenie, że Wykonawca zapoznał się z warunkami zamówienia i z projektowanymi postanowieniami umowy w sprawie zamówienia, które zostaną wprowadzone do umowy w sprawie zamówienia oraz, że przyjmuje ich treść bez żadnych zastrzeżeń – zgodnie z treścią zawartą w formularzu oferty, stanowiącym załącznik nr 1 do SWZ. Oświadczenie składa się, pod rygorem nieważności, w formie elektronicznej (w postaci elektronicznej opatrzonej kwalifikowanym podpisem elektronicznym) lub w postaci elektronicznej opatrzonej podpisem zaufanym lub podpisem osobistym.`
   - `1. Pełnomocnictwo ustanowione do reprezentowania Wykonawcy/ów ubiegającego/ych się o udzielenie zamówienia publicznego. Pełnomocnictwo przekazuje się w postaci elektronicznej i opatruje kwalifikowanym podpisem elektronicznym, podpisem zaufanym lub podpisem osobistym. W przypadku, gdy pełnomocnictwo zostało wystawione w postaci papierowej i opatrzone własnoręcznym podpisem, przekazuje się cyfrowe odwzorowanie tego dokumentu, opatrzone kwalifikowanym podpisem elektronicznym, podpisem zaufanym lub podpisem osobistym, poświadczającym zgodność cyfrowego`
+- `staging_columns`:
+  - `cn_other_required_documents`
 
 ## 6.1
 - `col_name`: `section_6_1`
@@ -1036,6 +1273,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_allows_variant_offers`
 
 ## 6.2
 - `col_name`: `section_6_2`
@@ -1043,6 +1282,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `wymaga  tylko z jednoczesnym złożeniem oferty podstawowej`
+- `staging_columns`:
+  - `cn_variant_offer_submission_rules`
 
 ## 6.3
 - `col_name`: `section_6_3`
@@ -1053,6 +1294,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_electronic_auction`
 
 ## 6.3.1
 - `col_name`: `section_6_3_1`
@@ -1060,6 +1303,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `https://laip-srk.coig.biz/`
+- `staging_columns`:
+  - `cn_electronic_auction_url`
 
 ## 6.3.2
 - `col_name`: `section_6_3_2`
@@ -1069,6 +1314,8 @@ column level and described in the column-level documentation.
   - `1. Zgodnie z art. 281 ust. 2 pkt 17 ustawy Pzp Zamawiający informuje, że w niniejszym postępowaniu przewiduje`
   - `Zgodnie z pkt 24 SWZ`
   - `przeprowadzenie aukcji elektronicznej na zasadach określonych poniżej:`
+- `staging_columns`:
+  - `cn_electronic_auction_description`
 
 ## 6.4
 - `col_name`: `section_6_4`
@@ -1079,6 +1326,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_requires_bid_bond`
 
 ## 6.4.1
 - `col_name`: `section_6_4_1`
@@ -1088,6 +1337,8 @@ column level and described in the column-level documentation.
   - `Wykonawca jest zobowiązany, przed upływem terminu składania ofert, wnieść wadium w kwocie 10.000,00 (słownie: dziesięć tysięcy i 00/100) złotych. Szczegółowe wymagania zawiera § 11 SWZ.`
   - `Wartość: 25 000,00 PLN`
   - `Wadium należy wnieść w wysokości:`
+- `staging_columns`:
+  - `cn_bid_bond_requirements`
 
 ## 6.5
 - `col_name`: `section_6_5`
@@ -1098,6 +1349,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_requires_performance_security`
 
 ## 6.6
 - `col_name`: `section_6_6`
@@ -1107,6 +1360,8 @@ column level and described in the column-level documentation.
   - `W przypadku wspólnego ubiegania się wykonawców o udzielenie zamówienia zamawiający bada, czy nie zachodzą podstawy wykluczenia wobec każdego z tych wykonawców.`
   - `1. Wykonawcy wspólnie ubiegający się o udzielenie zamówienia, ustanawiają pełnomocnika do reprezentowania ich w postępowaniu o udzielenie zamówienia albo reprezentowania w postępowaniu i zawarcia umowy w sprawie zamówienia publicznego – nie dotyczy spółki cywilnej, o ile`
   - `1.	Wykonawcy mogą wspólnie ubiegać się o udzielenie zamówienia. W takim przypadku Wykonawcy ustanawiają pełnomocnika do reprezentowania ich w postępowaniu o udzielenie zamówienia albo reprezentowania w postępowaniu i zawarcia umowy w sprawie zamówienia publicznego (lider konsorcjum).`
+- `staging_columns`:
+  - `cn_joint_bid_requirements`
 
 ## 6.7
 - `col_name`: `section_6_7`
@@ -1117,6 +1372,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_may_cancel_if_funding_missing`
 
 ## 7.1
 - `col_name`: `section_7_1`
@@ -1127,6 +1384,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_advance_payments`
 
 ## 7.2
 - `col_name`: `section_7_2`
@@ -1136,6 +1395,8 @@ column level and described in the column-level documentation.
   - `Wskazana w projektowanych postanowieniach umowy, stanowiących załącznik do SWZ.`
   - `Zamawiający dopuszcza możliwość udzielenia zaliczki w wysokości 5% wynagrodzenia brutto, o którym mowa w § 4 ust. 8 PPU. W przypadku udzielenia zaliczki Zamawiający będzie żądał wniesienia zabezpieczenia zaliczki.`
   - `Zgodnie z wynegocjowanymi warunkami umowy`
+- `staging_columns`:
+  - `cn_advance_payment_terms`
 
 ## 7.3
 - `col_name`: `section_7_3`
@@ -1146,6 +1407,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_allows_contract_changes`
 
 ## 7.4
 - `col_name`: `section_7_4`
@@ -1155,6 +1418,8 @@ column level and described in the column-level documentation.
   - `Zamawiający przewiduje możliwość zmian postanowień zawartej umowy (tzw. zmiany kontraktowe w oparciu o art. 455 ust. 1 pkt 1 ustawy) w stosunku do treści oferty, na podstawie której dokonano wyboru Wykonawcy, zgodnie z warunkami podanymi w projektowanych postanowieniach umowy, stanowiącymi załącznik nr 4 do SWZ.`
   - `Zamawiający przewiduje możliwość zmian postanowień zawartej umowy (tzw. zmiany kontraktowe w oparciu o art. 455 ust. 1 pkt 1 ustawy) w stosunku do treści oferty, na podstawie której dokonano wyboru Wykonawcy, zgodnie z warunkami podanymi w projektowanych postanowieniach umowy, stanowiącymi załącznik nr 6 do SWZ.`
   - `Z uwagi na ograniczoną liczbę znaków zobowiązania wynikające z realizacji przedmiotu zamówienia, a spoczywające na Wykonawcy oraz Zamawiającym oraz przewidywane dopuszczalne zmiany postanowień umownych, zawiera wzór umowy stanowiący załącznik nr 3 do SWZ.`
+- `staging_columns`:
+  - `cn_contract_change_terms`
 
 ## 7.5
 - `col_name`: `section_7_5`
@@ -1165,6 +1430,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_contract_execution_requirements`
 
 ## 7.6
 - `col_name`: `section_7_6`
@@ -1174,6 +1441,8 @@ column level and described in the column-level documentation.
   - `w zakresie zatrudnienia na podstawie stosunku pracy, w okolicznościach, o których mowa w art. 95 ustawy`
   - `obejmujące, zgodnie z art. 96 ustawy: - aspekty srodowiskowe w zakresie żądania określonej etykiety lub wskazania mającego zastosowanie wymagania określonej etykiety, zgodnie z art. 104 ustawy: - etykiety  środowiskowej (tzw. Ekoetykieta)`
   - `obejmujące, zgodnie z art. 96 ustawy: - aspekty społeczne`
+- `staging_columns`:
+  - `cn_contract_execution_requirements`
 
 ## 8.1
 - `col_name`: `section_8_1`
@@ -1185,6 +1454,8 @@ column level and described in the column-level documentation.
   - `2025-01-13 09:30`
 - `parser`:
   - `fn`: `parse_datetime_from_text`
+- `staging_columns`:
+  - `cn_offer_submission_deadline`
 
 ## 8.2
 - `col_name`: `section_8_2`
@@ -1194,6 +1465,8 @@ column level and described in the column-level documentation.
   - `https://ezamowienia.gov.pl`
   - `Ofertę należy złożyć za pośrednictwem Platformy przetargowej https://zoz.logintrade.net/rejestracja/ustawowe.html`
   - `Platforma e-Zamówienia dostępna pod adresem https://ezamowienia.gov.pl`
+- `staging_columns`:
+  - `cn_offer_submission_place`
 
 ## 8.3
 - `col_name`: `section_8_3`
@@ -1205,6 +1478,8 @@ column level and described in the column-level documentation.
   - `2025-01-13 09:35`
 - `parser`:
   - `fn`: `parse_datetime_from_text`
+- `staging_columns`:
+  - `cn_offer_opening_datetime`
 
 ## 8.4
 - `col_name`: `section_8_4`
@@ -1216,6 +1491,8 @@ column level and described in the column-level documentation.
   - `do 2025-02-03`
 - `parser`:
   - `fn`: `parse_duration_end_date`
+- `staging_columns`:
+  - `cn_offer_binding_deadline`
 
 ## 8.5
 - `col_name`: `section_8_5`
@@ -1225,6 +1502,8 @@ column level and described in the column-level documentation.
   - `Część 1 : Tak Część 2 : Tak Część 3 : Tak Część 4 : Tak Część 5 : Tak Część 6 : Tak Część 7 : Tak Część 8 : Tak Część 9 : Tak Część 10 : Tak Część 11 : Tak Część 12 : Tak Część 13 : Tak Część 14 : Tak Część 15 : Tak Część 16 : Tak Część 17 : Tak Część 18 : Tak Część 19 : Tak Część 20 : Tak Część 21 : Tak Część 22 : Tak Część 23 : Tak Część 24 : Tak Część 25 : Tak Część 26 : Tak Część 27 : Tak Część 28 : Tak Część 29 : Tak Część 30 : Tak Część 31 : Tak Część 32 : Tak Część 33 : Tak Część 34 : Tak Część 35 : Tak Część 36 : Tak Część 37 : Tak Część 38 : Tak Część 39 : Tak Część 40 : Tak Część 41 : Tak Część 42 : Tak Część 43 : Tak Część 44 : Tak Część 45 : Tak Część 46 : Tak Część 47 : Tak Część 48 : Tak Część 49 : Tak Część 50 : Tak Część 51 : Tak Część 52 : Tak Część 53 : Tak Część 54 : Tak Część 55 : Tak Część 56 : Tak Część 57 : Tak Część 58 : Tak Część 59 : Tak`
   - `Tak`
   - `Część 1 : Tak Część 2 : Tak`
+- `staging_columns`:
+  - `cn_allows_negotiated_selection`
 
 ## 8.6
 - `col_name`: `section_8_6`
@@ -1236,6 +1515,8 @@ column level and described in the column-level documentation.
   - `5`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `cn_max_bidders_invited_to_negotiation`
 
 ## 8.7
 - `col_name`: `section_8_7`
@@ -1245,6 +1526,15 @@ column level and described in the column-level documentation.
   - `1)	Cena: waga 60 punktów (PK1);`
   - `cena`
   - `kryteria oceny ofert określone w Rozdziale XXVIII SWZ`
+- `staging_columns`:
+  - `cn_negotiation_shortlisting_criteria`
+
+## 8.8
+- `col_name`: `section_8_8`
+- `section_header`: `Krótki opis minimalnych wymagań dotyczących przedmiotu zamówienia lub realizacji zamówienia, niepodlegających negocjacjom, które muszą spełnić wszystkie oferty`
+- `data_model`: `core`
+- `example_values`:
+  - `Krótki opis minimalnych wymagań dotyczących przedmiotu zamówienia znajduje się w załączniku nr 1 do OPiW.`
 
 ## 8.9
 - `col_name`: `section_8_9`
@@ -1255,6 +1545,8 @@ column level and described in the column-level documentation.
   - `2025-01-16 12:00`
 - `parser`:
   - `fn`: `parse_datetime_from_text`
+- `staging_columns`:
+  - `cn_request_to_participate_deadline`
 
 ## 8.10
 - `col_name`: `section_8_10`
@@ -1263,6 +1555,8 @@ column level and described in the column-level documentation.
 - `example_values`:
   - `https://platformazakupowa.pl/pn/powiatsulecinski`
   - `e zamowienia`
+- `staging_columns`:
+  - `cn_request_to_participate_place`
 
 ## 8.11
 - `col_name`: `section_8_11`
@@ -1273,6 +1567,8 @@ column level and described in the column-level documentation.
   - `2025-01-17 12:00`
 - `parser`:
   - `fn`: `parse_datetime_from_text`
+- `staging_columns`:
+  - `cn_request_opening_datetime`
 
 ## 8.18
 - `col_name`: `section_8_18`
@@ -1282,6 +1578,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_has_multi_stage_negotiations`
 
 ## 8.19
 - `col_name`: `section_8_19`
@@ -1290,6 +1588,8 @@ column level and described in the column-level documentation.
 - `example_values`:
   - `Umowa ramowa zawarta zostanie z kilkoma wykonawcami`
   - `Umowa ramowa zawarta zostanie z jednym wykonawcą`
+- `staging_columns`:
+  - `cn_framework_agreement_arrangement`
 
 ## 8.20
 - `col_name`: `section_8_20`
@@ -1300,6 +1600,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `cn_limits_framework_participants`
 
 ## 8.21
 - `col_name`: `section_8_21`
@@ -1311,6 +1613,8 @@ column level and described in the column-level documentation.
   - `1`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `cn_max_framework_participants`
 
 ## 8.22
 - `col_name`: `section_8_22`
@@ -1320,3 +1624,12 @@ column level and described in the column-level documentation.
   - `Zamawiający udziela zamówień na podstawie art. 314 ust. 1 pkt 2  ustawy`
   - `Zamawiający udziela zamówień na podstawie art. 314 ust. 1 pkt 3  ustawy`
   - `Zamawiający udziela zamówień na podstawie art. 314 ust. 1 pkt 1  ustawy`
+- `staging_columns`:
+  - `cn_framework_call_off_legal_basis`
+
+## 8.23
+- `col_name`: `section_8_23`
+- `section_header`: `Uzasadnienie zawarcia umowy ramowej na okres wykraczający poza wskazany w art. 311 ust. 3 ustawy`
+- `data_model`: `core`
+- `example_values`:
+  - `nie dotyczy`

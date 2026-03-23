@@ -4,7 +4,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-from scripts.generate_notice_profile_markdown import render_markdown
+from scripts.generate_notice_profile_markdown import (
+    enrich_profile_with_staging_mappings,
+    extract_staging_mappings,
+    render_markdown,
+)
 from scripts.validate_notice_contracts import models_path_for_profile
 
 
@@ -15,6 +19,7 @@ def test_render_markdown_for_mapping_sections() -> None:
             "section_header": "Rola zamawiajacego",
             "data_model": "core",
             "example_values": ["A", "B"],
+            "staging_columns": ["cn_procedure_conduct_mode"],
         }
     }
 
@@ -23,6 +28,8 @@ def test_render_markdown_for_mapping_sections() -> None:
     assert "## 1.1" in markdown
     assert "- `col_name`: `section_1_1`" in markdown
     assert "- `example_values`:" in markdown
+    assert "- `staging_columns`:" in markdown
+    assert "- `cn_procedure_conduct_mode`" in markdown
     assert "Specific column-level value constraints are defined separately" in markdown
 
 
@@ -46,6 +53,54 @@ def test_render_markdown_for_list_sections() -> None:
 def test_models_path_for_profile_handles_automatic_suffix() -> None:
     profile_path = Path("competition_result_notice_profile_automatic.json")
     assert models_path_for_profile(profile_path).name == "competition_result_notice_models.py"
+
+
+def test_extract_staging_mappings_captures_direct_and_case_mappings() -> None:
+    sql = """
+select
+    case
+        when section_1_1 = 'A' then 'x'
+        else null
+    end as cn_procedure_conduct_mode,
+    section_1_11_8_code as cn_procedure_operator_nuts3_code,
+    section_1_11_8_name as cn_procedure_operator_nuts3_name
+from something
+"""
+
+    mappings = extract_staging_mappings(sql)
+
+    assert mappings["section_1_1"] == ["cn_procedure_conduct_mode"]
+    assert mappings["section_1_11_8_code"] == ["cn_procedure_operator_nuts3_code"]
+    assert mappings["section_1_11_8_name"] == ["cn_procedure_operator_nuts3_name"]
+
+
+def test_enrich_profile_with_staging_mappings_adds_staging_columns() -> None:
+    profile = {
+        "1.1": {
+            "col_name": "section_1_1",
+            "data_model": "core",
+        },
+        "1.11.8": {
+            "col_name": "section_1_11_8",
+            "data_model": "core",
+            "derived_cols": {
+                "section_1_11_8_code": {"fn": "x"},
+                "section_1_11_8_name": {"fn": "y"},
+            },
+        },
+    }
+
+    repo_root = Path(__file__).resolve().parents[1]
+    staging_dir = repo_root / "tests" / "fixtures" / "staging_mappings"
+    profile_path = Path("contract_notice_profile.json")
+
+    enriched = enrich_profile_with_staging_mappings(profile, profile_path, staging_dir)
+
+    assert enriched["1.1"]["staging_columns"] == ["cn_procedure_conduct_mode"]
+    assert enriched["1.11.8"]["staging_columns"] == [
+        "cn_procedure_operator_nuts3_code",
+        "cn_procedure_operator_nuts3_name",
+    ]
 
 
 def test_validate_notice_contracts_passes_for_aligned_pair() -> None:

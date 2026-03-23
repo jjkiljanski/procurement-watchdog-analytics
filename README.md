@@ -195,7 +195,7 @@ Runtime behavior:
   - dbt reads copied raw Silver tables in BigQuery with original upstream
     column names
 
-The canonical renaming and casting logic lives in `models/staging`, so the
+The canonical renaming and casting logic lives in `models/staging/bzp`, so the
 business layer does not change when you switch environments.
 
 ## Near-Term Next Steps

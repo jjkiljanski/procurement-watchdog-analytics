@@ -9,6 +9,8 @@ column level and described in the column-level documentation.
   - `Postępowanie prowadzone jest samodzielnie przez zamawiającego`
   - `Postępowanie prowadzi zamawiający centralny`
   - `Postępowanie prowadzi podmiot, któremu powierzono przeprowadzenie postępowania`
+- `staging_columns`:
+  - `trn_procedure_conduct_mode`
 
 ## 1.2
 - `col_name`: `section_1_2`
@@ -18,6 +20,8 @@ column level and described in the column-level documentation.
   - `Gmina Międzybórz`
   - `Gmina Malechowo`
   - `Związek Międzygminny Gospodarka Odpadami Aglomeracji Poznańskiej w likwidacji`
+- `staging_columns`:
+  - `trn_client_name`
 
 ## 1.3
 - `col_name`: `section_1_3`
@@ -27,6 +31,8 @@ column level and described in the column-level documentation.
   - `Centrum Projektów Europejskich`
   - `Powiat Górowski`
   - `Józefów nad Wisłą`
+- `staging_columns`:
+  - `trn_client_department`
 
 ## 1.4
 - `col_name`: `section_1_4`
@@ -41,6 +47,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_1_4_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `trn_client_national_id`
+  - `trn_client_national_id_type`
 
 ## 1.5.1
 - `col_name`: `section_1_5_1`
@@ -50,6 +59,8 @@ column level and described in the column-level documentation.
   - `Kolejowa 13`
   - `Malechowo`
   - `Św. Michała 43`
+- `staging_columns`:
+  - `trn_client_street`
 
 ## 1.5.2
 - `col_name`: `section_1_5_2`
@@ -59,6 +70,8 @@ column level and described in the column-level documentation.
   - `Międzybórz`
   - `Malechowo`
   - `Poznań`
+- `staging_columns`:
+  - `trn_client_city`
 
 ## 1.5.3
 - `col_name`: `section_1_5_3`
@@ -68,6 +81,8 @@ column level and described in the column-level documentation.
   - `56-513`
   - `76-142`
   - `61-119`
+- `staging_columns`:
+  - `trn_client_postal_code`
 
 ## 1.5.4
 - `col_name`: `section_1_5_4`
@@ -77,6 +92,8 @@ column level and described in the column-level documentation.
   - `dolnośląskie`
   - `zachodniopomorskie`
   - `wielkopolskie`
+- `staging_columns`:
+  - `trn_client_province`
 
 ## 1.5.5
 - `col_name`: `section_1_5_5`
@@ -86,6 +103,8 @@ column level and described in the column-level documentation.
   - `Polska`
   - `Białoruś`
   - `Republika Czeska`
+- `staging_columns`:
+  - `trn_client_country`
 
 ## 1.5.6
 - `col_name`: `section_1_5_6`
@@ -100,6 +119,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_nuts3_code`
   - `section_1_5_6_name`:
     - `fn`: `parse_nuts3_name`
+- `staging_columns`:
+  - `trn_client_nuts3_code`
+  - `trn_client_nuts3_name`
 
 ## 1.5.7
 - `col_name`: `section_1_5_7`
@@ -109,6 +131,8 @@ column level and described in the column-level documentation.
   - `94 31 84 213, 214, 092`
   - `(94) 31 – 40 – 561`
   - `+48 627413039`
+- `staging_columns`:
+  - `trn_client_phone`
 
 ## 1.5.8
 - `col_name`: `section_1_5_8`
@@ -118,6 +142,8 @@ column level and described in the column-level documentation.
   - `94 31 84 305`
   - `(94) 31 – 40 – 594`
   - `857221441`
+- `staging_columns`:
+  - `trn_client_fax`
 
 ## 1.5.9
 - `col_name`: `section_1_5_9`
@@ -127,6 +153,8 @@ column level and described in the column-level documentation.
   - `umig@miedzyborz.pl`
   - `urzad@malechowo.pl`
   - `zm@goap.org.pl`
+- `staging_columns`:
+  - `trn_client_email`
 
 ## 1.5.10
 - `col_name`: `section_1_5_10`
@@ -136,6 +164,8 @@ column level and described in the column-level documentation.
   - `http://www.bip.miedzyborz.pl/`
   - `www.malechowo.pl`
   - `https://www.goap.poznan.pl/`
+- `staging_columns`:
+  - `trn_client_website`
 
 ## 1.6
 - `col_name`: `section_1_6`
@@ -145,6 +175,8 @@ column level and described in the column-level documentation.
   - `https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-9c3ebce8-3944-4b4c-b577-2c7bfafea341`
   - `https://platformazakupowa.pl/pn/malechowo`
   - `https://platformazakupowa.pl/transakcja/1019572`
+- `staging_columns`:
+  - `trn_procedure_website_url`
 
 ## 1.7
 - `col_name`: `section_1_7`
@@ -154,6 +186,8 @@ column level and described in the column-level documentation.
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - jednostka samorządu terytorialnego`
   - `Zamawiający publiczny - jednostka sektora finansów publicznych - związek jednostek samorządu terytorialnego`
   - `Zamawiający publiczny - inny zamawiający`
+- `staging_columns`:
+  - `trn_buyer_type`
 
 ## 1.8
 - `col_name`: `section_1_8`
@@ -163,6 +197,8 @@ column level and described in the column-level documentation.
   - `Ogólne usługi publiczne`
   - `Środowisko`
   - `Inna działalność`
+- `staging_columns`:
+  - `trn_buyer_main_activity`
 
 ## 2.1
 - `col_name`: `section_2_1`
@@ -171,6 +207,8 @@ column level and described in the column-level documentation.
 - `example_values`:
   - `Zamówienia publicznego`
   - `Umowy ramowej`
+- `staging_columns`:
+  - `trn_notice_subject`
 
 ## 2.2
 - `col_name`: `section_2_2`
@@ -181,6 +219,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_is_social_service_notice`
 
 ## 2.3
 - `col_name`: `section_2_3`
@@ -190,6 +230,8 @@ column level and described in the column-level documentation.
   - `Odbieranie i transport odpadów komunalnych powstających na terenie nieruchomości zamieszkałych na obszarze Gminy Międzybórz`
   - `Opracowanie projektu planu ogólnego gminy Malechowo`
   - `Świadczenie usług pocztowych dla Związku Międzygminnego "Gospodarka Odpadami Aglomeracji Poznańskiej" w likwidacji w roku 2025`
+- `staging_columns`:
+  - `trn_contract_title`
 
 ## 2.4
 - `col_name`: `section_2_4`
@@ -199,6 +241,8 @@ column level and described in the column-level documentation.
   - `ocds-148610-9c3ebce8-3944-4b4c-b577-2c7bfafea341`
   - `ocds-148610-b42106bb-fc6d-4e92-8e6d-eee22abee768`
   - `ocds-148610-04972aaf-f2c8-4f77-a5dd-16535ce4aaea`
+- `staging_columns`:
+  - `trn_procedure_ocid`
 
 ## 2.5
 - `col_name`: `section_2_5`
@@ -208,6 +252,8 @@ column level and described in the column-level documentation.
   - `2025/BZP 00000001`
   - `2025/BZP 00000002`
   - `2025/BZP 00000004`
+- `staging_columns`:
+  - `trn_notice_number`
 
 ## 2.6
 - `col_name`: `section_2_6`
@@ -215,6 +261,8 @@ column level and described in the column-level documentation.
 - `data_model`: `core`
 - `example_values`:
   - `01`
+- `staging_columns`:
+  - `trn_notice_version`
 
 ## 2.7
 - `col_name`: `section_2_7`
@@ -226,6 +274,8 @@ column level and described in the column-level documentation.
   - `2025-01-03`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `trn_notice_date`
 
 ## 2.8
 - `col_name`: `section_2_8`
@@ -236,6 +286,8 @@ column level and described in the column-level documentation.
   - `Nie`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_is_in_procurement_plan`
 
 ## 2.9
 - `col_name`: `section_2_9`
@@ -245,6 +297,8 @@ column level and described in the column-level documentation.
   - `2024/BZP 00221173/03/P`
   - `2024/BZP 00070604/05/P`
   - `2024/BZP 00011163/01/P`
+- `staging_columns`:
+  - `trn_procurement_plan_number`
 
 ## 2.10
 - `col_name`: `section_2_10`
@@ -254,6 +308,8 @@ column level and described in the column-level documentation.
   - `1.3.2 Odbieranie i transport odpadów komunalnych powstających na terenie nieruchomości zamieszkałych na obszarze Gminy Międzybórz`
   - `1.3.3 Wykonanie projektu planu ogólnego gminy Malechowo`
   - `1.3.1 Świadczenie usług pocztowych`
+- `staging_columns`:
+  - `trn_procurement_plan_item_identifier`
 
 ## 2.11
 - `col_name`: `section_2_11`
@@ -264,6 +320,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_is_eu_funded`
 
 ## 2.12
 - `col_name`: `section_2_12`
@@ -273,6 +331,8 @@ column level and described in the column-level documentation.
   - `Program Operacyjny Pomoc Techniczna dla Funduszy Europejskich 2021-2027`
   - `Cyberbezpieczny Powiat Górowski”. Projekt realizowany jest w ramach Programu Fundusze Europejskie na Rozwój Cyfrowy 2021-2027 (FERC)`
   - `4. Zamówienie realizowane jest w ramach projektu pn. Integralny Program Wsparcia Kompetencji Kluczowych dla Gospodarki 4.0 studentów i kadry UMK w Toruniu" , Numer Projektu: FERS.01.05-IP.08-0265/23, Działanie: 01.05 Umiejętności w szkolnictwie wyższym , Program Fundusze Europejskie dla Rozwoju Społecznego w ramach Europejskiego Funduszu Społecznego Plus`
+- `staging_columns`:
+  - `trn_eu_funding_program_name`
 
 ## 2.13
 - `col_name`: `section_2_13`
@@ -283,6 +343,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_was_preceded_by_prior_notice`
 
 ## 2.14
 - `col_name`: `section_2_14`
@@ -292,6 +354,8 @@ column level and described in the column-level documentation.
   - `2024/BZP 00522198`
   - `2024/BZP 00623010`
   - `2024/BZP 00532931`
+- `staging_columns`:
+  - `trn_prior_notice_number`
 
 ## 3.1
 - `col_name`: `section_3_1`
@@ -301,6 +365,8 @@ column level and described in the column-level documentation.
   - `Zamówienie udzielane jest w trybie zamówienia z wolnej ręki na podstawie: art. 305 pkt 1 ustawy w zw. z art. 214 ust. 1 pkt 11 ustawy`
   - `Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy`
   - `Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy`
+- `staging_columns`:
+  - `trn_award_procedure_legal_basis`
 
 ## 3.1.1
 - `col_name`: `section_3_1_1`
@@ -310,6 +376,8 @@ column level and described in the column-level documentation.
   - `Postępowanie o udzielenie zamówienia publicznego, którego przedmiotem jest: „Odbieranie i transport odpadów komunalnych powstających na terenie nieruchomości zamieszkałych na obszarze Gminy Międzybórz”, prowadzone jest w trybie zamówienia z wolnej ręki. Gmina zamierza udzielić zamówienia publicznego w trybie zamówienia z wolnej ręki ZGKiM Sp. z o.o. z siedzibą w Międzyborzu (dalej jako ZGKiM sp. z o.o.). Zaproszony do negocjacji Wykonawca tj. ZGKiM sp. z o.o. jest osobą prawną, prowadzącą działalność gospodarczą w formie spółki prawa handlowego tj. spółki z ograniczoną odpowiedzialnością ze 100% udziałem kapitału jednostki samorządu terytorialnego - Gminy . ZGKiM sp. z o.o. nie posiada bezpośredniego udziału kapitału prywatnego. ZGKiM Sp. z o.o. jest w pełni nadzorowana przez Gminę  - jedynego udziałowca. W związku z powyższym, jedyny udziałowiec wskazanej spółki tj. Gmina sprawuje kontrolę, odpowiadającą kontroli sprawowanej nad własnymi jednostkami, pozostałe zapisy w protokole`
   - `Organem założycielskim dla Przedsiębiorstwa Usług Komunalnych Sp. z o.o. jest Gmina Józefów nad Wisłą ze 100% udziałem. W okresie trzech lat roboty i usługi wykonywane były na rzecz Gminy Józefów nad Wisłą są wyższe jak 90% ogólnej wartości robót i usług art. 67 ust. pkt 12 lit. b`
   - `Zaproponowany trybu wyboru wykonawcy wynika z przesłanek określonych w art. 214 ust. 1. pkt 1) PZP. Przyjęto tryb wyboru wykonawcy „z wolnej ręki” i zaproponowano, aby realizację zadania powierzyć firmie Esri Polska Sp. z o.o. z siedzibą w Warszawie, Plac Konesera 9, 03-736 Warszawa. Firma Esri Polska Sp. z o.o. jest jedy-nym autoryzowanym dystrybutorem oprogramowania Esri w Polsce.`
+- `staging_columns`:
+  - `trn_non_competitive_procedure_justification`
 
 ## 3.1.2
 - `col_name`: `section_3_1_2`
@@ -319,6 +387,8 @@ column level and described in the column-level documentation.
   - `ocds-148610-f71e8f59-0ccc-11ed-8000-d680d39e541a`
   - `ocds-148610-3cd756b0-692e-48a0-9ea2-cf161e3db770`
   - `ocds-148610-f7fbbb62-6db2-11ee-a60c-9ec5599dddc1`
+- `staging_columns`:
+  - `trn_prior_procedure_ocid`
 
 ## 4.1
 - `col_name`: `section_4_1`
@@ -328,6 +398,8 @@ column level and described in the column-level documentation.
   - `1.3.2/2024`
   - `RIGP.2710.8.2024`
   - `DO.271.41.2024.MK`
+- `staging_columns`:
+  - `trn_reference_number`
 
 ## 4.2
 - `col_name`: `section_4_2`
@@ -338,6 +410,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_is_split_into_separate_lots`
 
 ## 4.3
 - `col_name`: `section_4_3`
@@ -352,6 +426,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_3_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_total_contract_value_amount`
+  - `trn_total_contract_value_currency`
 
 ## 4.3.1
 - `col_name`: `section_4_3_1`
@@ -366,6 +443,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_3_1_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_current_procedure_value_amount`
+  - `trn_current_procedure_value_currency`
 
 ## 4.3.2
 - `col_name`: `section_4_3_2`
@@ -377,6 +457,8 @@ column level and described in the column-level documentation.
   - `513009,63`
 - `parser`:
   - `fn`: `parse_pln_value`
+- `staging_columns`:
+  - `trn_framework_agreement_max_value_amount`
 
 ## 4.4
 - `col_name`: `section_4_4`
@@ -386,6 +468,8 @@ column level and described in the column-level documentation.
   - `Usługi`
   - `Roboty budowlane`
   - `Dostawy`
+- `staging_columns`:
+  - `trn_contract_type`
 
 ## 4.5.1
 - `col_name`: `section_4_5_1`
@@ -395,6 +479,17 @@ column level and described in the column-level documentation.
   - `a)	Świadczenie usług odbioru i transportu odpadów komunalnych od właścicieli nieruchomości zamieszkałych na terenie Gminy w sposób zapewniający osiągnięcie odpowiednich poziomów recyklingu, przygotowania do ponownego użycia i odzysku innymi metodami oraz ograniczenie masy odpadów ulegających biodegradacji przekazywanych do składowania, zgodnie z zapisami ustawy z dnia 13 września 1996 r. o utrzymaniu czystości i porządku w gminach (t.j. Dz. U. z 2020 r., poz. 1439), zapisami Planu Gospodarki Odpadami dla Województwa Dolnośląskiego, Uchwały Nr  XXII/157/2020  Rady Miejskiej w Międzyborzu UCHWAŁA RADY MIEJSKIEJ W MIĘDZYBORZU z dnia 26 listopada 2020 r. w sprawie szczegółowego sposobu i zakresu świadczenia usług w zakresie odbierania odpadów komunalnych od właścicieli nieruchomości i zagospodarowania tych odpadów, w zamian za uiszczoną przez właściciela nieruchomości opłatę za gospodarowanie odpadami komunalnymi.; UCHWAŁĄ NR XXII/156/2020 RADY MIEJSKIEJ W MIĘDZYBORZU z dnia 26 listopada 2020 r. w sprawie uchwalenia regulaminu utrzymania czystości i porządku na terenie Miasta i Gminy Międzybórz`
   - `1.	Przedmiotem zamówienia jest opracowanie projektu planu ogólnego gminy Malechowo o którym jest mowa w art. 13a ustawy o planowaniu i zagospodarowaniu przestrzennym (t. j. Dz. U. z 2023 r., poz. 977 ze zm.) oraz udział w czynnościach związanych ze sporządzeniem i uchwaleniem planu ogólnego. Powierzchnia opracowania obejmuje obszar Gminy Malechowo – ok. 22 663 ha. 2.	Projekt wykonany będzie: 1)	zgodnie z zapisami uchwały Nr LVIII/477/2024 Rady Gminy Malechowo z dnia 28 marca 2024 r. w sprawie przystąpienia do sporządzenia planu ogólnego gminy Malechowo stanowiącej załącznik nr 8 do SWZ, 2)	z zachowaniem wymogów oraz procedury określonej w ustawie z dnia 27 marca 2003 r. o planowaniu i zagospodarowaniu przestrzennym (Dz. U. z 2023 r. poz. 977, z późn. zm.), 3)	z zachowaniem wymogów oraz procedury określonej w rozporządzeniu Ministra Rozwoju i Technologii z dnia 8 grudnia 2023r. w sprawie sposobu przygotowania projektu planu ogólnego gminy, dokumentowania prac planistycznych w zakresie tego planu oraz wydawania z niego wypisów i wyrysów (Dz. U. z 2023r, poz. 2758), 4)	z uwzględnieniem uwag zgłaszanych przez Zamawiającego w trakcie realizacji umowy i aktualnego orzecznictwa sądowego dotyczącego zagospodarowania przestrzennego. 3.	Szczegółowe obowiązki Wykonawcy oraz wymagania dotyczące opracowania określa projekt umowy (zał. nr 4 do SWZ) wraz z harmonogramem  rzeczowo – finansowym realizacji przedmiotu umowy. 4.	Wykaz  materiałów dostarczanych  przez  Zamawiającego określa załącznik nr 2 do „Projektu Umowy”. 5.	Zakres usług został określony w załączniku nr 7 do SWZ.`
   - `Przedmiotem zamówienia jest świadczenie usług pocztowych dla Związku Międzygminnego „Gospodarka Odpadami Aglomeracji Poznańskiej” w likwidacji w okresie od 1 stycznia 2025 r. do 31 grudnia 2025 r.`
+- `staging_columns`:
+  - `trn_part_short_description`
+
+## 4.5.2
+- `col_name`: `section_4_5_2`
+- `section_header`: `Zapotrzebowanie na innowacyjny produkt, usługę lub roboty budowlane`
+- `data_model`: `part`
+- `example_values`:
+  - `nie dotyczy`
+- `staging_columns`:
+  - `trn_part_innovation_requirement_description`
 
 ## 4.5.3
 - `col_name`: `section_4_5_3`
@@ -406,6 +501,8 @@ column level and described in the column-level documentation.
   - `64110000-0 - Usługi pocztowe`
 - `parser`:
   - `fn`: `parse_cpv_codes`
+- `staging_columns`:
+  - `trn_part_main_cpv_codes`
 
 ## 4.5.4
 - `col_name`: `section_4_5_4`
@@ -417,6 +514,8 @@ column level and described in the column-level documentation.
   - `15540000-5 - Produkty serowarskie`
 - `parser`:
   - `fn`: `parse_cpv_codes`
+- `staging_columns`:
+  - `trn_part_additional_cpv_codes`
 
 ## 4.5.5
 - `col_name`: `section_4_5_5`
@@ -431,6 +530,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_4_5_5_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_part_value_amount`
+  - `trn_part_value_currency`
 
 ## 5.1
 - `col_name`: `section_5_1`
@@ -440,6 +542,8 @@ column level and described in the column-level documentation.
   - `Postępowanie/cześć postępowania zakończyła się zawarciem umowy`
   - `Postępowanie/cześć postępowania zakończyła się unieważnieniem`
   - `Nie rozstrzygnięto`
+- `staging_columns`:
+  - `trn_part_outcome_status`
 
 ## 5.2
 - `col_name`: `section_5_2`
@@ -451,6 +555,8 @@ column level and described in the column-level documentation.
   - `art. 255 pkt 3 ustawy`
 - `parser`:
   - `fn`: `parse_list_from_newlines`
+- `staging_columns`:
+  - `trn_part_cancellation_legal_basis`
 
 ## 5.2.1
 - `col_name`: `section_5_2_1`
@@ -460,6 +566,8 @@ column level and described in the column-level documentation.
   - `Uzasadnienie faktyczne: w prowadzonym postępowaniu w części IV w terminie wskazanym na złożenie ofert wpłynęła jedna oferta, do której Wykonawca załączył dowody podpisu elektronicznego pomijając dokumenty, których te podpisy dotyczą. Formularz ofertowy z wymaganymi dokumentami został załączony przez Wykonawcę po otwarciu ofert przy wykorzystaniu zakładki do komunikacji (komunikaty, pytania). Zgodnie z art. 226 ust. 1 pkt 6 ustawy Pzp Zamawiający odrzuca ofertę, jeżeli nie została sporządzona lub przekazana  w sposób zgodny z wymaganiami technicznymi oraz organizacyjnymi sporządzania lub przekazywania ofert przy użyciu środków komunikacji elektronicznej określonymi  przez Zamawiającego. Uzasadnienie prawne: Zgodnie z art. 255 pkt 2 ustawy Pzp Zamawiający unieważnia  postępowanie o udzielenie zamówienia, jeżeli wszystkie złożone wnioski o dopuszczenie  do udziału w postępowaniu albo oferty podlegały odrzuceniu.`
   - `nie złożono żadnego wniosku o dopuszczenie do udziału w`
   - `Oferta Wykonawcy: Agencja Naukowo-Techniczna SYMICO Sp z o.o podlega  odrzuceniu na podstawie art. 226 ust. 1 pkt 5 prawo zamówień publicznych,  ponieważ jej treść jest niezgodna   z warunkami zamówienia.`
+- `staging_columns`:
+  - `trn_part_cancellation_reason`
 
 ## 6.1
 - `col_name`: `section_6_1`
@@ -471,6 +579,8 @@ column level and described in the column-level documentation.
   - `2`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_received_offer_count`
 
 ## 6.1.1
 - `col_name`: `section_6_1_1`
@@ -482,6 +592,8 @@ column level and described in the column-level documentation.
   - `7`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_received_variant_offer_count`
 
 ## 6.1.2
 - `col_name`: `section_6_1_2`
@@ -493,6 +605,8 @@ column level and described in the column-level documentation.
   - `3`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_received_additional_offer_count`
 
 ## 6.1.3
 - `col_name`: `section_6_1_3`
@@ -504,6 +618,8 @@ column level and described in the column-level documentation.
   - `4`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_received_sme_offer_count`
 
 ## 6.1.4
 - `col_name`: `section_6_1_4`
@@ -515,6 +631,8 @@ column level and described in the column-level documentation.
   - `2`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_received_eea_foreign_offer_count`
 
 ## 6.1.5
 - `col_name`: `section_6_1_5`
@@ -526,6 +644,8 @@ column level and described in the column-level documentation.
   - `1`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_received_non_eea_offer_count`
 
 ## 6.1.6
 - `col_name`: `section_6_1_6`
@@ -537,6 +657,8 @@ column level and described in the column-level documentation.
   - `2`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_rejected_offer_count`
 
 ## 6.1.7
 - `col_name`: `section_6_1_7`
@@ -548,6 +670,8 @@ column level and described in the column-level documentation.
   - `2`
 - `parser`:
   - `fn`: `parse_int_from_text`
+- `staging_columns`:
+  - `trn_part_abnormally_low_offer_count`
 
 ## 6.2
 - `col_name`: `section_6_2`
@@ -562,6 +686,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_6_2_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_part_lowest_offer_amount`
+  - `trn_part_lowest_offer_currency`
 
 ## 6.3
 - `col_name`: `section_6_3`
@@ -576,6 +703,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_6_3_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_part_highest_offer_amount`
+  - `trn_part_highest_offer_currency`
 
 ## 6.4
 - `col_name`: `section_6_4`
@@ -590,6 +720,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_6_4_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_part_awarded_offer_amount`
+  - `trn_part_awarded_offer_currency`
 
 ## 6.5
 - `col_name`: `section_6_5`
@@ -600,6 +733,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_part_used_electronic_auction`
 
 ## 6.6
 - `col_name`: `section_6_6`
@@ -610,6 +745,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_part_awarded_offer_is_variant`
 
 ## 6.7
 - `col_name`: `section_6_7`
@@ -619,6 +756,8 @@ column level and described in the column-level documentation.
   - `zgodnie z art. 242 ust. 2 ustawy - aspekty społeczne`
   - `zgodnie z art. 242 ust. 2 ustawy - aspekty środowiskowe`
   - `zgodnie z art. 242 ust. 2 ustawy - aspekty społeczne zgodnie z art. 242 ust. 2 ustawy - aspekty środowiskowe`
+- `staging_columns`:
+  - `trn_part_awarded_offer_criteria_policy_aspects`
 
 ## 7.1
 - `col_name`: `section_7_1`
@@ -629,6 +768,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_part_awarded_to_joint_bidders`
 
 ## 7.2
 - `col_name`: `section_7_2`
@@ -638,6 +779,8 @@ column level and described in the column-level documentation.
   - `Mały przedsiębiorca`
   - `Mikro przedsiębiorca`
   - `Średni przedsiębiorca`
+- `staging_columns`:
+  - `trn_part_supplier_company_size`
 
 ## 7.3.1
 - `col_name`: `section_7_3_1`
@@ -647,6 +790,8 @@ column level and described in the column-level documentation.
   - `Zakład Gospodarki Komunalnej i Mieszkaniowej Sp. z o.o.`
   - `UrbanConsulting Filip Sokołowski`
   - `Poczta Polska S.A.`
+- `staging_columns`:
+  - `trn_part_supplier_name`
 
 ## 7.3.2
 - `col_name`: `section_7_3_2`
@@ -661,6 +806,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_national_id_value`
   - `section_7_3_2_type`:
     - `fn`: `parse_national_id_type`
+- `staging_columns`:
+  - `trn_part_supplier_national_id`
+  - `trn_part_supplier_national_id_type`
 
 ## 7.3.3
 - `col_name`: `section_7_3_3`
@@ -670,6 +818,8 @@ column level and described in the column-level documentation.
   - `Kolejowa 9`
   - `ul. Strzelców 46/35`
   - `Rodziny Hiszpańskich 8`
+- `staging_columns`:
+  - `trn_part_supplier_street`
 
 ## 7.3.4
 - `col_name`: `section_7_3_4`
@@ -679,6 +829,8 @@ column level and described in the column-level documentation.
   - `Międzybórz`
   - `Gdynia`
   - `Warszawa`
+- `staging_columns`:
+  - `trn_part_supplier_city`
 
 ## 7.3.5
 - `col_name`: `section_7_3_5`
@@ -688,6 +840,8 @@ column level and described in the column-level documentation.
   - `56-513`
   - `81-586`
   - `00-940`
+- `staging_columns`:
+  - `trn_part_supplier_postal_code`
 
 ## 7.3.6
 - `col_name`: `section_7_3_6`
@@ -697,6 +851,8 @@ column level and described in the column-level documentation.
   - `wielkopolskie`
   - `pomorskie`
   - `mazowieckie`
+- `staging_columns`:
+  - `trn_part_supplier_province`
 
 ## 7.3.7
 - `col_name`: `section_7_3_7`
@@ -706,6 +862,8 @@ column level and described in the column-level documentation.
   - `Polska`
   - `Niemcy`
   - `Republika Czeska`
+- `staging_columns`:
+  - `trn_part_supplier_country`
 
 ## 7.3.8
 - `col_name`: `section_7_3_8`
@@ -716,6 +874,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_part_supplier_declares_subcontracting`
 
 ## 7.3.9
 - `col_name`: `section_7_3_9`
@@ -725,6 +885,8 @@ column level and described in the column-level documentation.
   - `dostawy do 80%, podwykonawca nie znany na etapie składania ofert`
   - `Ręczne odśnieżanie chodników, placów, schodów, parkingów, działek gminnych na terenie miasta Dzierzgoń; Wzgórza Verde sp. z o.o., ul. Słowackiego 30, 82-440 Dzierzgoń`
   - `Ręczna likwidacja śliskości chodników, placów, schodów, parkingów, działek gminnych na terenie miasta Dzierzgoń; Wzgórza Verde sp. z o.o., ul. Słowackiego 30, 82-440 Dzierzgoń`
+- `staging_columns`:
+  - `trn_part_supplier_declared_subcontracting_scope`
 
 ## 7.4
 - `col_name`: `section_7_4`
@@ -735,6 +897,8 @@ column level and described in the column-level documentation.
   - `Tak`
 - `parser`:
   - `fn`: `parse_tak_nie`
+- `staging_columns`:
+  - `trn_part_additional_subcontracting_declaration`
 
 ## 7.4.1
 - `col_name`: `section_7_4_1`
@@ -744,6 +908,8 @@ column level and described in the column-level documentation.
   - `KACPRZAK ESTRADA Obsłucha techniczna KAMZA Obsługa cateringowa`
   - `Obsługa kadrowa - ALFA SECURITY Sp. z o.o.`
   - `1)	ALFA SECURITY SERVICE SP. Z O.O. UL. OLESKA 20, 42-700 LUBLINIEC w zakresie obsługi kadrowej, 2)    NOVA WD Sp. z o.o. Sp. K., ul. Świeradowska 51-57, 50-559 Wrocław  w  zakresie podjazdów grupy interwencyjnej.`
+- `staging_columns`:
+  - `trn_part_additional_subcontracting_scope`
 
 ## 8.1
 - `col_name`: `section_8_1`
@@ -755,6 +921,8 @@ column level and described in the column-level documentation.
   - `2024-12-19`
 - `parser`:
   - `fn`: `parse_date_from_text`
+- `staging_columns`:
+  - `trn_part_contract_signature_date`
 
 ## 8.2
 - `col_name`: `section_8_2`
@@ -769,6 +937,9 @@ column level and described in the column-level documentation.
     - `fn`: `parse_pln_value`
   - `section_8_2_currency`:
     - `fn`: `parse_currency_code`
+- `staging_columns`:
+  - `trn_part_contract_value_amount`
+  - `trn_part_contract_value_currency`
 
 ## 8.3
 - `col_name`: `section_8_3`
@@ -783,6 +954,8 @@ column level and described in the column-level documentation.
     - `fn`: `parse_duration_end_date`
   - `section_8_3_days`:
     - `fn`: `parse_duration_days_from_range`
+- `staging_columns`:
+  - `trn_part_contract_duration_days`
 
 ## 8.4
 - `col_name`: `section_8_4`
@@ -792,3 +965,5 @@ column level and described in the column-level documentation.
   - `w zakresie zatrudnienia na podstawie stosunku pracy, w okolicznościach, o których mowa w art. 95 ustawy`
   - `w zakresie zatrudnienia na podstawie stosunku pracy, w okolicznościach, o których mowa w art. 95 ustawy obejmujące, zgodnie z art. 96 ustawy: - aspekty społeczne`
   - `w zakresie żądania określonej etykiety lub wskazania mającego zastosowanie wymagania określonej etykiety, zgodnie z art. 104 ustawy: - etykiety  środowiskowej (tzw. Ekoetykieta)`
+- `staging_columns`:
+  - `trn_part_contract_execution_requirements`
