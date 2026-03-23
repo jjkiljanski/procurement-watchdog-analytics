@@ -1,0 +1,121 @@
+version: 2
+
+models:
+  - name: stg_silver__tender_result_notice_core
+    description: Canonical staging contract for the Silver TenderResultNotice core relation.
+    columns:
+      - name: trn_core_notice_id
+        tests:
+          - not_null
+      - name: trn_core_notice_type
+      - name: trn_core_publication_date_day
+      - name: trn_procedure_conduct_mode
+      - name: trn_procedure_website_url
+      - name: trn_buyer_type
+      - name: trn_buyer_main_activity
+      - name: trn_notice_subject
+      - name: trn_is_social_service_notice
+      - name: trn_contract_title
+      - name: trn_procedure_ocid
+      - name: trn_notice_number
+      - name: trn_notice_version
+      - name: trn_notice_date
+      - name: trn_is_in_procurement_plan
+      - name: trn_procurement_plan_number
+      - name: trn_procurement_plan_item_identifier
+      - name: trn_is_eu_funded
+      - name: trn_eu_funding_program_name
+      - name: trn_was_preceded_by_prior_notice
+      - name: trn_prior_notice_number
+      - name: trn_award_procedure_legal_basis
+      - name: trn_non_competitive_procedure_justification
+      - name: trn_prior_procedure_ocid
+      - name: trn_reference_number
+      - name: trn_is_split_into_separate_lots
+      - name: trn_total_contract_value_amount
+      - name: trn_total_contract_value_currency
+      - name: trn_current_procedure_value_amount
+      - name: trn_current_procedure_value_currency
+      - name: trn_framework_agreement_max_value_amount
+      - name: trn_contract_type
+
+  - name: stg_silver__tender_result_notice_client
+    description: Canonical staging contract for the Silver TenderResultNotice client relation.
+    columns:
+      - name: trn_client_notice_id
+        tests:
+          - not_null
+      - name: trn_client_notice_type
+      - name: trn_client_publication_date_day
+      - name: trn_client_ordinal
+      - name: trn_client_name
+      - name: trn_client_department
+      - name: trn_client_national_id
+      - name: trn_client_national_id_type
+      - name: trn_client_street
+      - name: trn_client_city
+      - name: trn_client_postal_code
+      - name: trn_client_province
+      - name: trn_client_country
+      - name: trn_client_nuts3_code
+      - name: trn_client_nuts3_name
+      - name: trn_client_phone
+      - name: trn_client_fax
+      - name: trn_client_email
+      - name: trn_client_website
+
+  - name: stg_silver__tender_result_notice_part
+    description: Canonical staging contract for the Silver TenderResultNotice part relation.
+    columns:
+      - name: trn_part_notice_id
+        tests:
+          - not_null
+      - name: trn_part_notice_type
+      - name: trn_part_publication_date_day
+      - name: trn_part_ordinal
+      - name: trn_part_short_description
+      - name: trn_part_innovation_requirement_description
+      - name: trn_part_main_cpv_codes
+      - name: trn_part_additional_cpv_codes
+      - name: trn_part_value_amount
+      - name: trn_part_value_currency
+      - name: trn_part_outcome_status
+      - name: trn_part_cancellation_legal_basis
+      - name: trn_part_cancellation_reason
+      - name: trn_part_received_offer_count
+      - name: trn_part_received_variant_offer_count
+      - name: trn_part_received_additional_offer_count
+      - name: trn_part_received_sme_offer_count
+      - name: trn_part_received_eea_foreign_offer_count
+      - name: trn_part_received_non_eea_offer_count
+      - name: trn_part_rejected_offer_count
+      - name: trn_part_abnormally_low_offer_count
+      - name: trn_part_lowest_offer_amount
+      - name: trn_part_lowest_offer_currency
+      - name: trn_part_highest_offer_amount
+      - name: trn_part_highest_offer_currency
+      - name: trn_part_awarded_offer_amount
+      - name: trn_part_awarded_offer_currency
+      - name: trn_part_used_electronic_auction
+      - name: trn_part_awarded_offer_is_variant
+      - name: trn_part_awarded_offer_criteria_policy_aspects
+      - name: trn_part_awarded_to_joint_bidders
+      - name: trn_part_supplier_company_size
+      - name: trn_part_supplier_name
+      - name: trn_part_supplier_national_id
+      - name: trn_part_supplier_national_id_type
+      - name: trn_part_supplier_street
+      - name: trn_part_supplier_city
+      - name: trn_part_supplier_postal_code
+      - name: trn_part_supplier_province
+      - name: trn_part_supplier_country
+      - name: trn_part_supplier_declares_subcontracting
+      - name: trn_part_supplier_declared_subcontracting_scope
+      - name: trn_part_additional_subcontracting_declaration
+      - name: trn_part_additional_subcontracting_scope
+      - name: trn_part_contract_signature_date
+      - name: trn_part_contract_value_amount
+      - name: trn_part_contract_value_currency
+      - name: trn_part_contract_duration_days
+      - name: trn_part_contract_end_date
+      - name: trn_part_contract_execution_requirements

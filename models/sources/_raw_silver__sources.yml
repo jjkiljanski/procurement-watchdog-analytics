@@ -23,3 +23,12 @@ sources:
 
       - name: contract_notice_part_criterion
         description: Raw ContractNotice part_criterion relation copied from upstream Silver.
+
+      - name: tender_result_notice_core
+        description: Raw TenderResultNotice core relation copied from upstream Silver.
+
+      - name: tender_result_notice_client
+        description: Raw TenderResultNotice client relation copied from upstream Silver.
+
+      - name: tender_result_notice_part
+        description: Raw TenderResultNotice part relation copied from upstream Silver.
