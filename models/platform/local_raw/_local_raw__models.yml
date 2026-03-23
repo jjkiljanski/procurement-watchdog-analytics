@@ -24,3 +24,12 @@ models:
 
   - name: local_raw__tender_result_notice_part
     description: DuckDB-only raw relation over local TenderResultNotice part parquet.
+
+  - name: local_raw__contract_performing_notice_core
+    description: DuckDB-only raw relation over local ContractPerformingNotice core parquet.
+
+  - name: local_raw__contract_performing_notice_part
+    description: DuckDB-only raw relation over local ContractPerformingNotice part parquet.
+
+  - name: local_raw__contract_performing_notice_change_matter
+    description: DuckDB-only raw relation over local ContractPerformingNotice change_matter parquet.

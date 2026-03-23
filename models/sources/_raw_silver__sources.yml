@@ -32,3 +32,12 @@ sources:
 
       - name: tender_result_notice_part
         description: Raw TenderResultNotice part relation copied from upstream Silver.
+
+      - name: contract_performing_notice_core
+        description: Raw ContractPerformingNotice core relation copied from upstream Silver.
+
+      - name: contract_performing_notice_part
+        description: Raw ContractPerformingNotice part relation copied from upstream Silver.
+
+      - name: contract_performing_notice_change_matter
+        description: Raw ContractPerformingNotice change_matter relation copied from upstream Silver.

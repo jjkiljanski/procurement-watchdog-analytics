@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: stg_silver__contract_performing_notice_core
+    description: Canonical staging contract for the Silver ContractPerformingNotice core relation.
+    columns:
+      - name: cpn_core_notice_id
+        tests:
+          - not_null
+      - name: cpn_core_notice_type
+      - name: cpn_core_publication_date_day
+      - name: cpn_buyer_name
+      - name: cpn_buyer_department
+      - name: cpn_buyer_national_id
+      - name: cpn_buyer_national_id_type
+      - name: cpn_buyer_street
+      - name: cpn_buyer_city
+      - name: cpn_buyer_postal_code
+      - name: cpn_buyer_province
+      - name: cpn_buyer_country
+      - name: cpn_buyer_nuts3_code
+      - name: cpn_buyer_nuts3_name
+      - name: cpn_buyer_phone
+      - name: cpn_buyer_fax
+      - name: cpn_buyer_email
+      - name: cpn_buyer_website
+      - name: cpn_buyer_type
+      - name: cpn_procedure_ocid
+      - name: cpn_notice_number
+      - name: cpn_notice_version
+      - name: cpn_notice_date
+      - name: cpn_procurement_character
+      - name: cpn_was_preceded_by_prior_notice
+      - name: cpn_prior_notice_number
+      - name: cpn_is_eu_funded
+      - name: cpn_eu_funding_program_name
+      - name: cpn_award_procedure_legal_basis
+      - name: cpn_contract_type
+      - name: cpn_contract_title
+      - name: cpn_contract_signature_date
+      - name: cpn_contract_term_end_date
+      - name: cpn_supplier_section_label
+      - name: cpn_supplier_name
+      - name: cpn_supplier_national_id
+      - name: cpn_supplier_national_id_type
+      - name: cpn_supplier_street
+      - name: cpn_supplier_city
+      - name: cpn_supplier_postal_code
+      - name: cpn_supplier_province
+      - name: cpn_supplier_country
+      - name: cpn_contract_value_amount
+      - name: cpn_contract_value_currency
+      - name: cpn_result_notice_number
+      - name: cpn_contract_completed
+      - name: cpn_contract_completion_date
+      - name: cpn_completed_on_original_deadline
+      - name: cpn_contract_change_count
+      - name: cpn_total_paid_amount
+      - name: cpn_total_paid_currency
+      - name: cpn_contract_completed_properly
+      - name: cpn_monitored_contract_execution_requirements
+
+  - name: stg_silver__contract_performing_notice_part
+    description: Canonical staging contract for the Silver ContractPerformingNotice part relation.
+    columns:
+      - name: cpn_part_notice_id
+        tests:
+          - not_null
+      - name: cpn_part_notice_type
+      - name: cpn_part_publication_date_day
+      - name: cpn_part_ordinal
+      - name: cpn_part_short_description
+      - name: cpn_part_main_cpv_codes
+      - name: cpn_part_additional_cpv_codes
+
+  - name: stg_silver__contract_performing_notice_change_matter
+    description: Canonical staging contract for the Silver ContractPerformingNotice change_matter relation.
+    columns:
+      - name: cpn_change_notice_id
+        tests:
+          - not_null
+      - name: cpn_change_notice_type
+      - name: cpn_change_publication_date_day
+      - name: cpn_change_ordinal
+      - name: cpn_change_number
+      - name: cpn_change_legal_basis
+      - name: cpn_change_reason
+      - name: cpn_change_contract_description_after_change
+      - name: cpn_change_value_amount
+      - name: cpn_change_value_currency
+      - name: cpn_change_increased_contract_price
