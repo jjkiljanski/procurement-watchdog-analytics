@@ -10,19 +10,6 @@ select
     organizationName as buyer_name,
     clientTypeName as client_type_name,
     provinceName as province_name,
-    noticeStage as notice_stage,
-    * exclude (
-        objectId,
-        caseId,
-        noticeType,
-        publicationDate,
-        publicationDateDay,
-        tenderId,
-        organizationId,
-        organizationName,
-        clientTypeName,
-        provinceName,
-        noticeStage
-    )
+    noticeStage as notice_stage
 from {{ raw_silver_relation('common_envelope') }}
 {{ dev_date_window('publicationDateDay') }}

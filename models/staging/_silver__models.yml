@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_silver__common_envelope
-    description: Canonical staging contract for the Silver common envelope relation.
+    description: Canonical staging contract for the Silver common envelope relation. Contains only the most basic metadata same for all notice types.
     columns:
       - name: notice_id
         tests:
@@ -12,28 +12,197 @@ models:
       - name: publication_date
 
   - name: stg_silver__contract_notice_core
-    description: Canonical staging contract for the Silver ContractNotice core relation.
+    description: Canonical staging contract for the Silver ContractNotice core relation. Contains the parsed data from all the ContractNotice HTML sections that can appear just once within one notice (e.g. type of the main buyer issuing the notice).
     columns:
-      - name: notice_id
+      - name: cn_core_notice_id
         tests:
           - not_null
-      - name: notice_type
-      - name: publication_date_day
+      - name: cn_core_notice_type
+      - name: cn_core_publication_date_day
+      - name: cn_procedure_conduct_mode
+        description: >
+          Whether the procedure is conducted directly by the buyer,
+          jointly by multiple buyers, or by an entrusted entity.
+        tests:
+          - accepted_values:
+              values: ['samodzielnie', 'wspólnie', 'powierzono']
+      - name: cn_buyer_type
+        description: >
+          The type of the main buyer issuing the notice (e.g. public buyer in the public finances sector, sector buyer, etc.). Extracted from the relevant section of the notice if available.
+      - name: cn_buyer_main_activity
+      - name: cn_joint_procurement_responsibility_split
+      - name: cn_procedure_operator_name
+      - name: cn_procedure_operator_national_id
+        tests:
+          - matches_regex:
+              pattern: '^[0-9]+$'
+      - name: cn_procedure_operator_national_id_type
+        tests:
+          - accepted_values:
+              values: ['REGON', 'NIP', 'PESEL', 'other']
+      - name: cn_procedure_operator_street
+      - name: cn_procedure_operator_city
+      - name: cn_procedure_operator_postal_code
+        tests:
+          - matches_regex:
+              pattern: '^[0-9]{2}-[0-9]{3}$'
+      - name: cn_procedure_operator_province
+      - name: cn_procedure_operator_country
+      - name: cn_procedure_operator_nuts3_code
+        tests:
+          - matches_regex:
+              pattern: '^PL[0-9]{2}[A-Z0-9]$'
+      - name: cn_procedure_operator_nuts3_name
+      - name: cn_procedure_operator_phone
+      - name: cn_procedure_operator_fax
+      - name: cn_procedure_operator_email
+      - name: cn_procedure_operator_website
+      - name: cn_notice_subject
+        tests:
+          - accepted_values:
+              values: ['Zamówienia publicznego', 'Umowy ramowej']
+      - name: cn_is_social_service_notice
+      - name: cn_contract_title
+      - name: cn_procedure_ocid
+      - name: cn_notice_number
+      - name: cn_notice_version
+      - name: cn_notice_date
+      - name: cn_is_in_procurement_plan
+      - name: cn_procurement_plan_number
+      - name: cn_procurement_plan_item_identifier
+      - name: cn_is_reserved_contract
+      - name: cn_reserved_contract_eligible_contractor_types
+      - name: cn_is_reserved_social_service_contract
+      - name: cn_is_eu_funded
+      - name: cn_eu_funding_program_name
+      - name: cn_award_procedure_legal_basis
+      - name: cn_framework_agreement_legal_basis
+      - name: cn_procedure_website_url
+      - name: cn_has_restricted_procurement_documents
+      - name: cn_restricted_documents_access_info
+      - name: cn_requires_electronic_submission
+      - name: cn_electronic_communication_url
+      - name: cn_electronic_communication_requirements
+      - name: cn_non_general_tools_access_url
+      - name: cn_requires_non_general_electronic_tools
+      - name: cn_non_general_tools_access_method
+      - name: cn_non_electronic_communication_reason
+      - name: cn_non_electronic_submission_method
+      - name: cn_electronic_catalog_requirement
+      - name: cn_submission_languages
+      - name: cn_gdpr_information_clause
+      - name: cn_gdpr_limitation_clause
+      - name: cn_had_market_consultations
+      - name: cn_reference_number
+      - name: cn_contract_type
+      - name: cn_is_split_into_separate_lots
+      - name: cn_total_lots_value_amount
+      - name: cn_total_lots_value_currency
+      - name: cn_procedure_value_amount
+      - name: cn_procedure_value_currency
+      - name: cn_framework_agreement_value_amount
+      - name: cn_framework_agreement_value_currency
+      - name: cn_allows_partial_offers
+      - name: cn_number_of_lots
+      - name: cn_limits_lots_per_bidder
+      - name: cn_max_lots_per_bidder
+      - name: cn_has_social_environmental_label_requirements
+      - name: cn_social_environmental_label_requirements_description
+      - name: cn_has_optional_exclusion_grounds
+      - name: cn_optional_exclusion_grounds
+      - name: cn_has_participation_conditions
+      - name: cn_participation_conditions_description
+      - name: cn_requires_art_125_declaration
+      - name: cn_exclusion_evidence_requirements
+      - name: cn_participation_conditions_evidence_requirements
+      - name: cn_subject_matter_evidence_requirements
+      - name: cn_allows_subject_matter_evidence_completion
+      - name: cn_subject_matter_evidence_completion_scope
+      - name: cn_other_required_documents
+      - name: cn_allows_variant_offers
+      - name: cn_variant_offer_submission_rules
+      - name: cn_has_electronic_auction
+      - name: cn_electronic_auction_url
+      - name: cn_electronic_auction_description
+      - name: cn_requires_bid_bond
+      - name: cn_bid_bond_requirements
+      - name: cn_requires_performance_security
+      - name: cn_joint_bid_requirements
+      - name: cn_may_cancel_if_funding_missing
+      - name: cn_has_advance_payments
+      - name: cn_advance_payment_terms
+      - name: cn_allows_contract_changes
+      - name: cn_contract_change_terms
+      - name: cn_has_contract_execution_requirements
+      - name: cn_contract_execution_requirements
+      - name: cn_offer_submission_deadline
+      - name: cn_offer_submission_place
+      - name: cn_offer_opening_datetime
+      - name: cn_offer_binding_deadline
+      - name: cn_allows_negotiated_selection
+      - name: cn_max_bidders_invited_to_negotiation
+      - name: cn_negotiation_shortlisting_criteria
+      - name: cn_request_to_participate_deadline
+      - name: cn_request_to_participate_place
+      - name: cn_request_opening_datetime
+      - name: cn_has_multi_stage_negotiations
+      - name: cn_framework_agreement_arrangement
+      - name: cn_limits_framework_participants
+      - name: cn_max_framework_participants
+      - name: cn_framework_call_off_legal_basis
 
   - name: stg_silver__contract_notice_client
-    description: Canonical staging contract for the Silver ContractNotice client relation.
+    description: Canonical staging contract for the Silver ContractNotice client relation. Contains the parsed data from all the ContractNotice HTML sections that can appear multiple times within one notice AND describe one or more of the buyers issuing the notice (e.g. buyer's address).
     columns:
-      - name: notice_id
+      - name: cn_client_notice_id
         tests:
           - not_null
-      - name: notice_type
-      - name: publication_date_day
+      - name: cn_client_notice_type
+      - name: cn_client_publication_date_day
+      - name: cn_client_name
+      - name: cn_client_department
+      - name: cn_client_national_id
+      - name: cn_client_national_id_type
+      - name: cn_client_street
+      - name: cn_client_city
+      - name: cn_client_postal_code
+      - name: cn_client_province
+      - name: cn_client_country
+      - name: cn_client_nuts3_code
+      - name: cn_client_nuts3_name
+      - name: cn_client_phone
+      - name: cn_client_fax
+      - name: cn_client_email
+      - name: cn_client_website
 
   - name: stg_silver__contract_notice_part
-    description: Canonical staging contract for the Silver ContractNotice part relation.
+    description: Canonical staging contract for the Silver ContractNotice part relation. Contains the parsed data from all the ContractNotice HTML sections that can appear multiple times within one notice AND describe one or more of the procurement parts described in the notice (e.g. part's CPV code).
     columns:
-      - name: notice_id
+      - name: cn_part_notice_id
         tests:
           - not_null
-      - name: notice_type
-      - name: publication_date_day
+      - name: cn_part_notice_type
+      - name: cn_part_publication_date_day
+      - name: cn_part_description
+      - name: cn_part_is_replenishment
+      - name: cn_part_value_amount
+      - name: cn_part_value_currency
+      - name: cn_part_main_cpv_codes
+      - name: cn_part_additional_cpv_codes
+      - name: cn_part_has_options
+      - name: cn_part_option_scope
+      - name: cn_part_duration_days
+      - name: cn_part_duration_end_date
+      - name: cn_part_has_renewals
+      - name: cn_part_renewal_description
+      - name: cn_part_has_similar_services_option
+      - name: cn_part_similar_services_scope
+      - name: cn_part_offer_evaluation_method
+      - name: cn_part_award_criteria_weighting_method
+      - name: cn_part_award_criteria_summary
+      - name: cn_part_award_criterion_type
+      - name: cn_part_award_criterion_name
+      - name: cn_part_award_criterion_weight
+      - name: cn_part_award_criterion_order
+      - name: cn_part_award_criteria_include_policy_aspects
+      - name: cn_part_award_criteria_policy_aspects_description
