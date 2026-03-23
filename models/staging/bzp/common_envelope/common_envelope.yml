@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_silver__common_envelope
+    description: Canonical staging contract for the Silver common envelope relation. Contains only the most basic metadata same for all notice types.
+    columns:
+      - name: notice_id
+        tests:
+          - not_null
+      - name: case_id
+      - name: notice_type
+      - name: publication_date

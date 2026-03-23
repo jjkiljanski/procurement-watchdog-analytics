@@ -1,16 +1,6 @@
 version: 2
 
 models:
-  - name: stg_silver__common_envelope
-    description: Canonical staging contract for the Silver common envelope relation. Contains only the most basic metadata same for all notice types.
-    columns:
-      - name: notice_id
-        tests:
-          - not_null
-      - name: case_id
-      - name: notice_type
-      - name: publication_date
-
   - name: stg_silver__contract_notice_core
     description: Canonical staging contract for the Silver ContractNotice core relation. Contains the parsed data from all the ContractNotice HTML sections that can appear just once within one notice (e.g. type of the main buyer issuing the notice).
     columns:
@@ -25,7 +15,7 @@ models:
           jointly by multiple buyers, or by an entrusted entity.
         tests:
           - accepted_values:
-              values: ['samodzielnie', 'wspólnie', 'powierzono']
+              values: ['samodzielnie', 'wspĂłlnie', 'powierzono']
       - name: cn_buyer_type
         description: >
           The type of the main buyer issuing the notice (e.g. public buyer in the public finances sector, sector buyer, etc.). Extracted from the relevant section of the notice if available.
@@ -60,7 +50,7 @@ models:
       - name: cn_notice_subject
         tests:
           - accepted_values:
-              values: ['Zamówienia publicznego', 'Umowy ramowej']
+              values: ['ZamĂłwienia publicznego', 'Umowy ramowej']
       - name: cn_is_social_service_notice
       - name: cn_contract_title
       - name: cn_procedure_ocid
