@@ -15,7 +15,8 @@ models:
           jointly by multiple buyers, or by an entrusted entity.
         tests:
           - accepted_values:
-              values: ['samodzielnie', 'wspólnie', 'powierzono']
+              arguments:
+                values: ['samodzielnie', 'wspólnie', 'powierzono']
       - name: cn_buyer_type
         description: >
           The type of the main buyer issuing the notice (e.g. public buyer in the public finances sector, sector buyer, etc.). Extracted from the relevant section of the notice if available.
@@ -25,23 +26,27 @@ models:
       - name: cn_procedure_operator_national_id
         tests:
           - matches_regex:
-              pattern: '^[0-9]+$'
+              arguments:
+                pattern: '^[0-9]+$'
       - name: cn_procedure_operator_national_id_type
         tests:
           - accepted_values:
-              values: ['REGON', 'NIP', 'PESEL', 'other']
+              arguments:
+                values: ['REGON', 'NIP', 'PESEL', 'other']
       - name: cn_procedure_operator_street
       - name: cn_procedure_operator_city
       - name: cn_procedure_operator_postal_code
         tests:
           - matches_regex:
-              pattern: '^[0-9]{2}-[0-9]{3}$'
+              arguments:
+                pattern: '^[0-9]{2}-[0-9]{3}$'
       - name: cn_procedure_operator_province
       - name: cn_procedure_operator_country
       - name: cn_procedure_operator_nuts3_code
         tests:
           - matches_regex:
-              pattern: '^PL[0-9]{2}[A-Z0-9]$'
+              arguments:
+                pattern: '^PL[0-9]{2}[A-Z0-9]$'
       - name: cn_procedure_operator_nuts3_name
       - name: cn_procedure_operator_phone
       - name: cn_procedure_operator_fax
@@ -50,7 +55,8 @@ models:
       - name: cn_notice_subject
         tests:
           - accepted_values:
-              values: ['Zamówienia publicznego', 'Umowy ramowej']
+              arguments:
+                values: ['Zamówienia publicznego', 'Umowy ramowej']
       - name: cn_is_social_service_notice
       - name: cn_contract_title
       - name: cn_procedure_ocid
