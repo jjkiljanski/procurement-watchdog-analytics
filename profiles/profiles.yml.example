@@ -1,15 +1,24 @@
 procurement_watchdog_analytics:
-  target: dev
+  target: dev_bq
   outputs:
-    dev:
+    duckdb_local:
       type: duckdb
       path: procurement_watchdog_analytics.duckdb
       threads: 4
       schema: analytics
-    prod:
+    dev_bq:
       type: bigquery
       method: oauth
-      project: your-gcp-project
+      project: "{{ env_var('DBT_BIGQUERY_PROJECT') }}"
+      dataset: "{{ env_var('DBT_BIGQUERY_DATASET', 'analytics_dev_janek') }}"
+      threads: 4
+      location: EU
+      priority: interactive
+    prod_bq:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('DBT_BIGQUERY_PROJECT') }}"
       dataset: analytics
       threads: 4
       location: EU
+      priority: interactive

@@ -22,12 +22,22 @@ The current split is:
 
 ## Expected Upstream Inputs
 
-The current canonical input contract for this repo is:
+The repo currently reads these raw `silver.*` input tables:
 
 - `common_envelope`
 - `contract_notice_core`
 - `contract_notice_client`
 - `contract_notice_part`
+- `contract_notice_part_criterion`
+- `tender_result_notice_core`
+- `tender_result_notice_client`
+- `tender_result_notice_part`
+- `contract_performing_notice_core`
+- `contract_performing_notice_part`
+- `contract_performing_notice_change_matter`
+- `notice_update_notice_core`
+- `notice_update_notice_part`
+- `notice_update_notice_part_part`
 
 Locally, DuckDB builds these canonical relations from parquet files under:
 
@@ -88,10 +98,10 @@ Recommended setup:
 
 1. Activate the Python/conda environment that should own `dbt`.
 
-2. Install dbt and the DuckDB adapter:
+2. Install dbt and the adapters used in this repo:
 
    ```bash
-   python -m pip install dbt-core dbt-duckdb
+   python -m pip install dbt-core dbt-duckdb dbt-bigquery
    ```
 
 3. Copy the example profile:
@@ -103,8 +113,8 @@ Recommended setup:
 4. Validate the setup:
 
    ```bash
-   dbt debug
-   dbt parse
+   dbt debug --target duckdb_local
+   dbt parse --target duckdb_local
    ```
 
 5. Run the static contract check before builds:
@@ -119,6 +129,51 @@ The local profile creates a DuckDB database file in the repo root:
 
 This file stores dbt-created views and tables. The source parquet files remain
 external and are read through DuckDB.
+
+## Shared BigQuery Development
+
+For collaborative work on BigQuery, use one shared repo and one personal dev
+dataset per developer:
+
+- `silver`: shared raw input tables copied from GCS
+- `analytics`: shared manually built production dataset
+- `analytics_dev_janek`: Janek's development dataset
+- `analytics_dev_pawel`: Pawel's development dataset
+
+The example profile in [profiles/profiles.yml.example](e:/git_projects/procurement-watchdog-analytics/profiles/profiles.yml.example)
+is set up so each developer only needs different local environment variables:
+
+```powershell
+$env:DBT_BIGQUERY_PROJECT = "your-gcp-project"
+$env:DBT_BIGQUERY_DATASET = "analytics_dev_janek"
+```
+
+For Pawel, only the dataset value changes:
+
+```powershell
+$env:DBT_BIGQUERY_PROJECT = "your-gcp-project"
+$env:DBT_BIGQUERY_DATASET = "analytics_dev_pawel"
+```
+
+Then each developer authenticates locally:
+
+```powershell
+gcloud auth login
+gcloud config set project $env:DBT_BIGQUERY_PROJECT
+gcloud auth application-default login
+```
+
+And validates the shared repo against their own dev dataset:
+
+```powershell
+dbt debug --target dev_bq
+dbt parse --target dev_bq
+```
+
+The repo uses `target.schema` for schemas, so local development stays isolated
+as long as each person points `DBT_BIGQUERY_DATASET` at their own dataset.
+Only manual shared builds should target `prod_bq`, which writes to
+`analytics`.
 
 ## First Local Run
 
@@ -139,6 +194,19 @@ Notes:
 - Recommended local sequence:
   - `python scripts/validate_notice_contracts.py`
   - `dbt run --select ...`
+
+## First BigQuery Run
+
+After the raw `silver.*` tables exist in BigQuery, a good first shared run is:
+
+```powershell
+dbt run --target dev_bq --select +stg_silver__common_envelope
+dbt run --target dev_bq --select mart_notice_daily_counts
+```
+
+The new `mart_notice_daily_counts` model aggregates the canonical
+`stg_silver__common_envelope` relation to one row per
+`publication_date_day`.
 
 ## Inspecting Local Outputs
 
@@ -183,8 +251,6 @@ This repo should own:
 
 ## Local vs Production Runtime
 
-The contract is documented in `docs/contracts/silver_contract.md`.
-
 Runtime behavior:
 
 - `duckdb` target:
@@ -197,6 +263,33 @@ Runtime behavior:
 
 The canonical renaming and casting logic lives in `models/staging/bzp`, so the
 business layer does not change when you switch environments.
+
+## Team Workflow
+
+Recommended manual workflow at this stage:
+
+1. Janek works in `analytics_dev_janek` and Pawel works in
+   `analytics_dev_pawel`.
+2. Each person makes code changes on a Git branch in the shared repository.
+3. Each person runs `dbt` locally with `--target dev_bq`, which writes only to
+   their own development dataset because `DBT_BIGQUERY_DATASET` is different on
+   each machine.
+4. When the change looks correct, open a pull request and review the SQL and
+   the built result.
+5. After the pull request is merged, run a manual shared build with
+   `--target prod_bq` to refresh the shared `analytics` dataset.
+
+In practice, that means:
+
+- local development build:
+  - Janek sets `DBT_BIGQUERY_DATASET=analytics_dev_janek`
+  - Pawel sets `DBT_BIGQUERY_DATASET=analytics_dev_pawel`
+- shared production-like build:
+  - use `--target prod_bq`
+  - dbt writes to `analytics`
+
+This keeps developers from overwriting each other's work while still letting
+you share one repo and one BigQuery project.
 
 ## Near-Term Next Steps
 

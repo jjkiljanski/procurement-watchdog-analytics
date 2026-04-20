@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: mart_notice_daily_counts
+    description: Daily count of notices derived from the canonical common envelope staging relation.
+    columns:
+      - name: publication_date_day
+        tests:
+          - not_null
+          - unique
+      - name: total_notice_count
+        tests:
+          - not_null
