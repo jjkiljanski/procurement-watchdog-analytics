@@ -1,0 +1,94 @@
+version: 2
+
+models:
+  - name: stg_silver__notice_update_concession_core
+    description: Canonical staging model for NoticeUpdateConcession core rows.
+    columns:
+      - name: nuc_core_notice_id
+        description: Upstream object identifier of the notice.
+        tests:
+          - not_null
+      - name: nuc_core_notice_type
+        description: Constant upstream notice type.
+      - name: nuc_core_publication_date_day
+        description: Publication date partition from Silver.
+      - name: nuc_buyer_name
+        description: Buyer name.
+      - name: nuc_buyer_national_id
+        description: Buyer national identifier.
+      - name: nuc_buyer_national_id_type
+        description: Buyer national identifier type.
+      - name: nuc_buyer_street
+        description: Buyer street address.
+      - name: nuc_buyer_city
+        description: Buyer city.
+      - name: nuc_buyer_postal_code
+        description: Buyer postal code.
+      - name: nuc_buyer_province
+        description: Buyer province.
+      - name: nuc_buyer_country
+        description: Buyer country.
+      - name: nuc_buyer_nuts3_code
+        description: Buyer NUTS 3 code.
+      - name: nuc_buyer_nuts3_name
+        description: Buyer NUTS 3 region name.
+      - name: nuc_buyer_phone
+        description: Buyer phone number.
+      - name: nuc_buyer_fax
+        description: Buyer fax number.
+      - name: nuc_buyer_email
+        description: Buyer email address.
+      - name: nuc_buyer_website
+        description: Buyer website.
+      - name: nuc_buyer_type
+        description: Buyer organization type.
+      - name: nuc_buyer_main_activity
+        description: Buyer main activity.
+      - name: nuc_procedure_conducted_by_entrusted_entity
+        description: Whether the procedure is conducted by an entrusted entity.
+      - name: nuc_notice_number
+        description: BZP update notice number.
+      - name: nuc_notice_date
+        description: Update notice date.
+      - name: nuc_updated_notice_number
+        description: Number of the notice being updated.
+      - name: nuc_updated_notice_version
+        description: Version of the notice being updated.
+
+  - name: stg_silver__notice_update_concession_part
+    description: Canonical staging model for NoticeUpdateConcession changed-section rows.
+    columns:
+      - name: nuc_part_notice_id
+        description: Upstream object identifier of the notice.
+        tests:
+          - not_null
+      - name: nuc_part_notice_type
+        description: Constant upstream notice type.
+      - name: nuc_part_publication_date_day
+        description: Publication date partition from Silver.
+      - name: nuc_part_ordinal
+        description: Ordinal of the changed-section row within the notice.
+      - name: nuc_updated_notice_section_identifier
+        description: Identifier of the updated notice section.
+
+  - name: stg_silver__notice_update_concession_part_part
+    description: Canonical staging model for NoticeUpdateConcession change-detail rows.
+    columns:
+      - name: nuc_part_part_notice_id
+        description: Upstream object identifier of the notice.
+        tests:
+          - not_null
+      - name: nuc_part_part_notice_type
+        description: Constant upstream notice type.
+      - name: nuc_part_part_publication_date_day
+        description: Publication date partition from Silver.
+      - name: nuc_part_part_ordinal
+        description: Parent changed-section ordinal.
+      - name: nuc_part_part_subitem_ordinal
+        description: Ordinal of the change detail within the parent section.
+      - name: nuc_updated_notice_change_label
+        description: Label of the updated field or subsection.
+      - name: nuc_updated_notice_change_before
+        description: Value before the change.
+      - name: nuc_updated_notice_change_after
+        description: Value after the change.

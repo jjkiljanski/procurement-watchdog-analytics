@@ -47,12 +47,16 @@ The repo currently reads these raw `silver.*` input tables:
 - `tender_result_notice_core`
 - `tender_result_notice_client`
 - `tender_result_notice_part`
+- `small_contract_notice_core`
 - `contract_performing_notice_core`
 - `contract_performing_notice_part`
 - `contract_performing_notice_change_matter`
 - `notice_update_notice_core`
 - `notice_update_notice_part`
 - `notice_update_notice_part_part`
+- `notice_update_concession_core`
+- `notice_update_concession_part`
+- `notice_update_concession_part_part`
 
 Locally, DuckDB builds these canonical relations from parquet files under:
 

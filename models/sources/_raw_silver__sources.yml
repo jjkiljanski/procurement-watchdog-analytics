@@ -78,6 +78,9 @@ sources:
       - name: tender_result_notice_part
         description: Raw TenderResultNotice part relation copied from upstream Silver.
 
+      - name: small_contract_notice_core
+        description: Raw SmallContractNotice core relation copied from upstream Silver.
+
       - name: contract_performing_notice_core
         description: Raw ContractPerformingNotice core relation copied from upstream Silver.
 
@@ -95,3 +98,12 @@ sources:
 
       - name: notice_update_notice_part_part
         description: Raw NoticeUpdateNotice part_part relation copied from upstream Silver.
+
+      - name: notice_update_concession_core
+        description: Raw NoticeUpdateConcession core relation copied from upstream Silver.
+
+      - name: notice_update_concession_part
+        description: Raw NoticeUpdateConcession part relation copied from upstream Silver.
+
+      - name: notice_update_concession_part_part
+        description: Raw NoticeUpdateConcession part_part relation copied from upstream Silver.

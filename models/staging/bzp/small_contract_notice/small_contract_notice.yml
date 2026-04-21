@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_silver__small_contract_notice_core
+    description: Canonical staging model for SmallContractNotice core rows.
+    columns:
+      - name: scn_core_notice_id
+        description: Upstream object identifier of the notice.
+        tests:
+          - not_null
+      - name: scn_core_notice_type
+        description: Constant upstream notice type.
+      - name: scn_core_publication_date_day
+        description: Publication date partition from Silver.
+      - name: scn_buyer_name
+        description: Buyer name.
+      - name: scn_buyer_department
+        description: Buyer department or branch.
+      - name: scn_buyer_national_id
+        description: Buyer national identifier.
+      - name: scn_buyer_national_id_type
+        description: Buyer national identifier type.
+      - name: scn_buyer_street
+        description: Buyer street address.
+      - name: scn_buyer_city
+        description: Buyer city.
+      - name: scn_buyer_postal_code
+        description: Buyer postal code.
+      - name: scn_buyer_province
+        description: Buyer province.
+      - name: scn_buyer_country
+        description: Buyer country.
+      - name: scn_buyer_nuts3_code
+        description: Buyer NUTS 3 code.
+      - name: scn_buyer_nuts3_name
+        description: Buyer NUTS 3 region name.
+      - name: scn_buyer_phone
+        description: Buyer phone number.
+      - name: scn_buyer_fax
+        description: Buyer fax number.
+      - name: scn_buyer_email
+        description: Buyer email address.
+      - name: scn_buyer_website
+        description: Buyer website.
+      - name: scn_buyer_type
+        description: Buyer organization type.
+      - name: scn_buyer_main_activity
+        description: Buyer main activity.
+      - name: scn_notice_number
+        description: BZP notice number.
+      - name: scn_notice_version
+        description: Notice version.
+      - name: scn_notice_date
+        description: Notice date.
+      - name: scn_contract_title
+        description: Contract title.
+      - name: scn_contract_type
+        description: Contract type.
+      - name: scn_contract_short_description
+        description: Short description of the contract subject.
+      - name: scn_contract_value_amount
+        description: Contract value amount.
+      - name: scn_contract_value_currency
+        description: Contract value currency.
+      - name: scn_submission_deadline
+        description: Application or offer submission deadline.
+      - name: scn_supplier_condition_information
+        description: Information for suppliers about contract conditions.

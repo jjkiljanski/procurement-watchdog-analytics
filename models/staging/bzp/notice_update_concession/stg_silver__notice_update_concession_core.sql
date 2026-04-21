@@ -1,0 +1,27 @@
+select
+    objectId as nuc_core_notice_id,
+    'NoticeUpdateConcession' as nuc_core_notice_type,
+    cast(publicationDateDay as date) as nuc_core_publication_date_day,
+    section_1_1 as nuc_buyer_name,
+    section_1_3_value as nuc_buyer_national_id,
+    section_1_3_type as nuc_buyer_national_id_type,
+    section_1_4_1 as nuc_buyer_street,
+    section_1_4_2 as nuc_buyer_city,
+    section_1_4_3 as nuc_buyer_postal_code,
+    section_1_4_4 as nuc_buyer_province,
+    section_1_4_5 as nuc_buyer_country,
+    section_1_4_6_code as nuc_buyer_nuts3_code,
+    section_1_4_6_name as nuc_buyer_nuts3_name,
+    section_1_4_7 as nuc_buyer_phone,
+    section_1_4_8 as nuc_buyer_fax,
+    section_1_4_9 as nuc_buyer_email,
+    section_1_4_10 as nuc_buyer_website,
+    section_1_5 as nuc_buyer_type,
+    section_1_6 as nuc_buyer_main_activity,
+    section_1_7 as nuc_procedure_conducted_by_entrusted_entity,
+    section_2_1 as nuc_notice_number,
+    section_2_2 as nuc_notice_date,
+    section_3_2 as nuc_updated_notice_number,
+    section_3_3 as nuc_updated_notice_version
+from {{ raw_silver_relation('notice_update_concession_core') }}
+{{ dev_date_window('publicationDateDay') }}
