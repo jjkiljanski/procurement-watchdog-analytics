@@ -49,6 +49,18 @@ models:
   - name: local_raw__concession_agreement_notice_criterion_procedure
     description: DuckDB-only raw relation over local ConcessionAgreementNotice criterion_procedure parquet.
 
+  - name: local_raw__concession_notice_core
+    description: DuckDB-only raw relation over local ConcessionNotice core parquet.
+
+  - name: local_raw__concession_notice_criterion_procedure
+    description: DuckDB-only raw relation over local ConcessionNotice criterion_procedure parquet.
+
+  - name: local_raw__concession_notice_criterion_qualification
+    description: DuckDB-only raw relation over local ConcessionNotice criterion_qualification parquet.
+
+  - name: local_raw__concession_update_agreement_notice_core
+    description: DuckDB-only raw relation over local ConcessionUpdateAgreementNotice core parquet.
+
   - name: local_raw__tender_result_notice_core
     description: DuckDB-only raw relation over local TenderResultNotice core parquet.
 

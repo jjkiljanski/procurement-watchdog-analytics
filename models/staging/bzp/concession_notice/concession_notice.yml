@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: stg_silver__concession_notice_core
+    description: Canonical staging contract for the Silver ConcessionNotice core relation.
+    columns:
+      - name: cno_core_notice_id
+        tests:
+          - not_null
+      - name: cno_core_notice_type
+      - name: cno_core_publication_date_day
+      - name: cno_buyer_name
+      - name: cno_buyer_national_id
+      - name: cno_buyer_national_id_type
+      - name: cno_buyer_street
+      - name: cno_buyer_city
+      - name: cno_buyer_postal_code
+      - name: cno_buyer_province
+      - name: cno_buyer_country
+      - name: cno_buyer_nuts3_code
+      - name: cno_buyer_nuts3_name
+      - name: cno_buyer_phone
+      - name: cno_buyer_fax
+      - name: cno_buyer_email
+      - name: cno_buyer_website
+      - name: cno_buyer_type
+      - name: cno_buyer_main_activity
+      - name: cno_procedure_conducted_by_entrusted_entity
+      - name: cno_concession_title
+      - name: cno_procedure_ocid
+      - name: cno_notice_number
+      - name: cno_notice_version
+      - name: cno_notice_date
+      - name: cno_is_reserved_concession
+      - name: cno_is_eu_funded
+      - name: cno_procedure_website_url
+      - name: cno_has_restricted_concession_documents
+      - name: cno_restricted_documents_access_info
+      - name: cno_communication_methods
+      - name: cno_electronic_communication_requirements
+      - name: cno_electronic_communication_url
+      - name: cno_submission_form_requirements
+      - name: cno_allows_non_general_electronic_tools
+      - name: cno_submission_languages
+      - name: cno_gdpr_information_clause
+      - name: cno_gdpr_limitation_clause
+      - name: cno_reference_number
+      - name: cno_concession_type
+      - name: cno_is_awarded_in_separate_procedures
+      - name: cno_concession_value_description
+      - name: cno_is_split_into_separate_lots
+      - name: cno_concession_short_description
+      - name: cno_main_cpv_codes
+      - name: cno_additional_cpv_codes
+      - name: cno_concession_place_of_performance
+      - name: cno_has_options
+      - name: cno_allows_extension
+      - name: cno_extension_description
+      - name: cno_concession_duration_days
+      - name: cno_concession_end_date
+      - name: cno_allows_partial_offers
+      - name: cno_concession_award_procedure
+      - name: cno_offer_submission_deadline
+      - name: cno_offer_submission_place
+      - name: cno_requires_bid_bond
+      - name: cno_requires_performance_security
+      - name: cno_requires_variant_offer
+      - name: cno_request_to_participate_deadline
+      - name: cno_request_to_participate_place
+      - name: cno_limits_invited_candidates
+      - name: cno_candidate_limit_description
+      - name: cno_criterion_weighting_method
+      - name: cno_uses_electronic_auction
+      - name: cno_is_public_private_partnership
+      - name: cno_qualification_criteria_description
+      - name: cno_exclusion_grounds
+      - name: cno_exclusion_evidence_requirements
+      - name: cno_has_optional_exclusion_grounds
+      - name: cno_optional_exclusion_grounds
+      - name: cno_optional_exclusion_evidence_requirements
+      - name: cno_qualification_declaration_rules
+      - name: cno_contract_execution_requirements
+      - name: cno_requires_specific_legal_form
+      - name: cno_financing_and_payment_information
+      - name: cno_allows_contract_changes
+      - name: cno_contract_change_terms
+      - name: cno_concession_execution_requirements
+
+  - name: stg_silver__concession_notice_criterion_procedure
+    description: Canonical staging contract for ConcessionNotice procedure evaluation criteria.
+    columns:
+      - name: cno_procedure_criterion_notice_id
+        tests:
+          - not_null
+      - name: cno_procedure_criterion_notice_type
+      - name: cno_procedure_criterion_publication_date_day
+      - name: cno_procedure_criterion_ordinal
+      - name: cno_procedure_criterion_type
+      - name: cno_procedure_criterion_name
+      - name: cno_procedure_criterion_weight
+      - name: cno_procedure_criterion_order
+      - name: cno_procedure_criterion_description
+
+  - name: stg_silver__concession_notice_criterion_qualification
+    description: Canonical staging contract for ConcessionNotice qualification criteria.
+    columns:
+      - name: cno_qualification_criterion_notice_id
+        tests:
+          - not_null
+      - name: cno_qualification_criterion_notice_type
+      - name: cno_qualification_criterion_publication_date_day
+      - name: cno_qualification_criterion_ordinal
+      - name: cno_qualification_criterion_type
+      - name: cno_qualification_criterion_name
+      - name: cno_qualification_criterion_minimum_level
+      - name: cno_qualification_criterion_description
+      - name: cno_qualification_criterion_allows_self_declaration
+      - name: cno_qualification_criterion_evidence_requirements

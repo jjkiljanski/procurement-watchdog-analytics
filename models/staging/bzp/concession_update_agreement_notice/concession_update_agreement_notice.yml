@@ -1,0 +1,110 @@
+version: 2
+
+models:
+  - name: stg_silver__concession_update_agreement_notice_core
+    description: Canonical staging model for ConcessionUpdateAgreementNotice core rows.
+    columns:
+      - name: cua_core_notice_id
+        description: Upstream object identifier of the notice.
+        tests:
+          - not_null
+      - name: cua_core_notice_type
+        description: Constant upstream notice type.
+      - name: cua_core_publication_date_day
+        description: Publication date partition from Silver.
+      - name: cua_buyer_name
+        description: Buyer name.
+      - name: cua_buyer_national_id
+        description: Buyer national identifier.
+      - name: cua_buyer_national_id_type
+        description: Buyer national identifier type.
+      - name: cua_buyer_street
+        description: Buyer street address.
+      - name: cua_buyer_city
+        description: Buyer city.
+      - name: cua_buyer_postal_code
+        description: Buyer postal code.
+      - name: cua_buyer_province
+        description: Buyer province.
+      - name: cua_buyer_country
+        description: Buyer country.
+      - name: cua_buyer_nuts3_code
+        description: Buyer NUTS 3 code.
+      - name: cua_buyer_nuts3_name
+        description: Buyer NUTS 3 region name.
+      - name: cua_buyer_email
+        description: Buyer email address.
+      - name: cua_buyer_website
+        description: Buyer website.
+      - name: cua_buyer_type
+        description: Buyer organization type.
+      - name: cua_procedure_ocid
+        description: Procedure identifier.
+      - name: cua_notice_number
+        description: BZP notice number.
+      - name: cua_notice_version
+        description: Notice version.
+      - name: cua_notice_date
+        description: Notice date.
+      - name: cua_prior_concession_or_intention_notice_number
+        description: Prior concession or concession-intention notice number.
+      - name: cua_concession_agreement_notice_number
+        description: Related concession agreement notice number.
+      - name: cua_concession_title
+        description: Concession title.
+      - name: cua_is_awarded_in_separate_procedures
+        description: Whether the concession was awarded in separate procedures.
+      - name: cua_is_split_into_separate_lots
+        description: Whether the concession is split into separate lots.
+      - name: cua_is_concession_agreement_change
+        description: Whether the notice concerns a concession agreement change.
+      - name: cua_concession_type
+        description: Concession type.
+      - name: cua_concession_short_description
+        description: Short description of the concession agreement subject.
+      - name: cua_main_cpv_codes
+        description: Main CPV codes.
+      - name: cua_additional_cpv_codes
+        description: Additional CPV codes.
+      - name: cua_concession_signature_date
+        description: Original concession agreement signature date.
+      - name: cua_concession_duration_start_date
+        description: Original concession agreement duration start date.
+      - name: cua_concession_duration_end_date
+        description: Original concession agreement duration end date.
+      - name: cua_concession_duration
+        description: Original concession agreement duration.
+      - name: cua_concession_value_amount
+        description: Original concession agreement value amount.
+      - name: cua_concession_value_currency
+        description: Original concession agreement value currency.
+      - name: cua_awarded_to_joint_concessionaires
+        description: Whether the agreement was awarded to joint concessionaires.
+      - name: cua_concessionaire_name
+        description: Concessionaire name.
+      - name: cua_concessionaire_street
+        description: Concessionaire street address.
+      - name: cua_concessionaire_city
+        description: Concessionaire city.
+      - name: cua_concessionaire_postal_code
+        description: Concessionaire postal code.
+      - name: cua_concessionaire_province
+        description: Concessionaire province.
+      - name: cua_concessionaire_country
+        description: Concessionaire country.
+      - name: cua_concessionaire_national_id
+        description: Concessionaire national identifier.
+      - name: cua_concessionaire_national_id_type
+        description: Concessionaire national identifier type.
+      - name: cua_contract_change_date
+        description: Date of the concession agreement change.
+      - name: cua_contract_change_legal_basis
+        description: Legal basis for the concession agreement change.
+      - name: cua_contract_change_reasons
+        description: Reasons for the concession agreement change.
+      - name: cua_contract_change_description
+        description: Short description of the concession agreement change.
+      - name: cua_concessionaire_user_revenue_description
+        description: Estimated concessionaire revenues from concession users.
+      - name: cua_buyer_payment_revenue_description
+        description: Estimated concessionaire revenues from buyer payments.
