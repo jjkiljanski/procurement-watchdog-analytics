@@ -4,6 +4,7 @@ import argparse
 import glob
 import json
 import re
+import shutil
 import subprocess
 import sys
 from collections import defaultdict
@@ -178,8 +179,12 @@ def parquet_columns_from_local_raw(
 
 
 def bigquery_columns(table_name: str, project: str, dataset: str) -> set[str]:
+    bq_executable = shutil.which("bq") or shutil.which("bq.cmd") or shutil.which("bq.exe")
+    if bq_executable is None:
+        raise FileNotFoundError("Could not find bq, bq.cmd, or bq.exe on PATH")
+
     result = subprocess.run(
-        ["bq", "show", "--format=json", f"{project}:{dataset}.{table_name}"],
+        [bq_executable, "show", "--format=json", f"{project}:{dataset}.{table_name}"],
         capture_output=True,
         text=True,
         check=False,
