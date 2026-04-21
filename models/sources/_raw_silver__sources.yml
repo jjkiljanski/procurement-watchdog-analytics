@@ -24,6 +24,21 @@ sources:
       - name: contract_notice_part_criterion
         description: Raw ContractNotice part_criterion relation copied from upstream Silver.
 
+      - name: agreement_intention_notice_core
+        description: Raw AgreementIntentionNotice core relation copied from upstream Silver.
+
+      - name: agreement_intention_notice_client
+        description: Raw AgreementIntentionNotice client relation copied from upstream Silver.
+
+      - name: agreement_intention_notice_part
+        description: Raw AgreementIntentionNotice part relation copied from upstream Silver.
+
+      - name: agreement_update_notice_core
+        description: Raw AgreementUpdateNotice core relation copied from upstream Silver.
+
+      - name: agreement_update_notice_part
+        description: Raw AgreementUpdateNotice part relation copied from upstream Silver.
+
       - name: tender_result_notice_core
         description: Raw TenderResultNotice core relation copied from upstream Silver.
 

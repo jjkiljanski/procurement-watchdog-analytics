@@ -1,0 +1,50 @@
+select
+    objectId as ain_core_notice_id,
+    'AgreementIntentionNotice' as ain_core_notice_type,
+    cast(publicationDateDay as date) as ain_core_publication_date_day,
+    case
+        when section_1_1 = 'Postępowanie prowadzone jest samodzielnie przez zamawiającego' then 'samodzielnie'
+        when section_1_1 = 'Postępowanie prowadzi zamawiający centralny' then 'centralny'
+        when section_1_1 = 'Postępowanie prowadzi podmiot, któremu powierzono przeprowadzenie postępowania' then 'powierzono'
+        else null
+    end as ain_procedure_conduct_mode,
+    section_1_6 as ain_buyer_type,
+    section_1_7 as ain_buyer_main_activity,
+    section_1_9_1 as ain_procedure_operator_name,
+    section_1_9_2 as ain_procedure_operator_national_id,
+    section_1_9_2_type as ain_procedure_operator_national_id_type,
+    section_1_9_3 as ain_procedure_operator_street,
+    section_1_9_4 as ain_procedure_operator_city,
+    section_1_9_5 as ain_procedure_operator_postal_code,
+    section_1_9_6 as ain_procedure_operator_province,
+    section_1_9_7 as ain_procedure_operator_country,
+    section_1_9_8_code as ain_procedure_operator_nuts3_code,
+    section_1_9_8_name as ain_procedure_operator_nuts3_name,
+    section_1_9_9 as ain_procedure_operator_phone,
+    section_1_9_10 as ain_procedure_operator_fax,
+    section_1_9_11 as ain_procedure_operator_email,
+    section_1_9_12 as ain_procedure_operator_website,
+    section_2_1 as ain_contract_title,
+    section_2_2 as ain_procedure_ocid,
+    section_2_3 as ain_notice_number,
+    section_2_4 as ain_notice_version,
+    section_2_5 as ain_notice_date,
+    section_2_6 as ain_is_in_procurement_plan,
+    section_2_7 as ain_procurement_plan_number,
+    section_2_8 as ain_procurement_plan_item_identifier,
+    section_2_9 as ain_is_social_service_notice,
+    section_2_10 as ain_is_eu_funded,
+    section_2_11 as ain_eu_funding_program_name,
+    section_3_1 as ain_had_market_consultations,
+    section_3_2 as ain_reference_number,
+    section_3_3 as ain_contract_type,
+    section_3_4 as ain_is_awarded_in_separate_procedures,
+    section_3_5 as ain_total_contract_value_amount,
+    section_3_5_1 as ain_current_procedure_value_amount,
+    section_3_6 as ain_allows_partial_offers,
+    section_3_7 as ain_number_of_lots,
+    section_4_1 as ain_award_procedure_legal_basis,
+    section_4_2 as ain_non_competitive_procedure_justification,
+    section_4_3 as ain_prior_procedure_ocid
+from {{ raw_silver_relation('agreement_intention_notice_core') }}
+{{ dev_date_window('publicationDateDay') }}

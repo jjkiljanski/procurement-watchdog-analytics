@@ -16,6 +16,21 @@ models:
   - name: local_raw__contract_notice_part_criterion
     description: DuckDB-only raw relation over local ContractNotice part_criterion parquet.
 
+  - name: local_raw__agreement_intention_notice_core
+    description: DuckDB-only raw relation over local AgreementIntentionNotice core parquet.
+
+  - name: local_raw__agreement_intention_notice_client
+    description: DuckDB-only raw relation over local AgreementIntentionNotice client parquet.
+
+  - name: local_raw__agreement_intention_notice_part
+    description: DuckDB-only raw relation over local AgreementIntentionNotice part parquet.
+
+  - name: local_raw__agreement_update_notice_core
+    description: DuckDB-only raw relation over local AgreementUpdateNotice core parquet.
+
+  - name: local_raw__agreement_update_notice_part
+    description: DuckDB-only raw relation over local AgreementUpdateNotice part parquet.
+
   - name: local_raw__tender_result_notice_core
     description: DuckDB-only raw relation over local TenderResultNotice core parquet.
 

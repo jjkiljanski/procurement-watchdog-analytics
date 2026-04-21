@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: stg_silver__agreement_intention_notice_core
+    description: Canonical staging contract for the Silver AgreementIntentionNotice core relation.
+    columns:
+      - name: ain_core_notice_id
+        tests:
+          - not_null
+      - name: ain_core_notice_type
+      - name: ain_core_publication_date_day
+      - name: ain_procedure_conduct_mode
+      - name: ain_buyer_type
+      - name: ain_buyer_main_activity
+      - name: ain_procedure_operator_name
+      - name: ain_procedure_operator_national_id
+      - name: ain_procedure_operator_national_id_type
+      - name: ain_procedure_operator_street
+      - name: ain_procedure_operator_city
+      - name: ain_procedure_operator_postal_code
+      - name: ain_procedure_operator_province
+      - name: ain_procedure_operator_country
+      - name: ain_procedure_operator_nuts3_code
+      - name: ain_procedure_operator_nuts3_name
+      - name: ain_procedure_operator_phone
+      - name: ain_procedure_operator_fax
+      - name: ain_procedure_operator_email
+      - name: ain_procedure_operator_website
+      - name: ain_contract_title
+      - name: ain_procedure_ocid
+      - name: ain_notice_number
+      - name: ain_notice_version
+      - name: ain_notice_date
+      - name: ain_is_in_procurement_plan
+      - name: ain_procurement_plan_number
+      - name: ain_procurement_plan_item_identifier
+      - name: ain_is_social_service_notice
+      - name: ain_is_eu_funded
+      - name: ain_eu_funding_program_name
+      - name: ain_had_market_consultations
+      - name: ain_reference_number
+      - name: ain_contract_type
+      - name: ain_is_awarded_in_separate_procedures
+      - name: ain_total_contract_value_amount
+      - name: ain_current_procedure_value_amount
+      - name: ain_allows_partial_offers
+      - name: ain_number_of_lots
+      - name: ain_award_procedure_legal_basis
+      - name: ain_non_competitive_procedure_justification
+      - name: ain_prior_procedure_ocid
+
+  - name: stg_silver__agreement_intention_notice_client
+    description: Canonical staging contract for the Silver AgreementIntentionNotice client relation.
+    columns:
+      - name: ain_client_notice_id
+        tests:
+          - not_null
+      - name: ain_client_notice_type
+      - name: ain_client_publication_date_day
+      - name: ain_client_ordinal
+      - name: ain_client_name
+      - name: ain_client_department
+      - name: ain_client_national_id
+      - name: ain_client_national_id_type
+      - name: ain_client_street
+      - name: ain_client_city
+      - name: ain_client_postal_code
+      - name: ain_client_province
+      - name: ain_client_country
+      - name: ain_client_nuts3_code
+      - name: ain_client_nuts3_name
+      - name: ain_client_phone
+      - name: ain_client_email
+      - name: ain_client_website
+      - name: ain_client_secondary_website
+
+  - name: stg_silver__agreement_intention_notice_part
+    description: Canonical staging contract for the Silver AgreementIntentionNotice part relation.
+    columns:
+      - name: ain_part_notice_id
+        tests:
+          - not_null
+      - name: ain_part_notice_type
+      - name: ain_part_publication_date_day
+      - name: ain_part_ordinal
+      - name: ain_part_short_description
+      - name: ain_part_value_amount
+      - name: ain_part_main_cpv_codes
+      - name: ain_part_additional_cpv_codes
+      - name: ain_part_intended_supplier_name
+      - name: ain_part_intended_supplier_street
+      - name: ain_part_intended_supplier_city
+      - name: ain_part_intended_supplier_postal_code
+      - name: ain_part_intended_supplier_province
+      - name: ain_part_intended_supplier_country

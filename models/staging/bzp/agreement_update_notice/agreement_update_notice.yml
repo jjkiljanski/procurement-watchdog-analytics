@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: stg_silver__agreement_update_notice_core
+    description: Canonical staging contract for the Silver AgreementUpdateNotice core relation.
+    columns:
+      - name: aun_core_notice_id
+        tests:
+          - not_null
+      - name: aun_core_notice_type
+      - name: aun_core_publication_date_day
+      - name: aun_buyer_name
+      - name: aun_buyer_department
+      - name: aun_buyer_national_id
+      - name: aun_buyer_national_id_type
+      - name: aun_buyer_street
+      - name: aun_buyer_city
+      - name: aun_buyer_postal_code
+      - name: aun_buyer_province
+      - name: aun_buyer_country
+      - name: aun_buyer_nuts3_code
+      - name: aun_buyer_nuts3_name
+      - name: aun_buyer_phone
+      - name: aun_buyer_fax
+      - name: aun_buyer_email
+      - name: aun_buyer_website
+      - name: aun_buyer_type
+      - name: aun_update_subject
+      - name: aun_procedure_ocid
+      - name: aun_notice_number
+      - name: aun_notice_version
+      - name: aun_notice_date
+      - name: aun_was_preceded_by_prior_notice
+      - name: aun_prior_notice_number
+      - name: aun_is_eu_funded
+      - name: aun_eu_funding_program_name
+      - name: aun_award_procedure_legal_basis
+      - name: aun_contract_type
+      - name: aun_contract_title
+      - name: aun_contract_signature_date
+      - name: aun_contract_duration_days
+      - name: aun_contract_end_date
+      - name: aun_supplier_section_label
+      - name: aun_supplier_name
+      - name: aun_supplier_national_id
+      - name: aun_supplier_national_id_type
+      - name: aun_supplier_street
+      - name: aun_supplier_city
+      - name: aun_supplier_postal_code
+      - name: aun_supplier_province
+      - name: aun_supplier_country
+      - name: aun_contract_value_amount
+      - name: aun_result_notice_number
+      - name: aun_contract_change_date
+      - name: aun_contract_change_legal_basis
+      - name: aun_contract_change_reasons
+      - name: aun_contract_change_description
+      - name: aun_contract_change_value_amount
+      - name: aun_contract_change_value_currency
+      - name: aun_contract_change_increased_price
+      - name: aun_had_prior_publishable_contract_changes
+      - name: aun_prior_contract_change_notice_numbers
+
+  - name: stg_silver__agreement_update_notice_part
+    description: Canonical staging contract for the Silver AgreementUpdateNotice part relation.
+    columns:
+      - name: aun_part_notice_id
+        tests:
+          - not_null
+      - name: aun_part_notice_type
+      - name: aun_part_publication_date_day
+      - name: aun_part_ordinal
+      - name: aun_part_short_description
+      - name: aun_part_main_cpv_codes
+      - name: aun_part_additional_cpv_codes
