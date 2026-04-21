@@ -31,6 +31,12 @@ models:
   - name: local_raw__agreement_update_notice_part
     description: DuckDB-only raw relation over local AgreementUpdateNotice part parquet.
 
+  - name: local_raw__circumstances_fulfillment_notice_core
+    description: DuckDB-only raw relation over local CircumstancesFulfillmentNotice core parquet.
+
+  - name: local_raw__competition_notice_core
+    description: DuckDB-only raw relation over local CompetitionNotice core parquet.
+
   - name: local_raw__tender_result_notice_core
     description: DuckDB-only raw relation over local TenderResultNotice core parquet.
 

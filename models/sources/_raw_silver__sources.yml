@@ -39,6 +39,12 @@ sources:
       - name: agreement_update_notice_part
         description: Raw AgreementUpdateNotice part relation copied from upstream Silver.
 
+      - name: circumstances_fulfillment_notice_core
+        description: Raw CircumstancesFulfillmentNotice core relation copied from upstream Silver.
+
+      - name: competition_notice_core
+        description: Raw CompetitionNotice core relation copied from upstream Silver.
+
       - name: tender_result_notice_core
         description: Raw TenderResultNotice core relation copied from upstream Silver.
 

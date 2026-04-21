@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_silver__circumstances_fulfillment_notice_core
+    description: Canonical staging contract for the Silver CircumstancesFulfillmentNotice core relation.
+    columns:
+      - name: cfn_core_notice_id
+        tests:
+          - not_null
+      - name: cfn_core_notice_type
+      - name: cfn_core_publication_date_day
+      - name: cfn_buyer_name
+      - name: cfn_buyer_department
+      - name: cfn_buyer_national_id
+      - name: cfn_buyer_national_id_type
+      - name: cfn_buyer_street
+      - name: cfn_buyer_city
+      - name: cfn_buyer_postal_code
+      - name: cfn_buyer_province
+      - name: cfn_buyer_country
+      - name: cfn_buyer_nuts3_code
+      - name: cfn_buyer_nuts3_name
+      - name: cfn_buyer_phone
+      - name: cfn_buyer_fax
+      - name: cfn_buyer_email
+      - name: cfn_buyer_website
+      - name: cfn_buyer_type
+      - name: cfn_buyer_main_activity
+      - name: cfn_contract_title
+      - name: cfn_procedure_ocid
+      - name: cfn_notice_number
+      - name: cfn_notice_version
+      - name: cfn_notice_date
+      - name: cfn_had_prior_circumstances_notice
+      - name: cfn_prior_circumstances_notice_number
+      - name: cfn_agreement_intention_notice_number
+      - name: cfn_result_notice_number
+      - name: cfn_is_eu_funded
+      - name: cfn_eu_funding_program_name
+      - name: cfn_award_procedure_legal_basis
+      - name: cfn_contract_type
+      - name: cfn_contract_short_description
+      - name: cfn_main_cpv_codes
+      - name: cfn_additional_cpv_codes
+      - name: cfn_contract_signature_date
+      - name: cfn_contract_duration_days
+      - name: cfn_contract_end_date
+      - name: cfn_supplier_name
+      - name: cfn_supplier_national_id
+      - name: cfn_supplier_national_id_type
+      - name: cfn_supplier_street
+      - name: cfn_supplier_city
+      - name: cfn_supplier_postal_code
+      - name: cfn_supplier_province
+      - name: cfn_supplier_country
+      - name: cfn_circumstances_still_fulfilled
