@@ -9,6 +9,11 @@ from scripts.generate_notice_profile_markdown import (
     extract_staging_mappings,
     render_markdown,
 )
+from scripts.validate_notice_staging import (
+    data_model_to_relation_suffix,
+    extract_staging_select,
+    expected_columns_by_relation,
+)
 from scripts.validate_notice_contracts import models_path_for_profile
 
 
@@ -53,6 +58,53 @@ def test_render_markdown_for_list_sections() -> None:
 def test_models_path_for_profile_handles_automatic_suffix() -> None:
     profile_path = Path("competition_result_notice_profile_automatic.json")
     assert models_path_for_profile(profile_path).name == "competition_result_notice_models.py"
+
+
+def test_notice_staging_relation_suffix_handles_nested_models() -> None:
+    assert data_model_to_relation_suffix("core") == "core"
+    assert data_model_to_relation_suffix("part.core") == "part"
+    assert data_model_to_relation_suffix("part.part") == "part_part"
+
+
+def test_expected_columns_by_relation_uses_derived_cols_as_coverage_group() -> None:
+    profile = {
+        "1.1": {
+            "col_name": "section_1_1",
+            "data_model": "core",
+        },
+        "1.2": {
+            "col_name": "section_1_2",
+            "data_model": "part.part",
+            "derived_cols": {
+                "section_1_2_before": {"fn": "parse_before"},
+                "section_1_2_after": {"fn": "parse_after"},
+            },
+        },
+    }
+
+    expected = expected_columns_by_relation(profile)
+
+    assert expected["core"] == [{"section_1_1"}]
+    assert expected["part_part"] == [{"section_1_2_before", "section_1_2_after"}]
+
+
+def test_extract_staging_select_handles_case_commas_and_optional_columns() -> None:
+    sql = """
+select
+    case
+        when section_1_1 = 'A, B' then 'x'
+        else null
+    end as cn_mode,
+    {{ optional_raw_column('section_9_9') }} as cn_optional_value
+from {{ raw_silver_relation('contract_notice_core') }}
+"""
+
+    mappings, selected_source_columns, aliases = extract_staging_select(sql)
+
+    assert mappings["section_1_1"] == ["cn_mode"]
+    assert mappings["section_9_9"] == ["cn_optional_value"]
+    assert "section_9_9" not in selected_source_columns
+    assert aliases == {"cn_mode", "cn_optional_value"}
 
 
 def test_extract_staging_mappings_captures_direct_and_case_mappings() -> None:

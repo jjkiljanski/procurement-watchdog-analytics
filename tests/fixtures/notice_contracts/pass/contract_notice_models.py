@@ -3,5 +3,4 @@ class ContractNoticeCoreModel:
 
 
 class ContractNoticeClientModel:
-    section_1_2: str | None = None
     section_1_2_type: str | None = None

@@ -1,6 +1,6 @@
 select
     objectId as nun_core_notice_id,
-    noticeType as nun_core_notice_type,
+    'NoticeUpdateNotice' as nun_core_notice_type,
     cast(publicationDateDay as date) as nun_core_publication_date_day,
     section_1_1 as nun_buyer_name,
     section_1_2 as nun_buyer_department,

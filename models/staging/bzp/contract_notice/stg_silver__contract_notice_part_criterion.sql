@@ -1,6 +1,6 @@
 select
     objectId as cn_part_criterion_notice_id,
-    noticeType as cn_part_criterion_notice_type,
+    'ContractNotice' as cn_part_criterion_notice_type,
     cast(publicationDateDay as date) as cn_part_criterion_publication_date_day,
     part_ordinal as cn_part_criterion_part_ordinal,
     part_criterion_ordinal as cn_part_criterion_ordinal,

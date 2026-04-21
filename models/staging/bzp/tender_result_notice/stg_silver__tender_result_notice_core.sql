@@ -1,6 +1,6 @@
 select
     objectId as trn_core_notice_id,
-    noticeType as trn_core_notice_type,
+    'TenderResultNotice' as trn_core_notice_type,
     cast(publicationDateDay as date) as trn_core_publication_date_day,
     case
         when section_1_1 = 'Postępowanie prowadzone jest samodzielnie przez zamawiającego' then 'samodzielnie'

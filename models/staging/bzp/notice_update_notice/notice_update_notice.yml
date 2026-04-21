@@ -53,4 +53,6 @@ models:
       - name: nun_part_part_publication_date_day
       - name: nun_part_part_ordinal
       - name: nun_part_part_subitem_ordinal
-      - name: nun_updated_notice_change_description
+      - name: nun_updated_notice_change_label
+      - name: nun_updated_notice_change_before
+      - name: nun_updated_notice_change_after

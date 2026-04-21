@@ -1,6 +1,6 @@
 select
     objectId as trn_client_notice_id,
-    noticeType as trn_client_notice_type,
+    'TenderResultNotice' as trn_client_notice_type,
     cast(publicationDateDay as date) as trn_client_publication_date_day,
     client_ordinal as trn_client_ordinal,
     section_1_2 as trn_client_name,

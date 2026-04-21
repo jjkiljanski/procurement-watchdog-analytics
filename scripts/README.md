@@ -36,6 +36,27 @@ The check is static and contract-focused:
 - it fails on extra fields
 - it fails when the expected Pydantic model class is missing
 
+## Validate Notice Staging
+
+Check that lakehouse notice profiles are fully represented in dbt staging and,
+optionally, that the raw input tables are compatible with the staging SQL:
+
+```bash
+python scripts/validate_notice_staging.py --input metadata
+python scripts/validate_notice_staging.py --input duckdb
+python scripts/validate_notice_staging.py --input bigquery --bigquery-project YOUR_PROJECT --bigquery-dataset silver
+```
+
+The check is analytics-layer focused:
+
+- it verifies every notice profile/data-model has a matching staging SQL model
+- it verifies every profile-defined raw or derived field is explicitly mapped
+  to a renamed business column in staging SQL
+- it verifies the raw table is registered in `raw_silver` sources
+- it verifies the matching `local_raw__*` DuckDB model and YAML entry exist
+- with `--input duckdb`, it inspects local parquet schemas
+- with `--input bigquery`, it inspects BigQuery table schemas via `bq show`
+
 Recommended usage:
 
 - run before `dbt run` / `dbt build`

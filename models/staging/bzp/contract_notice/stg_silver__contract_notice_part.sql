@@ -1,6 +1,6 @@
 select
     objectId as cn_part_notice_id,
-    noticeType as cn_part_notice_type,
+    'ContractNotice' as cn_part_notice_type,
     cast(publicationDateDay as date) as cn_part_publication_date_day,
     part_ordinal as cn_part_ordinal,
     section_4_2_2 as cn_part_short_description,
@@ -8,8 +8,8 @@ select
     section_4_2_4 as cn_part_is_replenishment,
     section_4_2_5 as cn_part_value_amount,
     section_4_2_5_currency as cn_part_value_currency,
-    section_4_2_6 as cn_part_main_cpv_codes,
-    section_4_2_7 as cn_part_additional_cpv_codes,
+    {{ optional_raw_column('section_4_2_6') }} as cn_part_main_cpv_codes,
+    {{ optional_raw_column('section_4_2_7') }} as cn_part_additional_cpv_codes,
     section_4_2_8 as cn_part_has_options,
     section_4_2_9 as cn_part_option_scope,
     section_4_2_10_days as cn_part_duration_days,

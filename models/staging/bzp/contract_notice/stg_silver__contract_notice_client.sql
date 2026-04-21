@@ -1,6 +1,6 @@
 select
     objectId as cn_client_notice_id,
-    noticeType as cn_client_notice_type,
+    'ContractNotice' as cn_client_notice_type,
     cast(publicationDateDay as date) as cn_client_publication_date_day,
     section_1_2 as cn_client_name,
     section_1_3 as cn_client_department,

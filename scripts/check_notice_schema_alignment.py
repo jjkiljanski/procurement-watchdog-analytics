@@ -17,16 +17,49 @@ def expected_fields_by_data_model(profile_path: Path) -> dict[str, set[str]]:
     profile = json.loads(profile_path.read_text(encoding="utf-8"))
     expected: dict[str, set[str]] = defaultdict(set)
 
-    for _, section_data in profile.items():
-        data_model = section_data["data_model"]
-        col_name = section_data["col_name"]
-        expected[data_model].add(col_name)
+    for _, section_value in profile.items():
+        section_items = section_value if isinstance(section_value, list) else [section_value]
 
-        derived_cols = section_data.get("derived_cols", {})
-        for derived_col_name in derived_cols:
-            expected[data_model].add(derived_col_name)
+        for section_data in section_items:
+            if not isinstance(section_data, dict):
+                continue
+
+            data_model = data_model_to_class_suffix(section_data["data_model"])
+            derived_cols = section_data.get("derived_cols", {})
+            if derived_cols:
+                expected[data_model].update(derived_cols)
+                continue
+
+            expected[data_model].add(section_data["col_name"])
 
     return dict(expected)
+
+
+def data_model_to_class_suffix(data_model: str) -> str:
+    if data_model.endswith(".core"):
+        data_model = data_model.removesuffix(".core")
+    return data_model
+
+
+def expected_class_name(models_path: Path, data_model: str) -> str:
+    notice_type_token = models_path.stem.removesuffix("_models")
+    return f"{snake_to_pascal(notice_type_token)}{snake_to_pascal(data_model)}Model"
+
+
+def referenced_class_names(profile_path: Path, models_path: Path) -> set[str]:
+    profile = json.loads(profile_path.read_text(encoding="utf-8"))
+    data_models: set[str] = set()
+
+    for section_value in profile.values():
+        section_items = section_value if isinstance(section_value, list) else [section_value]
+        for section_data in section_items:
+            if not isinstance(section_data, dict):
+                continue
+            data_model = section_data["data_model"]
+            data_models.add(data_model)
+            data_models.add(data_model_to_class_suffix(data_model))
+
+    return {expected_class_name(models_path, data_model) for data_model in data_models}
 
 
 def model_fields_by_class(models_path: Path) -> dict[str, set[str]]:
@@ -45,11 +78,6 @@ def model_fields_by_class(models_path: Path) -> dict[str, set[str]]:
         class_fields[node.name] = fields
 
     return class_fields
-
-
-def expected_class_name(models_path: Path, data_model: str) -> str:
-    notice_type_token = models_path.stem.removesuffix("_models")
-    return f"{snake_to_pascal(notice_type_token)}{snake_to_pascal(data_model)}Model"
 
 
 def main() -> None:
@@ -90,7 +118,7 @@ def main() -> None:
                 f"{class_name} has fields not defined in profile JSON: {', '.join(extra)}"
             )
 
-    referenced_classes = {expected_class_name(args.models_py, data_model) for data_model in expected}
+    referenced_classes = referenced_class_names(args.profile_json, args.models_py)
     unreferenced_classes = sorted(set(actual) - referenced_classes)
     for class_name in unreferenced_classes:
         failures.append(

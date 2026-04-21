@@ -22,6 +22,7 @@ models:
           The type of the main buyer issuing the notice (e.g. public buyer in the public finances sector, sector buyer, etc.). Extracted from the relevant section of the notice if available.
       - name: cn_buyer_main_activity
       - name: cn_joint_procurement_responsibility_split
+      - name: cn_joint_procurement_cross_border_legal_basis
       - name: cn_procedure_operator_name
       - name: cn_procedure_operator_national_id
         tests:
@@ -138,6 +139,7 @@ models:
       - name: cn_allows_negotiated_selection
       - name: cn_max_bidders_invited_to_negotiation
       - name: cn_negotiation_shortlisting_criteria
+      - name: cn_minimum_requirements_description
       - name: cn_request_to_participate_deadline
       - name: cn_request_to_participate_place
       - name: cn_request_opening_datetime
@@ -146,6 +148,7 @@ models:
       - name: cn_limits_framework_participants
       - name: cn_max_framework_participants
       - name: cn_framework_call_off_legal_basis
+      - name: cn_framework_duration_justification
 
   - name: stg_silver__contract_notice_client
     description: Canonical staging contract for the Silver ContractNotice client relation. Contains the parsed data from all the ContractNotice HTML sections that can appear multiple times within one notice AND describe one or more of the buyers issuing the notice (e.g. buyer's address).

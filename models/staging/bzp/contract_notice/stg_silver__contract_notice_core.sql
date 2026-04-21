@@ -1,6 +1,6 @@
 select
     objectId as cn_core_notice_id,
-    noticeType as cn_core_notice_type,
+    'ContractNotice' as cn_core_notice_type,
     cast(publicationDateDay as date) as cn_core_publication_date_day,
     case
         when section_1_1 = 'Postępowanie prowadzone jest samodzielnie przez zamawiającego' then 'samodzielnie'
@@ -11,6 +11,7 @@ select
     section_1_6 as cn_buyer_type,
     section_1_7 as cn_buyer_main_activity,
     section_1_9 as cn_joint_procurement_responsibility_split,
+    section_1_10 as cn_joint_procurement_cross_border_legal_basis,
     section_1_11_1 as cn_procedure_operator_name,
     section_1_11_2 as cn_procedure_operator_national_id,
     section_1_11_2_type as cn_procedure_operator_national_id_type,
@@ -36,7 +37,7 @@ select
     section_2_9 as cn_procurement_plan_number,
     section_2_10 as cn_procurement_plan_item_identifier,
     section_2_11 as cn_is_reserved_contract,
-    section_2_12 as cn_reserved_contract_eligible_contractor_types,
+    {{ optional_raw_column('section_2_12') }} as cn_reserved_contract_eligible_contractor_types,
     section_2_13 as cn_is_reserved_social_service_contract,
     section_2_14 as cn_is_eu_funded,
     section_2_15 as cn_eu_funding_program_name,
@@ -74,7 +75,7 @@ select
     section_4_1_13 as cn_has_social_environmental_label_requirements,
     section_4_1_14 as cn_social_environmental_label_requirements_description,
     section_5_1 as cn_has_optional_exclusion_grounds,
-    section_5_2 as cn_optional_exclusion_grounds,
+    {{ optional_raw_column('section_5_2') }} as cn_optional_exclusion_grounds,
     section_5_3 as cn_has_participation_conditions,
     section_5_4 as cn_participation_conditions_description,
     section_5_5 as cn_requires_art_125_declaration,
@@ -107,6 +108,7 @@ select
     section_8_5 as cn_allows_negotiated_selection,
     section_8_6 as cn_max_bidders_invited_to_negotiation,
     section_8_7 as cn_negotiation_shortlisting_criteria,
+    section_8_8 as cn_minimum_requirements_description,
     section_8_9 as cn_request_to_participate_deadline,
     section_8_10 as cn_request_to_participate_place,
     section_8_11 as cn_request_opening_datetime,
@@ -114,6 +116,7 @@ select
     section_8_19 as cn_framework_agreement_arrangement,
     section_8_20 as cn_limits_framework_participants,
     section_8_21 as cn_max_framework_participants,
-    section_8_22 as cn_framework_call_off_legal_basis
+    section_8_22 as cn_framework_call_off_legal_basis,
+    section_8_23 as cn_framework_duration_justification
 from {{ raw_silver_relation('contract_notice_core') }}
 {{ dev_date_window('publicationDateDay') }}

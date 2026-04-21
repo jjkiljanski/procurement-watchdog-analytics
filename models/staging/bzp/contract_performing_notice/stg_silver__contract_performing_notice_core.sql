@@ -1,6 +1,6 @@
 select
     objectId as cpn_core_notice_id,
-    noticeType as cpn_core_notice_type,
+    'ContractPerformingNotice' as cpn_core_notice_type,
     cast(publicationDateDay as date) as cpn_core_publication_date_day,
     section_1_1 as cpn_buyer_name,
     section_1_2 as cpn_buyer_department,
