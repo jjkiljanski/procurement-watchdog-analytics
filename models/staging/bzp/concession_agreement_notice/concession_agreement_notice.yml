@@ -1,0 +1,102 @@
+version: 2
+
+models:
+  - name: stg_silver__concession_agreement_notice_core
+    description: Canonical staging contract for the Silver ConcessionAgreementNotice core relation.
+    columns:
+      - name: can_core_notice_id
+        tests:
+          - not_null
+      - name: can_core_notice_type
+      - name: can_core_publication_date_day
+      - name: can_buyer_name
+      - name: can_buyer_national_id
+      - name: can_buyer_national_id_type
+      - name: can_buyer_street
+      - name: can_buyer_city
+      - name: can_buyer_postal_code
+      - name: can_buyer_province
+      - name: can_buyer_country
+      - name: can_buyer_nuts3_code
+      - name: can_buyer_nuts3_name
+      - name: can_buyer_phone
+      - name: can_buyer_email
+      - name: can_buyer_website
+      - name: can_buyer_type
+      - name: can_buyer_main_activity
+      - name: can_buyer_other_activity
+      - name: can_procedure_conducted_by_entrusted_entity
+      - name: can_was_preceded_by_prior_concession_notice
+      - name: can_prior_concession_notice_number
+      - name: can_concession_title
+      - name: can_procedure_ocid
+      - name: can_notice_number
+      - name: can_notice_version
+      - name: can_notice_date
+      - name: can_is_eu_funded
+      - name: can_reference_number
+      - name: can_is_awarded_in_separate_procedures
+      - name: can_estimated_concession_value_amount
+      - name: can_estimated_concession_value_currency
+      - name: can_is_split_into_separate_lots
+      - name: can_concession_type
+      - name: can_concession_short_description
+      - name: can_main_cpv_codes
+      - name: can_additional_cpv_codes
+      - name: can_concession_award_procedure
+      - name: can_without_prior_concession_notice
+      - name: can_no_prior_notice_legal_basis
+      - name: can_no_prior_notice_justification
+      - name: can_criterion_weighting_method
+      - name: can_used_electronic_auction
+      - name: can_excluded_contractor_count
+      - name: can_received_offer_count
+      - name: can_received_variant_offer_count
+      - name: can_received_sme_offer_count
+      - name: can_received_eea_foreign_offer_count
+      - name: can_received_non_eea_offer_count
+      - name: can_rejected_offer_count
+      - name: can_awarded_offer_is_variant
+      - name: can_awarded_to_joint_concessionaires
+      - name: can_concessionaire_name
+      - name: can_concessionaire_street
+      - name: can_concessionaire_city
+      - name: can_concessionaire_postal_code
+      - name: can_concessionaire_province
+      - name: can_concessionaire_country
+      - name: can_concessionaire_national_id
+      - name: can_concessionaire_national_id_type
+      - name: can_concessionaire_company_size
+      - name: can_concessionaire_from_other_eea_country
+      - name: can_concessionaire_from_non_eea_country
+      - name: can_concession_signature_date
+      - name: can_concession_duration_start_date
+      - name: can_concession_duration_end_date
+      - name: can_concession_duration_days
+      - name: can_concession_value_amount
+      - name: can_concession_value_currency
+      - name: can_concessionaire_user_revenue_description
+      - name: can_buyer_payment_value_amount
+      - name: can_buyer_payment_value_currency
+      - name: can_has_options
+      - name: can_allows_extension
+      - name: can_extension_description
+      - name: can_has_subcontracting
+      - name: can_has_employment_requirements
+      - name: can_has_social_environmental_innovation_requirements
+      - name: can_is_public_private_partnership
+      - name: can_additional_information
+
+  - name: stg_silver__concession_agreement_notice_criterion_procedure
+    description: Canonical staging contract for ConcessionAgreementNotice procedure evaluation criteria.
+    columns:
+      - name: can_criterion_notice_id
+        tests:
+          - not_null
+      - name: can_criterion_notice_type
+      - name: can_criterion_publication_date_day
+      - name: can_criterion_ordinal
+      - name: can_criterion_type
+      - name: can_criterion_name
+      - name: can_criterion_weight
+      - name: can_criterion_description

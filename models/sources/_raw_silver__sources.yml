@@ -45,6 +45,18 @@ sources:
       - name: competition_notice_core
         description: Raw CompetitionNotice core relation copied from upstream Silver.
 
+      - name: competition_result_notice_core
+        description: Raw CompetitionResultNotice core relation copied from upstream Silver.
+
+      - name: competition_result_notice_author
+        description: Raw CompetitionResultNotice author relation copied from upstream Silver.
+
+      - name: concession_agreement_notice_core
+        description: Raw ConcessionAgreementNotice core relation copied from upstream Silver.
+
+      - name: concession_agreement_notice_criterion_procedure
+        description: Raw ConcessionAgreementNotice criterion_procedure relation copied from upstream Silver.
+
       - name: tender_result_notice_core
         description: Raw TenderResultNotice core relation copied from upstream Silver.
 

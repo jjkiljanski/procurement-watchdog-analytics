@@ -1,0 +1,87 @@
+version: 2
+
+models:
+  - name: stg_silver__competition_result_notice_core
+    description: Canonical staging contract for the Silver CompetitionResultNotice core relation.
+    columns:
+      - name: crn_core_notice_id
+        tests:
+          - not_null
+      - name: crn_core_notice_type
+      - name: crn_core_publication_date_day
+      - name: crn_procedure_conduct_mode
+      - name: crn_buyer_name
+      - name: crn_buyer_department
+      - name: crn_buyer_national_id
+      - name: crn_buyer_national_id_type
+      - name: crn_buyer_street
+      - name: crn_buyer_city
+      - name: crn_buyer_postal_code
+      - name: crn_buyer_province
+      - name: crn_buyer_country
+      - name: crn_buyer_nuts3_code
+      - name: crn_buyer_nuts3_name
+      - name: crn_buyer_phone
+      - name: crn_buyer_fax
+      - name: crn_buyer_email
+      - name: crn_buyer_website
+      - name: crn_competition_website_url
+      - name: crn_buyer_type
+      - name: crn_buyer_main_activity
+      - name: crn_competition_operator_name
+      - name: crn_competition_operator_national_id
+      - name: crn_competition_operator_national_id_type
+      - name: crn_competition_operator_street
+      - name: crn_competition_operator_city
+      - name: crn_competition_operator_postal_code
+      - name: crn_competition_operator_province
+      - name: crn_competition_operator_country
+      - name: crn_competition_operator_nuts3_code
+      - name: crn_competition_operator_nuts3_name
+      - name: crn_competition_operator_phone
+      - name: crn_competition_operator_fax
+      - name: crn_competition_operator_email
+      - name: crn_competition_operator_website
+      - name: crn_competition_title
+      - name: crn_competition_ocid
+      - name: crn_notice_number
+      - name: crn_notice_version
+      - name: crn_notice_date
+      - name: crn_competition_notice_number
+      - name: crn_is_eu_funded
+      - name: crn_eu_funding_program_name
+      - name: crn_competition_procedure
+      - name: crn_competition_type
+      - name: crn_reference_number
+      - name: crn_competition_subject_description
+      - name: crn_main_cpv_codes
+      - name: crn_additional_cpv_codes
+      - name: crn_outcome_status
+      - name: crn_cancellation_legal_basis
+      - name: crn_result_approval_date
+      - name: crn_received_work_count
+      - name: crn_not_evaluated_work_count
+      - name: crn_selected_work_count
+      - name: crn_selected_work_policy_aspects
+
+  - name: stg_silver__competition_result_notice_author
+    description: Canonical staging contract for the Silver CompetitionResultNotice author relation.
+    columns:
+      - name: crn_author_notice_id
+        tests:
+          - not_null
+      - name: crn_author_notice_type
+      - name: crn_author_publication_date_day
+      - name: crn_author_ordinal
+      - name: crn_author_name
+      - name: crn_author_street
+      - name: crn_author_city
+      - name: crn_author_postal_code
+      - name: crn_author_province
+      - name: crn_author_country
+      - name: crn_author_national_id
+      - name: crn_author_national_id_type
+      - name: crn_author_award_place
+      - name: crn_author_prize_type
+      - name: crn_author_prize_value_amount
+      - name: crn_author_prize_value_currency

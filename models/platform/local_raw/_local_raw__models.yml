@@ -37,6 +37,18 @@ models:
   - name: local_raw__competition_notice_core
     description: DuckDB-only raw relation over local CompetitionNotice core parquet.
 
+  - name: local_raw__competition_result_notice_core
+    description: DuckDB-only raw relation over local CompetitionResultNotice core parquet.
+
+  - name: local_raw__competition_result_notice_author
+    description: DuckDB-only raw relation over local CompetitionResultNotice author parquet.
+
+  - name: local_raw__concession_agreement_notice_core
+    description: DuckDB-only raw relation over local ConcessionAgreementNotice core parquet.
+
+  - name: local_raw__concession_agreement_notice_criterion_procedure
+    description: DuckDB-only raw relation over local ConcessionAgreementNotice criterion_procedure parquet.
+
   - name: local_raw__tender_result_notice_core
     description: DuckDB-only raw relation over local TenderResultNotice core parquet.
 

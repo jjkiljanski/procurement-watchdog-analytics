@@ -36,6 +36,10 @@ The repo currently reads these raw `silver.*` input tables:
 - `agreement_update_notice_part`
 - `circumstances_fulfillment_notice_core`
 - `competition_notice_core`
+- `competition_result_notice_core`
+- `competition_result_notice_author`
+- `concession_agreement_notice_core`
+- `concession_agreement_notice_criterion_procedure`
 - `tender_result_notice_core`
 - `tender_result_notice_client`
 - `tender_result_notice_part`
